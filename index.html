@@ -69,7 +69,7 @@
         <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
     </div>
 
-    <div style="display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <div style="display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
         <script>
             const template = `
                 <div style="aspect-ratio: 0.8333; border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
@@ -78,7 +78,7 @@
             for (let i=0; i<100; i++) {
                 let construct = template;
 
-                construct = construct.replace("%url%", "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589");
+                construct = construct.replace(/%url%/g, "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589");
                 
                 document.write(construct);
             }
