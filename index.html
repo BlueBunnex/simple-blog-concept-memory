@@ -75,6 +75,8 @@
                 <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
             `;
             const img = document.createElement('img');
+            //img.style.display = "none";
+            document.body.appendChild(img);
 
             function insert(src) {
                 let construct = template;
