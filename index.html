@@ -23,12 +23,12 @@
     
     <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
 
-    <div id="trailer" style="width: 200px; aspect-ratio: 1; background: #ed55bb; border-radius: 100%; position: absolute; z-index: -1; filter: blur(20px) opacity(50%);"></div>
+    <div id="trailer" style="width: 200px; aspect-ratio: 1; background: #ed55bb; border-radius: 100%; position: absolute; top: 0; left: 0; z-index: -1; filter: blur(20px) opacity(50%);"></div>
 
     <script>
         const trailer = document.getElementById("trailer");
 
-        window.onmousemove = e => {
+        function updateTrailer() {
             const x = e.clientX - trailer.offsetWidth / 2;
             const y = e.clientY - trailer.offsetHeight / 2;
 
@@ -40,7 +40,11 @@
                 duration: 800,
                 fill: "forwards"
             });
+
+            requestAnimationFrame(updateTrailer);
         }
+
+        requestAnimationFrame(updateTrailer);
     </script>
   
 </body>
