@@ -10,6 +10,11 @@
             color: white;
         }
 
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
         #bluesky {
             display: inline-block;
             padding: 6px 10px;
@@ -62,14 +67,14 @@
     
     <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
 
-    <div style="display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <div style="display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
         <script>
-            const template = "<div style='background: black; height: %height%; border-radius: 6px;'></div>";
+            const template = "<div style='background: black; aspect-ratio: 1.2; border-radius: 10px; background-image: url(\"%url%\"); background-size: cover; background-position: center;'></div>";
 
             for (let i=0; i<100; i++) {
                 let construct = template;
 
-                construct = construct.replace("%height%", Math.random() * 200 + 100 + "px");
+                construct = construct.replace("%url%", "https://giphy.com/gifs/mecha-137qIhWsIf9bDW");
                 
                 document.write(construct);
             }
