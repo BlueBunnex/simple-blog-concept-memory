@@ -72,13 +72,24 @@
     <div style="display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
         <script>
             const template = `
-                <div style="aspect-ratio: 0.8333; border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
+                <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
             `;
+
+            let img = document.createElement('img');
 
             for (let i=0; i<100; i++) {
                 let construct = template;
 
-                construct = construct.replace(/%url%/g, "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589");
+                let src = "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589";
+                img.src = src;
+                
+                construct = construct.replace(/%url%/g, src);
+
+                if (img.naturalWidth > img.naturalHeight) {
+                    construct = construct.replace("%aspect%", "aspect-ratio: 1.6666; grid-column: span 2;");
+                } else {
+                    construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
+                }
                 
                 document.write(construct);
             }
