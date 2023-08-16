@@ -69,12 +69,12 @@
 
     <div style="display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
         <script>
-            const template = "<div style='aspect-ratio: 0.8333; border-radius: 10px; background-color: black; background-image: url(%url%); background-size: cover; background-position: center;'></div>";
+            const template = `<div style='aspect-ratio: 0.8333; border-radius: 10px; background-color: black; background-image: url("url"); background-size: cover; background-position: center;'></div>`;
 
             for (let i=0; i<100; i++) {
                 let construct = template;
 
-                construct = construct.replace("%url%", "'https://giphy.com/gifs/mecha-137qIhWsIf9bDW'");
+                construct = construct.replace("%url%", "https://giphy.com/gifs/mecha-137qIhWsIf9bDW");
                 
                 document.write(construct);
             }
