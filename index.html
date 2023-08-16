@@ -69,7 +69,7 @@
             for (let i=0; i<100; i++) {
                 let construct = template;
 
-                construct = construct.replace("%height%", "" + (Math.random() * 200 + 100));
+                construct = construct.replace("%height%", Math.random() * 200 + 100 + "px");
                 
                 document.write(construct);
             }
