@@ -217,10 +217,20 @@
     
     <div id="trailer"></div>
 
-    <div id="lockdown-container" style="color: white; font-size: 4em; display: none; text-align: center;">
+    <div id="lockdown-container" style="color: white; font-size: 4rem; display: none; text-align: center;">
         Grape Clicker
-        <div style="font-size: 1em;">124 grapes clicked</div>
-        <img src="res/grapes.png" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: pointer; width: 500px;">
+        <div id="grape-counter" style="font-size: 2rem;">0 grapes clicked</div>
+        <img onclick="clickGrape();" src="res/grapes.png" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: pointer; width: 500px;">
+        
+        <script>
+            const counter = document.getElementById("grape-counter");
+            var clicks = 0;
+            
+            function clickGrape() {
+                clicks++;
+                counter.innerHTML = clicks + " grapes clicked";
+            }
+        </script>
     </div>
 
     <div id="card-container">
