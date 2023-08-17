@@ -138,7 +138,7 @@
         }
     </style>
     <script>
-        var lightbox, trailer;
+        var lightbox, lightboxImg, trailer;
         var x, y;
 
         window.onmousemove = e => {
@@ -161,7 +161,7 @@
 
         function openLightbox(src) {
             lightbox.style.display = "block";
-            lightbox.getElementsByTagName("img").src = src;
+            lightboxImg.src = src;
         }
 
         function closeLightbox() {
@@ -170,7 +170,10 @@
 
         function start() {
             lightbox = document.getElementById("lightbox");
+            lightboxImg = lightbox.getElementsByTagName("img")[0];
+            
             trailer = document.getElementById("trailer");
+            
             requestAnimationFrame(updateTrailer);
         }
     </script>
