@@ -56,6 +56,11 @@
             padding: 10px;
         }
 
+        .card #controls img {
+            width: 100px;
+            filter: invert(100%);
+        }
+
         .card:hover #image {
             filter: brightness(50%) blur(2px);
             transform: scale(1.1);
@@ -126,9 +131,8 @@
                 <div class="card" style="%aspect%">
                     <div id="image" style="background-image: url('%url%');"></div>
                     <div id="controls">
-                        <a href="%url%" download="download">Download</a>
                         <img src="res/expand.svg">
-                        <img src="res/download.svg">
+                        <a href="%url%" download="download"><img src="res/download.svg"></a>
                     </div>
                 </div>
             `;
