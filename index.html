@@ -140,6 +140,10 @@
             requestAnimationFrame(updateTrailer);
         }
 
+        function closeLightbox() {
+            alert("no");
+        }
+
         function start() {
             trailer = document.getElementById("trailer");
             requestAnimationFrame(updateTrailer);
@@ -148,7 +152,9 @@
 </head>
 <body onload="start();">
 
-    <div id="lightbox" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5);"></div>
+    <div onclick="closeLightbox();" id="lightbox" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 100;">
+        <img style="left: 50%; top: 50%; transform: translate(-50%, -50%);" src="img/002003.7cf93a7b.906616746.png">
+    </div>
     
     <div id="trailer"></div>
 
