@@ -34,6 +34,7 @@
             padding: 10px;
             transition-duration: 0.2s;
             position: relative;
+            will-change: transform; /* for rounded corners + overflow hidden + transition */
         }
 
         .card #image {
@@ -48,9 +49,17 @@
             bottom: 0;
         }
 
+        .card #controls {
+            display: none;
+        }
+
         .card:hover #image {
             filter: brightness(50%) blur(2px);
             transform: scale(1.1);
+        }
+
+        .card:hover #controls {
+            display: block;
         }
     </style>
     <script>
@@ -113,7 +122,9 @@
             const template = `
                 <div class="card" style="%aspect%">
                     <div id="image" style="background-image: url('%url%');"></div>
-                    <a href="%url%" download="download">Download</a>
+                    <div id="controls">
+                        <a href="%url%" download="download">Download</a>
+                    </div>
                 </div>
             `;
             const img = document.createElement('img');
