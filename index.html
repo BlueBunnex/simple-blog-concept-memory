@@ -197,7 +197,7 @@
             
             <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
             ·
-            <a>13 total images</a>
+            <a id="total"></a>
         </div>
         
         <script>
@@ -216,6 +216,8 @@
                 "img/000001.png",
                 "img/000000.png"
             ];
+
+            document.getElementById("total").innerHTML = imageList.length + " total images";
             
             const template = `
                 <div class="card" style="%aspect%">
