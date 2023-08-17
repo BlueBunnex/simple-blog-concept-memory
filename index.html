@@ -36,6 +36,11 @@
             max-height: 95vh;
         }
 
+        @keyframes trailer-spin {
+            from { transform: rotate(0deg) scaleY(1.2); }
+            to { transform: rotate(360deg) scaleY(1.2); }
+        }
+
         #trailer {
             width: 400px;
             aspect-ratio: 1;
@@ -46,6 +51,10 @@
             left: 0;
             z-index: -1;
             filter: blur(160px);
+
+            animation-name: trailer-spin;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
         }
 
         #description {
