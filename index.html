@@ -70,20 +70,23 @@
         
         <script>
             const imageList = [
-                "img/000000.png",
-                "img/000001.png",
-                "img/001866.c3a846ae.2624838716.png",
-                "img/001886.475747bb.339805751.png",
-                "img/001962.85d518be.3741994020.png",
-                "img/001999.d82c604e.938713496.png",
+                "img/002006.22c567a5.1382344067.png",
                 "img/002003.7cf93a7b.906616746.png",
-                "img/002006.22c567a5.1382344067.png"
+                "img/001999.d82c604e.938713496.png",
+                "img/001962.85d518be.3741994020.png",
+                "img/001886.475747bb.339805751.png",
+                "img/001866.c3a846ae.2624838716.png",
+                "img/000001.png",
+                "img/000000.png"
             ];
             
             const template = `
                 <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
             `;
+            
             const img = document.createElement('img');
+            img.style.display = "none";
+            document.appendChild(img);
 
             function insert(src) {
                 let construct = template;
