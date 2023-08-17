@@ -53,6 +53,7 @@
             display: none;
             padding: 10px;
             grid-template-columns: auto auto;
+            gap: 16px;
 
             position: absolute;
             top: calc(50% - 80px);
@@ -68,7 +69,7 @@
         }
 
         .card #controls img {
-            width: 80px;
+            width: 72px;
             filter: invert(100%);
             position: absolute;
             top: 50%;
@@ -156,7 +157,7 @@
                         <a href="%url%"><img src="res/expand.svg"></a>
 
                         <!-- https://www.svgrepo.com/svg/470804/documents -->
-                        <a href="javascript:navigator.clipboard.writeText("%url%");"><img src="res/copy.svg"></a>
+                        <a href="javascript:navigator.clipboard.writeText('%url%');"><img src="res/copy.svg"></a>
 
                         <!-- https://www.svgrepo.com/svg/470808/download-alt -->
                         <a href="%url%" download="download"><img src="res/download.svg"></a>
