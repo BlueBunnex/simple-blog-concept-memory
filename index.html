@@ -120,7 +120,8 @@
         }
     </style>
     <script>
-        var trailer, x, y;
+        var lightbox, trailer;
+        var x, y;
 
         window.onmousemove = e => {
             x = e.clientX - trailer.offsetWidth / 2;
@@ -141,10 +142,11 @@
         }
 
         function closeLightbox() {
-            alert("no");
+            lightbox.style.display = "none";
         }
 
         function start() {
+            lightbox = document.getElementById("lightbox");
             trailer = document.getElementById("trailer");
             requestAnimationFrame(updateTrailer);
         }
@@ -152,8 +154,8 @@
 </head>
 <body onload="start();">
 
-    <div onclick="closeLightbox();" id="lightbox" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 100;">
-        <img style="left: 50%; top: 50%; transform: translate(-50%, -50%);" src="img/002003.7cf93a7b.906616746.png">
+    <div id="lightbox" onclick="closeLightbox();" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 100;">
+        <img style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" src="img/002003.7cf93a7b.906616746.png">
     </div>
     
     <div id="trailer"></div>
