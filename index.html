@@ -36,7 +36,12 @@
             will-change: transform; /* for rounded corners + overflow hidden + transition */
         }
 
-        .card #image, .card #controls {
+        .card #image {
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            transition-duration: inherit;
+
             position: absolute;
             top: 0;
             left: 0;
@@ -44,17 +49,16 @@
             bottom: 0;
         }
 
-        .card #image {
-            background-color: black;
-            background-size: cover;
-            background-position: center;
-            transition-duration: inherit;
-        }
-
         .card #controls {
             display: none;
             padding: 10px;
             grid-template-columns: auto;
+
+            position: absolute;
+            top: calc(50% - 80px);
+            left: calc(50% - 40px);
+            right: calc(50% - 40px);
+            bottom: calc(50% - 80px);
         }
         
         .card #controls a {
@@ -70,9 +74,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition-duration: inherit;
         }
 
-        .card #controls img:hover {
+        .card #controls a:hover img {
             filter: invert(50%);
         }
 
