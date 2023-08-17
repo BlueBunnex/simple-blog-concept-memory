@@ -243,7 +243,7 @@
             
             <a id="bluesky" href="https://bsky.app/profile/dogmomai.top">Open Bluesky</a>
             ·
-            <a style="color: #ffc0a0;">Reoccurring Characters (coming soon!)</a>
+            <a style="color: #ffb090;">Reoccurring Characters (coming soon!)</a>
             ·
             <a id="total"></a>
         </div>
@@ -304,7 +304,8 @@
                 if (img.naturalWidth > img.naturalHeight) {
                     construct = construct.replace("%aspect%", "grid-column: span 2;");
                 } else {
-                    if (Math.random() > 0.9) {
+                    // randomly make some images double the size
+                    if (Math.random() > 0.8) {
                         construct = construct.replace("%aspect%", "aspect-ratio: 0.8333; grid-column: span 2; grid-row: span 2;");
                     } else {
                         construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
