@@ -16,6 +16,24 @@
             overflow-x: hidden;
         }
 
+        #lightbox {
+            display: none; /* by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        #lightbox img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         #trailer {
             width: 300px;
             aspect-ratio: 1;
@@ -141,6 +159,11 @@
             requestAnimationFrame(updateTrailer);
         }
 
+        function openLightbox(src) {
+            lightbox.style.display = "block";
+            lightbox.getElementsByTagName("img").src = src;
+        }
+
         function closeLightbox() {
             lightbox.style.display = "none";
         }
@@ -154,8 +177,8 @@
 </head>
 <body onload="start();">
 
-    <div id="lightbox" onclick="closeLightbox();" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 100;">
-        <img style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" src="img/002003.7cf93a7b.906616746.png">
+    <div id="lightbox" onclick="closeLightbox();">
+        <img src="img/002003.7cf93a7b.906616746.png">
     </div>
     
     <div id="trailer"></div>
@@ -195,7 +218,7 @@
                     <div id="controls">
                     
                         <!-- https://www.svgrepo.com/svg/470814/expand -->
-                        <a href="%url%"><img src="res/expand.svg"></a>
+                        <a href="javascript:openLightbox('%url%')"><img src="res/expand.svg"></a>
 
                         <!-- https://www.svgrepo.com/svg/470804/documents -->
                         <!-- make sure to update url -->
