@@ -94,7 +94,9 @@
             ];
             
             const template = `
-                <div class="card" style="%aspect% background-image: url('%url%');" href="%url%" download="download"></div>
+                <div class="card" style="%aspect% background-image: url('%url%');">
+                    <a href="%url%" download="download">Download</a>
+                </div>
             `;
             const img = document.createElement('img');
 
