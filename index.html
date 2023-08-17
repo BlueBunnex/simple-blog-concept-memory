@@ -20,12 +20,20 @@
             display: inline-block;
             padding: 6px 10px;
             border-radius: 4px;
-            background: linear-gradient(-210deg, #42c9ee, #1b29cf);
+            background: linear-gradient(-210deg, #3b73b0, #1b29cf);
             color: white;
             font-weight: 900;
             font-style: italic;
             text-decoration: none;
             margin: 10px 0;
+        }
+
+        .card {
+            border-radius: 10px;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
         }
     </style>
     <script>
@@ -86,7 +94,7 @@
             ];
             
             const template = `
-                <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
+                <div class="card" style="%aspect% background-image: url('%url%');" href="%url%" download="download"></div>
             `;
             const img = document.createElement('img');
 
