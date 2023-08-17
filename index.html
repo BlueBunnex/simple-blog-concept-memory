@@ -73,6 +73,11 @@
     
         <div style="width: calc(100vw - 400px); display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
             <script>
+                const imageList = [
+                    "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589",
+                    "https://media.discordapp.net/attachments/1139934626241060894/1141054303734337627/SPOILER_view.png?width=1215&height=506"
+                ];
+                
                 const template = `
                     <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
                 `;
@@ -94,9 +99,8 @@
                     document.write(construct);
                 }
     
-                for (let i=0; i<100; i++) {
-                    insert("https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589");
-                    insert("https://media.discordapp.net/attachments/1139934626241060894/1141054303734337627/SPOILER_view.png?width=1215&height=506");
+                for (const imageSrc of imageList) {
+                    insert(imageSrc);
                 }
             </script>
         </div>
