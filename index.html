@@ -181,8 +181,24 @@
             lightbox.style.display = "none";
         }
 
-        function toggleLock() {
-            window.close();
+        function setShow(value) {
+            const d = new Date();
+
+            if (value) {
+                d.setTime(d.getTime() + (7*24*60*60*1000));
+            else {
+                d.setTime(d.getTime() - 999);
+            }
+            
+            document.cookie = "enable=set;expires=" + d.toUTCString() + ";path=/";
+            location.reload();
+        }
+
+        function lockdown() {
+            document.getElementById("card-container").style.display = "none";
+            document.getElementById("lockdown-text").style.display = "block";
+
+            setShow(false);
         }
 
         function start() {
@@ -202,6 +218,8 @@
     </div>
     
     <div id="trailer"></div>
+
+    <div id="lockdown-text" style="color: white; font-size: 40px; display: none; text-align: center;">Cool Mouse Effect Online!</div>
 
     <div id="card-container">
         
@@ -253,7 +271,7 @@
                         <a href="%url%" download="download"><img src="res/download.svg"></a>
 
                         <!-- https://www.svgrepo.com/svg/311440/warning -->
-                        <a href="javascript:toggleLock();"><img src="res/lock.svg"></a>
+                        <a href="javascript:lockdown();"><img src="res/lock.svg"></a>
                         
                     </div>
                 </div>
@@ -280,13 +298,6 @@
                 document.write(construct);
             }
 
-            function enableShow() {
-                const d = new Date();
-                d.setTime(d.getTime() + (7*24*60*60*1000));
-                document.cookie = "enable=set;expires=" + d.toUTCString() + ";path=/";
-                location.reload();
-            }
-
             if (decodeURIComponent(document.cookie).includes("enable=set")) {
                 for (const imageSrc of imageList) {
                     insert(imageSrc);
@@ -299,7 +310,7 @@
                         <br><br>
                         Additionally, if you know me... don't click the button below.
                         <br><br>
-                        <button type="button" onclick="enableShow();">I understand</button>
+                        <button type="button" onclick="setShow(true);">I understand</button>
                     </div>
                 `);
             }
