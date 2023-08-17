@@ -31,7 +31,6 @@
         .card {
             border-radius: 10px;
             overflow: hidden;
-            transition-duration: 0.2s;
             position: relative;
             will-change: transform; /* for rounded corners + overflow hidden + transition */
         }
@@ -40,7 +39,8 @@
             background-color: black;
             background-size: cover;
             background-position: center;
-            transition-duration: inherit;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 
             position: absolute;
             top: 0;
