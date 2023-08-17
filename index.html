@@ -52,7 +52,7 @@
         .card #controls {
             display: none;
             padding: 10px;
-            grid-template-columns: auto;
+            grid-template-columns: auto auto;
 
             position: absolute;
             top: calc(50% - 80px);
@@ -151,8 +151,16 @@
                 <div class="card" style="%aspect%">
                     <div id="image" style="background-image: url('%url%');"></div>
                     <div id="controls">
+                    
+                        /* https://www.svgrepo.com/svg/470814/expand */
                         <a href="%url%"><img src="res/expand.svg"></a>
+
+                        /* https://www.svgrepo.com/svg/470804/documents */
+                        <a href="javascript:navigator.clipboard.writeText("%url%");"><img src="res/copy.svg"></a>
+
+                        /* https://www.svgrepo.com/svg/470808/download-alt */
                         <a href="%url%" download="download"><img src="res/download.svg"></a>
+                        
                     </div>
                 </div>
             `;
