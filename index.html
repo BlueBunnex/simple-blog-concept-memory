@@ -54,50 +54,52 @@
         }
     </script>
 </head>
-<body onload="start();" style="display: flex;">
+<body onload="start();">
 
     <div id="trailer" style="width: 300px; aspect-ratio: 1; background: #ed55bb; border-radius: 100%; position: absolute; top: 0; left: 0; z-index: -1; filter: blur(100px) opacity(50%);"></div>
 
     <!-- cookies for "I understand" -->
 
-    <div style="flex: 1;">
-        <h1 style="margin: 0;">dogmom</h1>
-    
-        <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting donations (of more art).</p>
-        <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free--and encouraged--to download any art that you like.</p>
+    <div style="display: flex;">
+        <div style="flex: 0 0 400px; padding: 10px; box-sizing: border-box;">
+            <h1 style="margin: 0;">dogmom</h1>
         
-        <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
-        <br><br><br>
-    </div>
-
-    <div style="flex: 6; display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
-        <script>
-            const template = `
-                <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
-            `;
-            const img = document.createElement('img');
-
-            function insert(src) {
-                let construct = template;
-                
-                img.src = src;
-                
-                construct = construct.replace(/%url%/g, src);
-
-                if (img.naturalWidth > img.naturalHeight) {
-                    construct = construct.replace("%aspect%", "aspect-ratio: 1.6666; grid-column: span 2;");
-                } else {
-                    construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
+            <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting donations (of more art).</p>
+            <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free--and encouraged--to download any art that you like.</p>
+            
+            <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
+            <br><br><br>
+        </div>
+    
+        <div style="flex: 1; display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
+            <script>
+                const template = `
+                    <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
+                `;
+                const img = document.createElement('img');
+    
+                function insert(src) {
+                    let construct = template;
+                    
+                    img.src = src;
+                    
+                    construct = construct.replace(/%url%/g, src);
+    
+                    if (img.naturalWidth > img.naturalHeight) {
+                        construct = construct.replace("%aspect%", "aspect-ratio: 1.6666; grid-column: span 2;");
+                    } else {
+                        construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
+                    }
+                    
+                    document.write(construct);
                 }
-                
-                document.write(construct);
-            }
-
-            for (let i=0; i<100; i++) {
-                insert("https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589");
-                insert("https://media.discordapp.net/attachments/1139934626241060894/1141054303734337627/SPOILER_view.png?width=1215&height=506");
-            }
-        </script>
+    
+                for (let i=0; i<100; i++) {
+                    insert("https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589");
+                    insert("https://media.discordapp.net/attachments/1139934626241060894/1141054303734337627/SPOILER_view.png?width=1215&height=506");
+                }
+            </script>
+        </div>
     </div>
   
 </body>
