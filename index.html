@@ -61,7 +61,7 @@
 
     <div style="display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
         
-        <div style="grid-column: span 3; padding: 18px; box-sizing: border-box;">
+        <div id="textig" style="grid-column: span 3; padding: 18px; box-sizing: border-box;">
             <h1 style="margin: 0;">dogmom</h1>
             <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting donations (of more art).</p>
             <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free--and encouraged--to download any art that you like.</p>
@@ -99,7 +99,7 @@
                 const d = new Date();
                 d.setTime(d.getTime() + (7*24*60*60*1000));
                 document.cookie = "enable=set;expires=" + d.toUTCString() + ";path=/";
-                document.location.href = "index.html";
+                location.reload();
             }
 
             if (decodeURIComponent(document.cookie).includes("enable=set")) {
@@ -107,7 +107,7 @@
                     insert(imageSrc);
                 }
             } else {
-                document.write(`
+                document.getElementById("textig").innerHTML += (`
                     <div>
                         <p>This site contains suggestive content not intended for people under the age of eighteen.</p>
                         <button type="button" onclick="enableShow()">I understand</button>
