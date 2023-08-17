@@ -36,9 +36,10 @@
             max-height: 95vh;
         }
 
-        @keyframes trailer-spin {
-            from { width: 400px; }
-            to { width: 300px; }
+        @keyframes trailer-oscillate {
+            0%   { width: 400px; }
+            50%  { width: 300px; }
+            100% { width: 400px; }
         }
 
         #trailer {
