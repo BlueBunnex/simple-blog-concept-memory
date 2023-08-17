@@ -30,11 +30,21 @@
 
         .card {
             border-radius: 10px;
+            overflow: hidden;
+            padding: 10px;
+            transition-duration: 0.5s;
+        }
+
+        .card #image {
             background-color: black;
             background-size: cover;
             background-position: center;
-            cursor: pointer;
-            padding: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card:hover #image {
+            filter: brightness(50%);
         }
     </style>
     <script>
@@ -95,7 +105,8 @@
             ];
             
             const template = `
-                <div class="card" style="%aspect% background-image: url('%url%');">
+                <div class="card" style="%aspect%">
+                    <div id="image" style="background-image: url('%url%');"></div>
                     <a href="%url%" download="download">Download</a>
                 </div>
             `;
@@ -109,7 +120,7 @@
                 construct = construct.replace(/%url%/g, src);
 
                 if (img.naturalWidth > img.naturalHeight) {
-                    construct = construct.replace("%aspect%", "aspect-ratio: 1.6666; grid-column: span 2;");
+                    construct = construct.replace("%aspect%", "grid-column: span 2;");
                 } else {
                     construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
                 }
