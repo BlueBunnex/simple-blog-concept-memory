@@ -58,66 +58,65 @@
 
     <div id="trailer" style="width: 300px; aspect-ratio: 1; background: #ed55bb; border-radius: 100%; position: absolute; top: 0; left: 0; z-index: -1; filter: blur(100px) opacity(50%);"></div>
 
-    <div style="display: flex; width: 100%;">
-        <div style="flex: 0 0 400px; padding: 10px; box-sizing: border-box;">
+    <div style="width: calc(100vw - 400px); display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
+        
+        <div style="grid-column: span 3; padding: 10px; box-sizing: border-box;">
             <h1 style="margin: 0;">dogmom</h1>
         
             <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting donations (of more art).</p>
             <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free--and encouraged--to download any art that you like.</p>
             
             <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
-            <br><br><br>
         </div>
-    
-        <div style="width: calc(100vw - 400px); display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
-            <script>
-                const imageList = [
-                    "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589",
-                    "https://media.discordapp.net/attachments/1139934626241060894/1141054303734337627/SPOILER_view.png?width=1215&height=506"
-                ];
+        
+        <script>
+            const imageList = [
+                "https://media.discordapp.net/attachments/1139934626241060894/1141452754502565940/SPOILER_ComfyUI_00167_.png?width=589&height=589",
+                "https://media.discordapp.net/attachments/1139934626241060894/1141054303734337627/SPOILER_view.png?width=1215&height=506"
+            ];
+            
+            const template = `
+                <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
+            `;
+            const img = document.createElement('img');
+
+            function insert(src) {
+                let construct = template;
                 
-                const template = `
-                    <div style="%aspect% border-radius: 10px; background-color: black; background-image: url('%url%'); background-size: cover; background-position: center;"></div>
-                `;
-                const img = document.createElement('img');
-    
-                function insert(src) {
-                    let construct = template;
-                    
-                    img.src = src;
-                    
-                    construct = construct.replace(/%url%/g, src);
-    
-                    if (img.naturalWidth > img.naturalHeight) {
-                        construct = construct.replace("%aspect%", "aspect-ratio: 1.6666; grid-column: span 2;");
-                    } else {
-                        construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
-                    }
-                    
-                    document.write(construct);
-                }
+                img.src = src;
+                
+                construct = construct.replace(/%url%/g, src);
 
-                function enableShow() {
-                    const d = new Date();
-                    d.setTime(d.getTime() + (7*24*60*60*1000));
-                    document.cookie = "enable=set;expires=" + d.toUTCString() + ";path=/";
-                    location.reload();
-                }
-
-                if (decodeURIComponent(document.cookie).includes("enable=set")) {
-                    for (const imageSrc of imageList) {
-                        insert(imageSrc);
-                    }
+                if (img.naturalWidth > img.naturalHeight) {
+                    construct = construct.replace("%aspect%", "aspect-ratio: 1.6666; grid-column: span 2;");
                 } else {
-                    document.write(`
-                        <div>
-                            <p>This site contains suggestive content not intended for people under the age of eighteen.</p>
-                            <button type="button" onclick="enableShow()">I understand</button>
-                        </div>
-                    `);
+                    construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
                 }
-            </script>
-        </div>
+                
+                document.write(construct);
+            }
+
+            function enableShow() {
+                const d = new Date();
+                d.setTime(d.getTime() + (7*24*60*60*1000));
+                document.cookie = "enable=set;expires=" + d.toUTCString() + ";path=/";
+                location.reload();
+            }
+
+            if (decodeURIComponent(document.cookie).includes("enable=set")) {
+                for (const imageSrc of imageList) {
+                    insert(imageSrc);
+                }
+            } else {
+                document.write(`
+                    <div>
+                        <p>This site contains suggestive content not intended for people under the age of eighteen.</p>
+                        <button type="button" onclick="enableShow()">I understand</button>
+                    </div>
+                `);
+            }
+        </script>
+        
     </div>
   
 </body>
