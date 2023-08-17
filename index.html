@@ -43,17 +43,18 @@
         }
 
         #trailer {
-            aspect-ratio: 1;
             background: #dbd2c1; /* #ed55bb */
             border-radius: 100%;
+            aspect-ratio: 1;
+            filter: blur(160px);
+
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
-            filter: blur(160px);
 
-            animation-name: trailer-spin;
-            animation-duration: 7s;
+            animation-name: trailer-oscillate;
+            animation-duration: 6s;
             animation-iteration-count: infinite;
         }
 
