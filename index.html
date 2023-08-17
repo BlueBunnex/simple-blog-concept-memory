@@ -246,7 +246,11 @@
                 if (img.naturalWidth > img.naturalHeight) {
                     construct = construct.replace("%aspect%", "grid-column: span 2;");
                 } else {
-                    construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
+                    if (Math.random() > 0.9) {
+                        construct = construct.replace("%aspect%", "aspect-ratio: 0.8333; grid-column: span 2; grid-row: span 2;");
+                    } else {
+                        construct = construct.replace("%aspect%", "aspect-ratio: 0.8333;");
+                    }
                 }
                 
                 document.write(construct);
