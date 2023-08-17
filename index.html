@@ -16,6 +16,18 @@
             overflow-x: hidden;
         }
 
+        #trailer {
+            width: 300px;
+            aspect-ratio: 1;
+            background: #ed55bb;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: blur(100px) opacity(50%);
+        }
+
         #bluesky {
             display: inline-block;
             padding: 6px 10px;
@@ -26,6 +38,19 @@
             font-style: italic;
             text-decoration: none;
             margin: 10px 0;
+        }
+
+        #description {
+            grid-column: span 3;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        #card-container {
+            display: grid;
+            gap: 6px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-auto-flow: dense;
         }
 
         .card {
@@ -120,11 +145,11 @@
 </head>
 <body onload="start();">
 
-    <div id="trailer" style="width: 300px; aspect-ratio: 1; background: #ed55bb; border-radius: 100%; position: absolute; top: 0; left: 0; z-index: -1; filter: blur(100px) opacity(50%);"></div>
+    <div id="trailer"></div>
 
-    <div style="display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-flow: dense;">
+    <div id="card-container">
         
-        <div id="textig" style="grid-column: span 3; padding: 12px; box-sizing: border-box;">
+        <div id="description">
             <h1 style="margin: 0;">dogmom</h1>
             <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting donations (of more art).</p>
             <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free--and encouraged--to download any art that you like.</p>
@@ -196,7 +221,7 @@
                     insert(imageSrc);
                 }
             } else {
-                document.getElementById("textig").innerHTML += (`
+                document.getElementById("description").innerHTML += (`
                     <br><br>
                     <div style="max-width: 600px; border: 2px solid red; border-radius: 10px; padding: 10px;">
                         This site contains suggestive content not intended for people under the age of eighteen. Only press the button below if you consent to, and are legally allowed to, view such imagery.
