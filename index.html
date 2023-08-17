@@ -28,22 +28,17 @@
             filter: blur(100px) opacity(50%);
         }
 
-        #bluesky {
-            display: inline-block;
-            padding: 6px 10px;
-            border-radius: 4px;
-            background: linear-gradient(-210deg, #5b73e0, #1b29cf);
-            color: white;
-            font-weight: 900;
-            font-style: italic;
-            text-decoration: none;
-            margin: 10px 0;
-        }
-
         #description {
             grid-column: span 3;
             padding: 12px;
             box-sizing: border-box;
+        }
+
+        #description a {
+            font-weight: 900;
+            font-style: italic;
+            text-decoration: none;
+            color: white;
         }
 
         #card-container {
@@ -155,7 +150,10 @@
             <h1 style="margin: 0;">dogmom</h1>
             <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting donations (of more art).</p>
             <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free—and encouraged—to download any art that you like.</p>
-            <a id="bluesky" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
+            
+            <a style="background: -webkit-linear-gradient(#5b73e0, #1b29cf); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" href="https://bsky.app/profile/dogmom.bsky.social">Open Bluesky</a>
+            ·
+            <a>13 total images</a>
         </div>
         
         <script>
