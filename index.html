@@ -99,7 +99,7 @@
                 const d = new Date();
                 d.setTime(d.getTime() + (7*24*60*60*1000));
                 document.cookie = "enable=set;expires=" + d.toUTCString() + ";path=/";
-                location.reload();
+                document.location.href = "index.html";
             }
 
             if (decodeURIComponent(document.cookie).includes("enable=set")) {
