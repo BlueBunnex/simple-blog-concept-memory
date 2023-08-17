@@ -181,6 +181,10 @@
             lightbox.style.display = "none";
         }
 
+        function toggleLock() {
+            window.close();
+        }
+
         function start() {
             lightbox = document.getElementById("lightbox");
             lightboxImg = lightbox.getElementsByTagName("img")[0];
@@ -249,7 +253,7 @@
                         <a href="%url%" download="download"><img src="res/download.svg"></a>
 
                         <!-- https://www.svgrepo.com/svg/311440/warning -->
-                        <a><img src="res/warning.svg"></a>
+                        <a href="javascript:toggleLock();"><img src="res/lock.svg"></a>
                         
                     </div>
                 </div>
