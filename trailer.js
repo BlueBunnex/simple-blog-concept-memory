@@ -19,7 +19,7 @@ function updateTrailer() {
     requestAnimationFrame(updateTrailer);
 }
 
-document.body.onload = e => {
+document.body.onload += e => {
     trailer = document.createElement("div");
     trailer.id = "trailer";
     document.body.appendChild(trailer);
