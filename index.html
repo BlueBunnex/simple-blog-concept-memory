@@ -148,8 +148,7 @@
         }
 
         function lockdown() {
-            document.getElementById("card-container").style.display = "none";
-            document.getElementById("lockdown-container").style.display = "block";
+            window.location.href = "lockdown.html";
         }
 
         function start() {
@@ -166,26 +165,10 @@
         <img src="img/002003.7cf93a7b.906616746.png">
     </div>
 
-    <div id="lockdown-container" style="color: white; font-size: 4rem; display: none; text-align: center;">
-        Grape Clicker
-        <div id="grape-counter" style="font-size: 2rem;">420 grapes clicked</div>
-        <img onclick="clickGrape();" src="res/grapes.png" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: pointer; width: 500px;">
-        
-        <script>
-            const counter = document.getElementById("grape-counter");
-            var clicks = 420; // start at not zero to seem like you've been on the site for a while
-            
-            function clickGrape() {
-                clicks++;
-                counter.innerHTML = clicks + " grapes clicked";
-            }
-        </script>
-    </div>
-
     <div id="card-container">
         
         <div id="description">
-            <h1 style="margin: 0;">dogmom</h1>
+            <h1>dogmom</h1>
             <p>This website is dedicated to displaying a hand curated selection of quality AI NSFW art. Accepting submissions—just reply to me on bluesky.</p>
             <p>Due to statements by the U.S. Copyright Office (USCO), none of the art on this site is protected under copyright law. Which I mean, I don't really care, but also means that you are free—and encouraged—to download any art that you like.</p>
             
