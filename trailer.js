@@ -19,10 +19,10 @@ function updateTrailer() {
     requestAnimationFrame(updateTrailer);
 }
 
-document.body.onload += e => {
+window.addEventListener('load', e => {
     trailer = document.createElement("div");
     trailer.id = "trailer";
     document.body.appendChild(trailer);
 
     requestAnimationFrame(updateTrailer);
-};
+});
