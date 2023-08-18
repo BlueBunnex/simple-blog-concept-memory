@@ -6,6 +6,8 @@
     color: white;
 }
 
+h1 { margin: 0; }
+
 @keyframes trailer-oscillate {
     0%   { width: 300px; }
     50%  { width: 250px; }
