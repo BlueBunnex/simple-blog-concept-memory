@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="base.css">
+    <script src="trailer.js"></script>
     <style>
         body {
             padding: 0;
@@ -123,26 +124,7 @@
         }
     </style>
     <script>
-        var lightbox, lightboxImg, trailer;
-        var x, y;
-
-        window.onmousemove = e => {
-            x = e.clientX - trailer.offsetWidth / 2;
-            y = e.clientY - trailer.offsetHeight / 2;
-        }
-
-        function updateTrailer() {
-            const keyframes = {
-                transform: `translate(${x}px, ${y}px)`
-            };
-
-            trailer.animate(keyframes, {
-                duration: 400,
-                fill: "forwards"
-            });
-
-            requestAnimationFrame(updateTrailer);
-        }
+        var lightbox, lightboxImg;
 
         function openLightbox(src) {
             lightbox.style.display = "block";
@@ -174,10 +156,6 @@
         function start() {
             lightbox = document.getElementById("lightbox");
             lightboxImg = lightbox.getElementsByTagName("img")[0];
-            
-            trailer = document.getElementById("trailer");
-            
-            requestAnimationFrame(updateTrailer);
         }
     </script>
 </head>
@@ -186,8 +164,6 @@
     <div id="lightbox" onclick="closeLightbox();">
         <img src="img/002003.7cf93a7b.906616746.png">
     </div>
-    
-    <div id="trailer"></div>
 
     <div id="lockdown-container" style="color: white; font-size: 4rem; display: none; text-align: center;">
         Grape Clicker
