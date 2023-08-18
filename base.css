@@ -5,3 +5,25 @@
     background: black;
     color: white;
 }
+
+@keyframes trailer-oscillate {
+    0%   { width: 300px; }
+    50%  { width: 250px; }
+    100% { width: 300px; }
+}
+
+#trailer {
+    background: #dbd2c1; /* #ed55bb */
+    border-radius: 100%;
+    aspect-ratio: 1;
+    filter: blur(160px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation-name: trailer-oscillate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
