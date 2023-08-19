@@ -21,12 +21,7 @@ function updateTrailer() {
 
 window.addEventListener('load', e => {
     trailerContainer = document.createElement("div");
-    trailerContainer.style.position = "absolute";
-    trailerContainer.style.top = "0";
-    trailerContainer.style.left = "0";
-    trailerContainer.style.right = "0";
-    trailerContainer.style.bottom = "0";
-    trailerContainer.style.overflow = "hidden";
+    trailer.id = "trailer-container";
     document.body.appendChild(trailerContainer);
     
     trailer = document.createElement("div");
