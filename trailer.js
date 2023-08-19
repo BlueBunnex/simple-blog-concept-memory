@@ -24,11 +24,11 @@ window.addEventListener('load', e => {
     trailer.id = "trailer";
     trailerContainer.appendChild(trailer);
 
-    // begin following mouse movements (should really append to event, but w/e)
-    window.onmousemove = o => {
+    // begin following mouse movements
+    window.addEventListener('mousemove', o => {
         x = o.clientX - trailer.offsetWidth / 2;
         y = o.clientY - trailer.offsetHeight / 2;
-    }
+    });
 
     requestAnimationFrame(updateTrailer);
 });
