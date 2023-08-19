@@ -23,6 +23,18 @@
 
         .character * { position: relative; }
 
+        .character #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url('img/002077.61eb0927.4242745261.png');
+        }
+
         .character p {
             background: rgba(0, 0, 0, 0.7);
             padding: 6px;
@@ -35,14 +47,14 @@
     <script src="trailer.js"></script>
 
     <div class="character">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url('img/002077.61eb0927.4242745261.png');"></div>
+        <div id="background"></div>
         
         <h1>Castella Deschamps</h1>
         <span class="chip">cow</span>
         <span class="chip">maid</span>
         <span class="chip">green</span>
         
-        <p>She sleeps for 16 hours a day, eats like a machine, and requires milking at least once a week.</p>
+        <p>She sleeps for 16 hours a day, eats like a machine, and requires milking at least once a week. She works in a quiet cafe that serves coffee with... well, I think you know what.</p>
     </div>
   
 </body>
