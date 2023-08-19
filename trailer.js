@@ -24,9 +24,9 @@ window.addEventListener('load', e => {
     trailer.id = "trailer";
     trailerContainer.appendChild(trailer);
 
-    window.onmousemove = e => {
-        x = e.clientX - trailer.offsetWidth / 2;
-        y = e.clientY - trailer.offsetHeight / 2;
+    window.onmousemove = o => {
+        x = o.clientX - trailer.offsetWidth / 2;
+        y = o.clientY - trailer.offsetHeight / 2;
     }
 
     requestAnimationFrame(updateTrailer);
