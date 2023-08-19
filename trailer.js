@@ -20,9 +20,18 @@ function updateTrailer() {
 }
 
 window.addEventListener('load', e => {
+    trailerContainer = document.createElement("div");
+    trailerContainer.style.position = "absolute";
+    trailerContainer.style.top = "0";
+    trailerContainer.style.left = "0";
+    trailerContainer.style.right = "0";
+    trailerContainer.style.bottom = "0";
+    trailerContainer.style.overflow = "hidden";
+    document.body.appendChild(trailerContainer);
+    
     trailer = document.createElement("div");
     trailer.id = "trailer";
-    document.body.appendChild(trailer);
+    trailerContainer.appendChild(trailer);
 
     requestAnimationFrame(updateTrailer);
 });
