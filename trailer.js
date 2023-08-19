@@ -1,4 +1,4 @@
-var trailer;
+const trailer = document.createElement("div");
 var x, y = 0;
 
 function updateTrailer() {
@@ -14,12 +14,11 @@ function updateTrailer() {
     requestAnimationFrame(updateTrailer);
 }
 
-document.addEventListener('load', e => {
+document.addEventListener('onload', e => {
     let trailerContainer = document.createElement("div");
     trailerContainer.id = "trailer-container";
     document.body.appendChild(trailerContainer);
     
-    trailer = document.createElement("div");
     trailer.id = "trailer";
     trailerContainer.appendChild(trailer);
 
