@@ -67,7 +67,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="loadCharacter(0);">
 
     <script src="trailer.js"></script>
 
@@ -85,15 +85,14 @@
         </div>
         
         <div id="character">
-            <div id="background" style="background-image: url('img/002077.61eb0927.4242745261.png');"></div>
+            <div id="background"></div>
             <div id="text">
                 <h1>Castella Deschamps</h1>
                 <span class="chip">cow</span>
                 <span class="chip">maid</span>
                 <span class="chip">green</span>
-                
-                <p>She sleeps for 16 hours a day, eats like a machine, and requires milking at least once a week. She works in a quiet cafe that serves coffee with... well, I think you know what.</p>
-                <p>cow girl, maid, gigantic breasts, cleavage, grinning, green hair, green ribbon, twintails, horns</p>
+
+                <p></p>
             </div>
         </div>
 
@@ -102,20 +101,34 @@
             const characterData = [
                 {
                     'name': "Castella Deschamps",
-                    'img': "img/001866.c3a846ae.2624838716.png"
+                    'img': "img/001866.c3a846ae.2624838716.png",
+                    'chips': ["cow", "maid", "green", "French"],
+                    'paras': [
+                        "She sleeps for 16 hours a day, eats like a machine, and requires milking at least once a week. She works in a quiet cafe that serves coffee with... well, I think you know what.",
+                        "cow girl, maid, gigantic breasts, cleavage, grinning, green hair, green ribbon, twintails, horns"
+                    ]
                 },
                 {
                     'name': "Penelope Rose",
-                    'img': "img/001866.c3a846ae.2624838716.png"
+                    'img': "img/001866.c3a846ae.2624838716.png",
+                    'chips': ["pink", "American"],
+                    'paras': []
                 },
                 {
-                    'name': "Clementine Helena da Silva Lima", // Brazilian
-                    'img': ""
+                    'name': "Clementine Helena da Silva Lima",
+                    'img': "",
+                    'chips': ["cat", "yellow", "Brazilian"],
+                    'paras': []
                 }
             ];
 
+            const background = getElementById("background");
+            const text = getElementById("text");
+
             function loadCharacter(index) {
                 alert(characterData[index]['name']);
+
+                background.style.backgroundImage = "url('" + characterData[index]['img'] + "');";
             }
             
         </script>
