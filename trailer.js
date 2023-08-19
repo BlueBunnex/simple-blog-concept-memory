@@ -1,5 +1,5 @@
 var trailer;
-var x, y = 0, 0;
+var x, y = 0;
 
 function updateTrailer() {
     const keyframes = {
