@@ -147,10 +147,6 @@
             location.reload();
         }
 
-        function lockdown() {
-            window.location.href = "lockdown.html";
-        }
-
         function start() {
             lightbox = document.getElementById("lightbox");
             lightboxImg = lightbox.getElementsByTagName("img")[0];
@@ -180,6 +176,7 @@
         </div>
         
         <script>
+            // prooobably make this externally managed at some point
             const imageList = [
                 "img/000005.png",
                 "img/000004.png",
@@ -221,7 +218,7 @@
                         <a href="%url%" download="download"><img src="res/download.svg"></a>
 
                         <!-- https://www.svgrepo.com/svg/311440/warning -->
-                        <a href="javascript:lockdown();"><img src="res/lock.svg"></a>
+                        <a href="lockdown.html"><img src="res/lock.svg"></a>
                         
                     </div>
                 </div>
