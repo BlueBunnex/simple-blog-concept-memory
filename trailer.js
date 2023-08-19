@@ -14,7 +14,9 @@ function updateTrailer() {
     requestAnimationFrame(updateTrailer);
 }
 
-document.addEventListener('onload', e => {
+window.addEventListener('load', e => {
+    console.log("loaded");
+    
     let trailerContainer = document.createElement("div");
     trailerContainer.id = "trailer-container";
     document.body.appendChild(trailerContainer);
