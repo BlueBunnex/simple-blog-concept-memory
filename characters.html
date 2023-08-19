@@ -38,6 +38,12 @@
             background: white;
         }
 
+        #controls a.selected {
+            border-left: 4px solid white;
+            padding-left: 4px;
+            transform: translateX(-8px);
+        }
+
         #character {
             flex: 1;
             overflow: hidden;
@@ -140,7 +146,16 @@
             const background = document.getElementById("background");
             const text = document.getElementById("text");
 
+            var currentlySelected = null;
+
             function loadCharacter(index) {
+                let newlySelected = document.getElementById("a_" + index);
+                
+                if (currentlySelected)
+                    currentlySelected.classList.remove('selected');
+                newlySelected.classList.add('selected');
+                currentlySelected = newlySelected;
+                
                 background.style.backgroundImage = "url('" + characterData[index]['img'] + "')";
 
                 text.innerHTML = "<h1>" + characterData[index]['name'] + "</h1>";
@@ -160,7 +175,7 @@
             let controls = document.getElementById('controls');
 
             for (a in characterData) {
-                controls.innerHTML += "<a href='javascript:loadCharacter(" + a + ");'>" + characterData[a]['name'] + "</a>";
+                controls.innerHTML += "<a id='a_" + a + "' href='javascript:loadCharacter(" + a + ");'>" + characterData[a]['name'] + "</a>";
             }
             
         </script>
