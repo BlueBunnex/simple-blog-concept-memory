@@ -121,14 +121,12 @@
             function loadCharacter(index) {
                 background.style.backgroundImage = "url('" + characterData[index]['img'] + "')";
 
-                text.innerHTML = `
-                    <h1>Castella Deschamps</h1>
-                    <span class="chip">cow</span>
-                    <span class="chip">maid</span>
-                    <span class="chip">green</span>
+                text.innerHTML = "<h1>" + characterData[index]['name'] + "</h1>";
+
+                // add chips
+                //<span class="chip">cow</span>
     
-                    <p></p>
-                `;
+                // add paras
             }
             
         </script>
