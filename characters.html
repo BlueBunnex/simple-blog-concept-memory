@@ -52,7 +52,7 @@
         }
 
         #character #text {
-            max-width: 500px;
+            max-width: 520px;
         }
 
         #character p {
@@ -127,13 +127,13 @@
                 text.innerHTML = "<h1>" + characterData[index]['name'] + "</h1>";
 
                 // add chips
-                for (variable in characterData[index]['chips']) {
-                    text.innerHTML += "<span class='chip'>" + variable + "</span>";
+                for (a in characterData[index]['chips']) {
+                    text.innerHTML += "<span class='chip' style='background: " + characterData[index]['color'] + ";'>" + characterData[index]['chips'][a] + "</span>";
                 }
     
                 // add paras
-                for (variable in characterData[index]['paras']) {
-                    text.innerHTML += "<p>" + variable + "</p>";
+                for (a in characterData[index]['paras']) {
+                    text.innerHTML += "<p>" + characterData[index]['paras'][a] + "</p>";
                 }
             }
             
