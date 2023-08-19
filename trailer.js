@@ -21,7 +21,7 @@ function updateTrailer() {
 
 window.addEventListener('load', e => {
     trailerContainer = document.createElement("div");
-    trailer.id = "trailer-container";
+    trailerContainer.id = "trailer-container";
     document.body.appendChild(trailerContainer);
     
     trailer = document.createElement("div");
