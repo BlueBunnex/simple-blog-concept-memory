@@ -86,14 +86,7 @@
         
         <div id="character">
             <div id="background"></div>
-            <div id="text">
-                <h1>Castella Deschamps</h1>
-                <span class="chip">cow</span>
-                <span class="chip">maid</span>
-                <span class="chip">green</span>
-
-                <p></p>
-            </div>
+            <div id="text"></div>
         </div>
 
         <script>
@@ -122,13 +115,20 @@
                 }
             ];
 
-            const background = getElementById("background");
-            const text = getElementById("text");
+            const background = document.getElementById("background");
+            const text = document.getElementById("text");
 
             function loadCharacter(index) {
-                alert(characterData[index]['name']);
-
                 background.style.backgroundImage = "url('" + characterData[index]['img'] + "');";
+
+                text.innerHTML = `
+                    <h1>Castella Deschamps</h1>
+                    <span class="chip">cow</span>
+                    <span class="chip">maid</span>
+                    <span class="chip">green</span>
+    
+                    <p></p>
+                `;
             }
             
         </script>
