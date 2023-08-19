@@ -27,12 +27,12 @@ window.addEventListener('load', e => {
     requestAnimationFrame(updateTrailer);
 });
 
-window.onmousemove = e => {
-     x = e.clientX - trailer.offsetWidth / 2;
-     y = e.clientY - trailer.offsetHeight / 2;
- }
+// window.onmousemove = e => {
+//      x = e.clientX - trailer.offsetWidth / 2;
+//      y = e.clientY - trailer.offsetHeight / 2;
+// }
 
-// document.addEventListener('onmousemove', e => {
-//     x = e.clientX - trailer.offsetWidth / 2;
-//     y = e.clientY - trailer.offsetHeight / 2;
-// });
+window.addEventListener('onmousemove', e => {
+    x = e.clientX - trailer.offsetWidth / 2;
+    y = e.clientY - trailer.offsetHeight / 2;
+});
