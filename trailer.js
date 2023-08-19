@@ -1,5 +1,5 @@
 var trailer;
-var x, y;
+var x, y = 0, 0;
 
 function updateTrailer() {
     const keyframes = {
@@ -15,7 +15,7 @@ function updateTrailer() {
 }
 
 document.addEventListener('load', e => {
-    trailerContainer = document.createElement("div");
+    let trailerContainer = document.createElement("div");
     trailerContainer.id = "trailer-container";
     document.body.appendChild(trailerContainer);
     
