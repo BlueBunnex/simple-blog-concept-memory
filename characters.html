@@ -7,7 +7,7 @@
         
         .chip {
             display: inline-block;
-            background: green;
+            background: grey;
             padding: 3px 10px 5px;
             border-radius: 20px;
             margin: 6px 0;
@@ -94,6 +94,7 @@
             const characterData = [
                 {
                     'name': "Castella Deschamps",
+                    'color': "green",
                     'img': "img/002077.61eb0927.4242745261.png",
                     'chips': ["cow", "maid", "green", "French"],
                     'paras': [
@@ -103,12 +104,14 @@
                 },
                 {
                     'name': "Penelope Rose",
+                    'color': "pink",
                     'img': "img/001866.c3a846ae.2624838716.png",
                     'chips': ["pink", "American"],
                     'paras': []
                 },
                 {
                     'name': "Clementine Helena da Silva Lima",
+                    'color': "yellow",
                     'img': "img/001827.60ec4050.4149302688.png",
                     'chips': ["cat", "yellow", "Brazilian"],
                     'paras': []
@@ -124,9 +127,14 @@
                 text.innerHTML = "<h1>" + characterData[index]['name'] + "</h1>";
 
                 // add chips
-                //<span class="chip">cow</span>
+                for (variable in characterData[index]['chips']) {
+                    text.innerHTML += "<span class='chip'>" + variable + "</span>";
+                }
     
                 // add paras
+                for (variable in characterData[index]['paras']) {
+                    text.innerHTML += "<p>" + variable + "</p>";
+                }
             }
             
         </script>
