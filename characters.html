@@ -26,7 +26,15 @@
 
         #controls a {
             color: white;
+            background: transparent;
             text-decoration: none;
+            display: block;
+            transition-duration: 0.3s;
+        }
+
+        #controls a:hover {
+            color: black;
+            background: white;
         }
 
         #character {
@@ -76,11 +84,8 @@
         <div id="controls">
             <a href="https://dogmomai.top">&lt;&lt; back</a>
             <br>
-            <br>
             <a href="javascript:loadCharacter(0);">Castella Deschamps</a>
-            <br>
             <a href="javascript:loadCharacter(1);">Penelope Rose</a>
-            <br>
             <a href="javascript:loadCharacter(2);">Clementine Helena da Silva Lima</a>
         </div>
         
@@ -114,7 +119,7 @@
                     'color': "#d19930",
                     'img': "img/001827.60ec4050.4149302688.png",
                     'chips': ["cat", "yellow", "Brazilian"],
-                    'paras': ["dark brown skin, yellow frilly robes, cute, submissive"]
+                    'paras': ["dark brown skin, yellow frilly robes, cute, submissive, cat ears"]
                 }
             ];
 
