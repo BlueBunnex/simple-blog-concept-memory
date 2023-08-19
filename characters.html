@@ -125,10 +125,10 @@
                     ]
                 },
                 {
-                    'name': "Elaine",
+                    'name': "Rela An",
                     'color': "red",
                     'img': "",
-                    'chips': ["gamer", "red"],
+                    'chips': ["gamer", "red", "Walan"],
                     'paras': []
                 }
             ];
@@ -152,9 +152,8 @@
                 }
             }
 
-            
-
-            let controls = getElementById('controls');
+            // load table
+            let controls = document.getElementById('controls');
 
             for (a in characterData) {
                 controls.innerHTML += "<a href='javascript:loadCharacter(" + a + ");'>" + characterData[a]['name'] + "</a>";
