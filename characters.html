@@ -85,9 +85,6 @@
         <div id="controls">
             <a href="https://dogmomai.top">&lt;&lt; back</a>
             <br>
-            <a href="javascript:loadCharacter(0);">Castella Deschamps</a>
-            <a href="javascript:loadCharacter(1);">Penelope Rose</a>
-            <a href="javascript:loadCharacter(2);">Clementine Helena da Silva Lima</a>
         </div>
         
         <div id="character">
@@ -126,6 +123,13 @@
                         "Apologies in advance for any variations in skin tone—the AI is not very good at dark skin.",
                         "dark brown skin, yellow frilly robes, cute, submissive, cat ears"
                     ]
+                },
+                {
+                    'name': "Elaine",
+                    'color': "red",
+                    'img': "",
+                    'chips': ["gamer", "red"],
+                    'paras': []
                 }
             ];
 
@@ -146,6 +150,14 @@
                 for (a in characterData[index]['paras']) {
                     text.innerHTML += "<p>" + characterData[index]['paras'][a] + "</p>";
                 }
+            }
+
+            
+
+            let controls = getElementById('controls');
+
+            for (a in characterData) {
+                controls.innerHTML += "<a href='javascript:loadCharacter(" + a + ");'>" + characterData[a]['name'] + "</a>";
             }
             
         </script>
