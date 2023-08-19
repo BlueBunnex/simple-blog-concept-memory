@@ -51,6 +51,10 @@
             mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
         }
 
+        #character #text {
+            max-width: 500px;
+        }
+
         #character p {
             background: rgba(0, 0, 0, 0.7);
             padding: 6px;
@@ -73,17 +77,16 @@
             <a href="https://dogmomai.top">&lt;&lt; back</a>
             <br>
             <br>
-            <a href="javascript:loadCharacter();">Castella Deschamps</a>
+            <a href="javascript:loadCharacter(0);">Castella Deschamps</a>
             <br>
-            <a href="javascript:loadCharacter();">Penelope Rose</a>
+            <a href="javascript:loadCharacter(1);">Penelope Rose</a>
             <br>
-            <a href="javascript:loadCharacter();">Clementine Helena da Silva Lima</a> <!-- Brazilian -->
+            <a href="javascript:loadCharacter(2);">Clementine Helena da Silva Lima</a>
         </div>
         
         <div id="character">
             <div id="background" style="background-image: url('img/002077.61eb0927.4242745261.png');"></div>
-
-            <div style="max-width: 500px;">
+            <div id="text">
                 <h1>Castella Deschamps</h1>
                 <span class="chip">cow</span>
                 <span class="chip">maid</span>
@@ -96,8 +99,23 @@
 
         <script>
 
-            function loadCharacter() {
-                alert("meow");
+            const characterData = [
+                {
+                    'name': "Castella Deschamps",
+                    'img': "img/001866.c3a846ae.2624838716.png"
+                },
+                {
+                    'name': "Penelope Rose",
+                    'img': "img/001866.c3a846ae.2624838716.png"
+                },
+                {
+                    'name': "Clementine Helena da Silva Lima", // Brazilian
+                    'img': ""
+                }
+            ];
+
+            function loadCharacter(index) {
+                alert(characterData[index]['name']);
             }
             
         </script>
