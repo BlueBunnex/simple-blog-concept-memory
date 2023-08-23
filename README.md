@@ -1,2 +1,2 @@
 # [dogmomai.top](http://dogmomai.top) (NSFW)
-A website dedicated to displaying a hand curated selection of quality AI NSFW art.
+don't ask me what I'm doing with this website bc I could not tell you
