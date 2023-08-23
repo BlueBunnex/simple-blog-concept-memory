@@ -16,17 +16,39 @@
         button {
             border: none;
             border-radius: 4px;
-            padding: 10px 16px;
             font-size: 1rem;
             font-weight: 700;
             color: white;
             background: #5050F0;
             cursor: pointer;
+            position: relative;
+
+            transition-duration: 0.3s;
+
+            width: 150px;
+            height: 50px;
+        }
+
+        button:hover {
+            width: 80px;
+            height: 80px;
         }
         
         button:active {
             mix-blend-mode: difference;
         }
+
+        button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button span:nth-child(0) { opacity: 1; }
+        button span:nth-child(1) { opacity: 0; }
+        button:hover span:nth-child(0) { opacity: 0; }
+        button:hover span:nth-child(1) { opacity: 1; }
 
         img {
             height: 100%;
@@ -39,11 +61,14 @@
     <div style="max-width: 650px; margin: auto;">
         <div style="margin: 80px 0 96px;">
             <h1 style="text-align: center; font-size: 3rem;">dogmomai is a top!!</h1>
-            <button type="button" style="margin: auto; display: block;">button!</button>
+            <button type="button" style="margin: auto; display: block;">
+                <span>button!</span>
+                <span>&gt;ω&lt;</span>
+            </button>
         </div>
 
         <!-- it would be so nice to have a whore wifey who would be slightly snarky but still be gentle and would understand me and be able to help me when I'm down -->
-        <p>WIP, but this is dogmomai herself - personally I think fat is cute &gt;ω&lt;</p>
+        <p>WIP, but this is dogmomai herself - personally I think fat is cute</p>
         
         <p style="font-family: monospace; background: #dcdce4; border-radius: 6px; padding: 16px;">plump, panda hat, whore, smiling, cleavage, blue and white stripes</p>
 
