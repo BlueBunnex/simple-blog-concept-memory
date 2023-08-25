@@ -69,11 +69,17 @@
     <div style="max-width: 650px; margin: auto;">
         <div style="margin: 80px 0 96px;">
             <h1>DogmomAI is here!</h1>
-            <button type="button" id="ok-button">
-                <span>Make everything OK</span>
+            <button type="button" id="ok-button" onclick="makeEverythingOK();">
+                <span id="ok-text">Make everything OK</span>
                 <span>&gt;ω&lt;</span>
             </button>
         </div>
+
+        <script>
+            function makeEverythingOK() {
+                document.getElementById("ok-text").innerHTML = "It already was <3";
+            }
+        </script>
 
         <h2>Abstract</h2>
         <p>WIP, but below is DogmomAI herself—personally I think fat is cute!</p>
