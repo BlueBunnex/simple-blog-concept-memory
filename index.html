@@ -88,7 +88,16 @@
         }
         
         #image-container div {
-            background-size: cover; position: absolute; width: 33.3%; height: 100%;
+            background-size: cover; position: absolute; width: 33.3%; height: 100%; background-position: 50%;
+        }
+
+        #image-container div:nth-child(2) { left: 33.3%; }
+        #image-container div:nth-child(3) { left: 66.6%; }
+
+        #image-container div:hover {
+            left: 0;
+            width: 100%;
+            background-position: 0;
         }
     </style>
 </head>
@@ -119,8 +128,8 @@
         
         <div id="image-container">
             <div style="background-image: url('mascot3.png');"></div>
-            <div style="background-image: url('mascot7.png');  background-position: 50%;  left: 33.3%;"></div>
-            <div style="background-image: url('mascot11.png'); background-position: 100%; left: 66.6%;"></div>
+            <div style="background-image: url('mascot7.png');"></div>
+            <div style="background-image: url('mascot11.png');"></div>
         </div>
 
         <p style="font-family: monospace; background: #e4dcdc; border-radius: 6px; padding: 16px;">
