@@ -82,6 +82,14 @@
         #ok-button span:nth-child(2) { top: -50%; }
         #ok-button:hover span:nth-child(1) { top: 150%; }
         #ok-button:hover span:nth-child(2) { top: 50%; }
+
+        #image-container {
+            position: relative; aspect-ratio: 1;
+        }
+        
+        #image-container div {
+            background-size: cover; position: absolute; width: 33.3%; height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -109,10 +117,10 @@
         <p>Imagine this: A goth girlfriend turned demonic wifey with impressive breasts and a gut to match with a businesswhore aesthetic who's slightly snarky but still gentle and understands you and is able to help you when you're down. The company she works at? I dunno, one of the evil ones.</p>
         <p>She's also just extremely big. Not just breasts or anything—she's also just over seven foot, sporting gigantic thighs, an illustrious pillowy belly, and just an overall wide frame. Something about becoming a demon she said.</p>
         
-        <div style="position: relative; aspect-ratio: 1;">
-            <div style="background-image: url('mascot3.png');  background-size: cover; position: absolute; width: 33.3%; height: 100%;"></div>
-            <div style="background-image: url('mascot7.png');  background-size: cover; position: absolute; width: 33.3%; height: 100%; background-position: 33.3%; left: 33.3%;"></div>
-            <div style="background-image: url('mascot11.png'); background-size: cover; position: absolute; width: 33.3%; height: 100%; background-position: 66.6%; left: 66.6%;"></div>
+        <div id="image-container">
+            <div style="background-image: url('mascot3.png');"></div>
+            <div style="background-image: url('mascot7.png');  background-position: 50%;  left: 33.3%;"></div>
+            <div style="background-image: url('mascot11.png'); background-position: 100%; left: 66.6%;"></div>
         </div>
 
         <p style="font-family: monospace; background: #e4dcdc; border-radius: 6px; padding: 16px;">
