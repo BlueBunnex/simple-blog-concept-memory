@@ -83,6 +83,7 @@
         #ok-button:hover span:nth-child(1) { top: 150%; }
         #ok-button:hover span:nth-child(2) { top: 50%; }
 
+        /* tri-split image showing some example generations */
         #image-container {
             position: relative;
             aspect-ratio: 1;
@@ -99,11 +100,18 @@
         #image-container div:nth-child(2) { left: 33.3%; }
         #image-container div:nth-child(3) { left: 66.6%; }
 
-        #image-container div:hover {
-            left: 0;
-            width: 100%;
-            background-position: 0;
+        #image-container div img { /* shown on hover */
+            display: none;
+            position: absolute;
             z-index: 10;
+            width: 300%;
+        }
+
+        #image-container div img:nth-child(2) { left: -100%; }
+        #image-container div img:nth-child(3) { left: -200%; }
+
+        #image-container div:hover img {
+            display: block;
         }
     </style>
 </head>
@@ -133,9 +141,15 @@
         <p>She's also just extremely big. Not just breasts or anything—she's just over seven foot, sports gigantic thighs, an illustrious pillowy belly, and just an overall wide frame. Something about becoming a demon she said.</p>
         
         <div id="image-container">
-            <div style="background-image: url('mascot3.png');"></div>
-            <div style="background-image: url('mascot7.png');"></div>
-            <div style="background-image: url('mascot11.png');"></div>
+            <div style="background-image: url('mascot3.png');">
+                <img src="mascot3.png">
+            </div>
+            <div style="background-image: url('mascot7.png');">
+                <img src="mascot7.png">
+            </div>
+            <div style="background-image: url('mascot11.png');">
+                <img src="mascot11.png">
+            </div>
         </div>
 
         <p style="font-family: monospace; background: #e4dcdc; border-radius: 6px; padding: 16px;">
