@@ -105,10 +105,11 @@
             position: absolute;
             z-index: 10;
             width: 300%;
+            pointer-events: none;
         }
 
-        #image-container div img:nth-child(2) { left: -100%; }
-        #image-container div img:nth-child(3) { left: -200%; }
+        #image-container div:nth-child(2) img { left: -100%; }
+        #image-container div:nth-child(3) img { left: -200%; }
 
         #image-container div:hover img {
             display: block;
