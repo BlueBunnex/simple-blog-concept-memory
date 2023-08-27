@@ -6,10 +6,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
+        :root {
+            --light:  #fbf9f9;
+            --dark:   #201212;
+            --accent: #f05050;
+        }
+        
         body {
             font-family: 'Outfit', sans-serif;
-            color: #201212;
-            background: #fbf9f9;
+            color: var(--dark);
+            background: var(--light);
             margin: 0;
         }
 
@@ -23,14 +29,14 @@
             font-size: 1.2rem;
             margin: 0;
             padding-top: 10px;
-            border-top: 2px dashed #F05050;
+            border-top: 2px dashed var(--accent);
             position: relative;
         }
 
         h3 {
             font-size: 1.2rem;
             text-align: center;
-            color: #F05050;
+            color: var(--accent);
         }
         
         h2:before {
@@ -38,7 +44,7 @@
             position: absolute;
             left: -1.5rem;
             top: 0.4rem;
-            color: #F05050;
+            color: var(--accent);
         }
 
         p { margin: 12px 0; }
@@ -66,8 +72,8 @@
             cursor: pointer;
             position: relative;
 
-            color: #201212;
-            background: #fbf9f9;
+            color: var(--dark);
+            background: #var(--light);
         }
 
         button:active {
@@ -87,8 +93,8 @@
             width: 200px;
             font-weight: 600;
             
-            color: #fbf9f9;
-            background: #F05050;
+            color: var(--light);
+            background: var(--accent);
         }
 
         #ok-button span {
@@ -203,11 +209,11 @@
         </p>
 
         <h3>Thank you!</h3>
-        <br><br><br><br><br><br><br><br><br><br>
+        <br><br>
         
     </div>
 
-    <div>© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.</div>
+    <div style="background: var(--accent); color: var(--light); height: 400px;"><br>© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.</div>
   
 </body>
 </html>
