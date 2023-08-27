@@ -49,9 +49,15 @@
 
         p { margin: 12px 0; }
 
-        #center {
+        .center {
             max-width: 650px;
             margin: auto;
+        }
+
+        #footer {
+            background: var(--accent);
+            color: var(--light);
+            height: 400px;
         }
 
         #header-buttons {
@@ -73,7 +79,7 @@
             position: relative;
 
             color: var(--dark);
-            background: #var(--light);
+            background: var(--light);
         }
 
         button:active {
@@ -145,7 +151,7 @@
 </head>
 <body>
 
-    <div id="center">
+    <div class="center">
 
         <h1>DogmomAI</h1>
         <div id="header-buttons">
@@ -213,7 +219,13 @@
         
     </div>
 
-    <div style="background: var(--accent); color: var(--light); height: 400px;"><br>© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.</div>
+    <div id="footer">
+        
+        <div class="center">
+            <br>© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.
+        </div>
+        
+    </div>
   
 </body>
 </html>
