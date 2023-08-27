@@ -68,6 +68,14 @@
             mix-blend-mode: difference;
         }
 
+        button img {
+            width: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         #ok-button {
             overflow: hidden;
             width: 200px;
@@ -128,9 +136,13 @@
 
         <h1>DogmomAI</h1>
         <div style="float: right; display: inline-flex; gap: 6px; justify-content: flex-end; margin-top: 6px;">
+            <button type="button" onclick="document.location.href='https://bsky.app/profile/dogmomai.top';">
+                <!-- https://www.svgrepo.com/svg/533176/at-sign -->
+                <img src="res/at-icon.svg">
+            </button>
             <button type="button" onclick="document.location.href='https://github.com/BlueBunnex/dogmomAI';">
                 <!-- https://www.svgrepo.com/svg/503359/github -->
-                <img src="res/github-icon.svg" style="width: 30px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+                <img src="res/github-icon.svg">
             </button>
             <button type="button" id="ok-button" onclick="makeEverythingOK();">
                 <span id="ok-text">Make everything OK</span>
