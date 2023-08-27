@@ -58,22 +58,22 @@
             height: 52px;
             font-size: 1rem;
             cursor: pointer;
+            position: relative;
 
             color: #201212;
             background: #fbf9f9;
         }
 
+        button:active {
+            mix-blend-mode: difference;
+        }
+
         #ok-button {
-            position: relative;
             overflow: hidden;
             width: 200px;
             
             color: #fbf9f9;
             background: #F05050;
-        }
-        
-        #ok-button:active {
-            mix-blend-mode: difference;
         }
 
         #ok-button span {
@@ -130,7 +130,7 @@
         <div style="float: right; display: inline-flex; gap: 6px; justify-content: flex-end; margin-top: 6px;">
             <button type="button" onclick="document.location.href='https://github.com/BlueBunnex/dogmomAI';">
                 <!-- https://www.svgrepo.com/svg/503359/github -->
-                <img src="res/github-icon.svg" width="100%">
+                <img src="res/github-icon.svg" style="width: 30px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
             </button>
             <button type="button" id="ok-button" onclick="makeEverythingOK();">
                 <span id="ok-text">Make everything OK</span>
