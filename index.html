@@ -30,6 +30,21 @@
         a:active {
             mix-blend-mode: difference;
         }
+
+        button {
+            color: var(--light);
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 0.6rem 1.2rem;
+            background: var(--accent);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:active {
+            mix-blend-mode: difference;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +53,9 @@
     <br><br>
     Formerly (just barely) a B-cup, following implant surgery she now sports firm bouncy silicon G-cups that are impossible to hide under even the largest of shirts. She did it solely for attention, because she knows how much you like looking at her now.
 
-    <button onclick="location.href='https://github.com/BlueBunnex/dogmomAI';" type="button" style="color: var(--light); font-weight: 700; background: var(--accent); border: none; border-radius: 6px; box-shadow: 0 6px var(--dark); cursor: pointer;">Repo</button>
+    <div style="display: flex;">
+        <button onclick="location.href='https://github.com/BlueBunnex/dogmomAI';" type="button">Repo</button>
+    </div>
     
     <h2 style="margin: 0;">trans checklist</h2>
     <ul>
