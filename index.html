@@ -54,6 +54,8 @@
             color: var(--accent);
             text-decoration: none;
         }
+        a:hover { text-decoration: underline; }
+        a:active { mix-blend-mode: difference; }
 
         .textbox {
             border-left: 1px solid var(--accent);
@@ -61,17 +63,30 @@
             padding: 10px;
         }
 
-        a:hover { text-decoration: underline; }
-        a:active { mix-blend-mode: difference; }
+        nav {
+            color: var(--light);
+        }
+
+        nav a {
+            border-right: 1px solid var(--light);
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav a:last-child { border: none; }
     </style>
 </head>
 <body>
 
-    <div style="background: var(--accent); height: 400px; color: var(--light);">
-        <div class="center" style="position: relative; height: 100%;">
+    <div style="background: var(--accent); color: var(--light);">
+        <div class="center" style="position: relative; height: 400px;">
             <h1 style="width: 50%; position: absolute; top: 50%; left: 0; transform: translateY(-100%);">DogmomAI</h1>
             <div style="width: 50%; position: absolute; top: 50%; right: 0; transform: translateY(-50%);">See, trans women are cool for the same reason that women are cool—they're women (and have boobs).</div>
         </div>
+        <nav>
+            <a>Mental Wellness</a>
+            <a>Diet</a> <!-- add a carrot icon -->
+        </nav>
     </div>
 
     <div class="center">
