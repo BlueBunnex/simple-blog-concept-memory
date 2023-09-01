@@ -65,13 +65,16 @@
 
         nav a {
             color: var(--light);
-            border-right: 1px solid var(--light);
-            padding: 5px;
-            margin: 5px 0;
+            border-left: 1px solid var(--light);
+            padding: 5px 10px;
+            margin: 10px 0;
             display: inline-block;
         }
 
-        nav a:last-child { border: none; }
+        nav a:first-child {
+            border: none;
+            padding-left: 0;
+        }
     </style>
 </head>
 <body>
