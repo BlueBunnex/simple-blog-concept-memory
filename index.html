@@ -35,6 +35,12 @@
         }
         #grid img { width: 100%; cursor: pointer; }
         #grid img:hover { opacity: 50%; }
+        #grid img#selected {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
     </style>
 </head>
 <body>
@@ -52,18 +58,10 @@
 
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].onclick = function() {
-
                 for (let j = 0; j < imgs.length; j++) {
-                    imgs[j].style.gridColumnStart = "auto";
-                    imgs[j].style.gridColumnEnd   = "auto";
-                    imgs[j].style.gridRowStart    = "auto";
-                    imgs[j].style.gridRowEnd      = "auto";
+                    img[j].id = "";
                 }
-                imgs[i].style.gridColumnStart = 1;
-                imgs[i].style.gridColumnEnd   = 5;
-                imgs[i].style.gridRowStart    = 1;
-                imgs[i].style.gridRowEnd      = 5;
-                
+                img[i].id = "selected";
             };
         }
     </script>
