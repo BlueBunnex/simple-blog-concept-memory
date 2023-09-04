@@ -35,13 +35,6 @@
         }
         #grid img { width: 100%; cursor: pointer; }
         #grid img:hover { opacity: 50%; }
-        #grid img#selected {
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row-start: 1;
-            grid-row-end: 5;
-        }
-        #grid img#selected:hover { opacity: 100%; }
     </style>
 </head>
 <body>
@@ -56,14 +49,9 @@
     </div>
     <script>
         const imgs = document.getElementById("grid").getElementsByTagName("img");
-        var selected = imgs[0]; // just set it to something so we don't have to handle null
-
+        
         for (let i = 0; i < imgs.length; i++) {
-            imgs[i].onclick = function() {
-                selected.id = "";
-                imgs[i].id = "selected";
-                selected = imgs[i];
-            };
+            imgs[i].onclick = function() { window.location.href = imgs[i].src; };
         }
     </script>
     
