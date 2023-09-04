@@ -48,10 +48,23 @@
         <img src="momoatsui.png">
     </div>
     <script>
-        let imgs = document.getElementById("grid").getElementsByTagName("img");
+        const imgs = document.getElementById("grid").getElementsByTagName("img");
 
         for (let i = 0; i < imgs.length; i++) {
-            imgs[i].onclick = function() { window.location.href = imgs[i].src; };
+            imgs[i].onclick = function() {
+
+                for (let j = 0; j < imgs.length; j++) {
+                    imgs[j].style.gridColumnStart = "auto";
+                    imgs[j].style.gridColumnEnd   = "auto";
+                    imgs[j].style.gridRowStart    = "auto";
+                    imgs[j].style.gridRowEnd      = "auto";
+                }
+                imgs[i].style.gridColumnStart = 1;
+                imgs[i].style.gridColumnEnd   = 5;
+                imgs[i].style.gridRowStart    = 1;
+                imgs[i].style.gridRowEnd      = 5;
+                
+            };
         }
     </script>
     
