@@ -55,13 +55,13 @@
     </div>
     <script>
         const imgs = document.getElementById("grid").getElementsByTagName("img");
+        var selected = imgs[0]; // just set it to something so we don't have to handle null
 
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].onclick = function() {
-                for (let j = 0; j < imgs.length; j++) {
-                    imgs[j].id = "";
-                }
+                selected.id = "";
                 imgs[i].id = "selected";
+                selected = imgs[i].id;
             };
         }
     </script>
