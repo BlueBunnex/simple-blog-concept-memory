@@ -48,10 +48,10 @@
         <img src="momoatsui.png">
     </div>
     <script>
-        let imgs = getElementById("grid").getElementsByTagName("img");
+        let imgs = document.getElementById("grid").getElementsByTagName("img");
 
         for (let i = 0; i < imgs.length; i++) {
-            imgs[i].onclick = function() { window.location.href = 'momo.png'; };
+            imgs[i].onclick = function() { window.location.href = imgs[i].src; };
         }
     </script>
     
