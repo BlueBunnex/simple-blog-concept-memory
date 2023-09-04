@@ -11,9 +11,10 @@
     
     <style>
         :root {
-            --light:  #fff;
-            --dark:   #111;
-            --accent: #B4B;
+            --light:    #FFF;
+            --light-bg: #FEF;
+            --dark:     #111;
+            --accent:   #B4B;
         }
         
         body {
@@ -30,7 +31,7 @@
         a:hover { text-decoration: underline; }
         a:active { mix-blend-mode: difference; }
 
-        #grid { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 4px; row-gap: 20px; padding: 20px 4px; background: lightgrey; }
+        #grid { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 4px; row-gap: 20px; padding: 20px 4px; background: var(--light-bg); }
         #grid img { width: 100%; cursor: alias; }
         #grid img:hover { opacity: 50%; }
     </style>
@@ -46,13 +47,6 @@
         <img src="momoatsui.png">
         <img src="momoiku.png">
         <img src="momodekai.png">
-        <div style="grid-column-start: 1; grid-column-end: 5;">
-            <a href="">[1]</a>
-            <a href="">[2]</a>
-            <a href="">[3]</a>
-            <a href="">[4]</a>
-            <a href="">[5]</a>
-        </div>
     </div>
     <script>
         const imgs = document.getElementById("grid").getElementsByTagName("img");
