@@ -31,6 +31,12 @@
         a:hover { text-decoration: underline; }
         a:active { mix-blend-mode: difference; }
 
+        p {
+            border-left: 2px solid var(--accent);
+            box-sizing: border-box;
+            padding-left: 4px;
+        }
+
         #grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -67,7 +73,7 @@
     <p>モモさんは１５５cm、体重は８１kg、胸はEカップです。</p>
     <hr>
     <a href="https://github.com/BlueBunnex/dogmomAI">github repo</a> | <a href="https://bsky.app/profile/dogmomai.top">bluesky</a>
-    <p style="background: var(--accent); color: var(--light);">© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.</p>
+    <div style="background: var(--accent); color: var(--light);">© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.</div>
     
 </body>
 </html>
