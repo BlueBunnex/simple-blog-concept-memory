@@ -29,18 +29,24 @@
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         a:active { mix-blend-mode: difference; }
+
+        #grid {
+            display: grid; grid-template-columns: auto auto auto auto; column-gap: 4px; row-gap: 20px; padding: 20px 4px; background: lightgrey;
+        }
+        #grid img { width: 100%; }
     </style>
 </head>
 <body>
 
     <h1>モモさん</h1>
-    <div style="display: grid; grid-template-columns: auto auto auto auto; column-gap: 4px; row-gap: 20px; padding: 20px 4px; background: lightgrey;">
-        <img src="momo.png" width="100%">
-        <img src="momoshiri.png" width="100%">
-        <img src="momonagai.png" width="100%">
-        <img src="momobiiru.png" width="100%">
+    <div id="grid">
+        <img src="momo.png">
+        <img src="momoshiri.png">
+        <img src="momonagai.png">
+        <img src="momobiiru.png">
+        <img src="momoatsui.png">
     </div>
-    <p>ここはモモさんだ。モモさんはナシの体がある、お尻が大きい。よくふざけるの女子。”あたしの胸は200cm”と言った。</p>
+    <p>ここはモモさんだ。モモさんはナシの体がある、お尻が大きい。よくふざけるの女子。”あたしの胸は200cm”と言った。ビールを飲むが好き。</p>
 
     <hr>
     <a href="https://github.com/BlueBunnex/dogmomAI">github repo</a> | <a href="https://bsky.app/profile/dogmomai.top">bluesky</a>
