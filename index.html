@@ -12,7 +12,7 @@
     <style>
         :root {
             --light:    #FFF;
-            --light-bg: #FEF;
+            --light-bg: #EEE;
             --dark:     #111;
             --accent:   #B4B;
         }
@@ -31,7 +31,14 @@
         a:hover { text-decoration: underline; }
         a:active { mix-blend-mode: difference; }
 
-        #grid { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 4px; row-gap: 20px; padding: 20px 4px; background: var(--light-bg); }
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 20px 4px;
+            padding: 20px 4px;
+            background: var(--light-bg);
+        }
+        
         #grid img { width: 100%; cursor: alias; }
         #grid img:hover { opacity: 50%; }
     </style>
