@@ -27,55 +27,14 @@
             max-width: 650px;
         }
 
-        h1 { margin: 20px 0 0; }
-        p { margin: 8px 0 16px; }
-
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         a:active { mix-blend-mode: difference; }
-
-        #grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px 4px;
-            padding: 20px 4px;
-            background: var(--light-bg);
-        }
-        
-        #grid img { width: 100%; cursor: alias; }
-        #grid img:hover { opacity: 50%; }
-
-        #copyright {
-            background: var(--accent);
-            color: var(--light);
-        }
     </style>
 </head>
 <body>
 
-    <div id="grid">
-        <img src="momo.png">
-        <img src="momoshiri.png">
-        <img src="momonagai.png">
-        <img src="momobiiru.png">
-        <img src="momoatsui.png">
-        <img src="momoiku.png">
-        <img src="momodekai.png">
-    </div>
-    <script>
-        const imgs = document.getElementById("grid").getElementsByTagName("img");
-        
-        for (let i = 0; i < imgs.length; i++) {
-            imgs[i].onclick = function() { window.location.href = imgs[i].src; };
-        }
-    </script>
-
-    <h1>モモさん</h1>
-    <p>ここはモモさんだ。モモさんはねこみみとナシの体がある、お尻が大きすぎる、ちょうかわいい。よくふざけるの女子。「あたしの胸は200cm」と言った。ビールを飲むが好き。</p>
-    <p>モモさんは１５５cm、体重は８１kg、胸はEカップです。</p>
-    <hr>
-    <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> | <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
-    <p id="copyright">© 2023 The DogmomAI Corporation (not a corporation). All rights reserved.</p>
+    &lt;3
     
 </body>
 </html>
