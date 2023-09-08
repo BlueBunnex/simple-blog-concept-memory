@@ -12,7 +12,6 @@
     <style>
         :root {
             --light:    #FFF;
-            --mid:      #9AB;
             --dark:     #012;
             --accent:   #8AF;
         }
@@ -22,13 +21,16 @@
             font-size: 0.875rem;
             
             color: var(--dark);
-            background: var(--mid);
             margin: 0;
         }
 
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
         a:active { mix-blend-mode: difference; }
+
+        th, td { padding: 0; }
+        th { padding-bottom: 0.25rem; }
+        td { color: var(--accent); font-size: 1rem; font-weight: 700; }
         
     </style>
 </head>
@@ -41,8 +43,18 @@
             <p>Student (linguistics + CS) who is obsessed with webdev. Thinks AI art is neat.
             <p>Melissa &lt;3</p>
 
-            <div style="color: var(--accent); margin-bottom: 0.25rem;">Posts</div>
-            <div style="font-size: 1rem; font-weight: 700;">30</div>
+            <table style="border-collapse: collapse; border: none;">
+                <tr>
+                    <th>Posts</th>
+                    <th>Friends</th>
+                    <th>Dabloons</th>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>999</td>
+                    <td>0</td>
+                </tr>
+            </table>
 
         </div>
         
