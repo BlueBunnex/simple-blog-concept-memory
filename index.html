@@ -32,6 +32,12 @@
 
         nav { background: var(--accent); color: white; margin-block-end: 1em; }
         nav a { color: white; }
+
+        p.quote {
+            background: #FEE;
+            padding: 10px;
+            border-left: 4px solid var(--accent);
+        }
         
     </style>
     <script>
@@ -64,11 +70,10 @@
             const id = parseInt(urlParams.get('id')); // ?id=1337
 
             const articleTemplate = `
-                <h2>$title$</h2>
-                <strong style="color: grey;">$author$ · $date$</strong> <!-- Topic? -->
                 <img style="width: 100%;" src="$image$">
+                <h2>$title$</h2>
+                <strong style="color: grey;">$author$ · $date$</strong>
                 $content$
-                <!--<a href="" style="text-align: center; display: block;">Return to top</a>-->
             `;
     
             if (isNaN(id)) {
