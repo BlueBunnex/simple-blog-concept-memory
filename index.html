@@ -49,6 +49,7 @@
                 "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
                 "content": `
                     <p>I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time!</p>
+                    <p class="quote">Pro tip: Sleeping with cats in the room is known to increase your happiness by 21%.</p>
                 `
             }
         ];
@@ -61,8 +62,6 @@
         <h1>DogmomAI</h1>
         <nav>
             <a href="https://dogmomai.top">HOME</a>
-            |
-            <a href="https://dogmomai.top/?id=0">ARTICLES</a>
         </nav>
 
         <script>
@@ -78,7 +77,9 @@
     
             if (isNaN(id)) {
                 // load home page
-                document.write("home");
+                for (int i=0; i<articles.length; i++) {
+                    document.write("<a href='https://dogmomai.top/?id=" + i + "'>ARTICLES</a>");
+                }
             } else {
                 // try to load article, show error if does not exist
                 if (articles[id] == null) {
