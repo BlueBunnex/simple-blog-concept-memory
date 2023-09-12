@@ -77,8 +77,8 @@
     
             if (isNaN(id)) {
                 // load home page
-                for (int i=0; i<articles.length; i++) {
-                    document.write("<a href='https://dogmomai.top/?id=" + i + "'>ARTICLES</a>");
+                for (let i=0; i<articles.length; i++) {
+                    document.write("<a href='https://dogmomai.top/?id=" + i + "'>ARTICLES</a><br>");
                 }
             } else {
                 // try to load article, show error if does not exist
