@@ -67,7 +67,7 @@
                 <strong style="color: grey;">$author$ · $date$</strong> <!-- Topic? -->
                 <img style="width: 100%;" src="$image$">
                 $content$
-                <a href="" style="text-align: center; display: block;">Return to top</a>
+                <!--<a href="" style="text-align: center; display: block;">Return to top</a>-->
             `;
     
             if (title == null) {
@@ -75,7 +75,11 @@
                 document.write("home");
             } else {
                 // try to load article, show error if does not exist
-                document.write(articleTemplate.replace("$title$", title));
+                document.write(
+                    articleTemplate
+                    .replace("$title$", title)
+                    .replace("$author$", articles[title]["author"])
+                );
             }
         </script>
         
