@@ -38,14 +38,16 @@
         const urlParams = new URLSearchParams(window.location.search);
         const title = urlParams.get('title'); // ?title=something%20else
 
-        alert(articles[title]);
+        if (title != null) { alert(title); }
     </script>
 
     <div style="margin: auto; max-width: 550px;">
 
         <h1>DogmomAI</h1>
         <nav>
-            <a href="">HOME</a> | <a href="https://dogmomai.top/?title=Cool%20Article">ARTICLES</a>
+            <a href="">HOME</a>
+            |
+            <a href="https://dogmomai.top/?title=Cool%20Article">ARTICLES</a>
         </nav>
 
         <br>
