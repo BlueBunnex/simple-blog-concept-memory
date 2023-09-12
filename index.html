@@ -34,32 +34,50 @@
         nav a { color: white; }
         
     </style>
+    <script>
+        const articles = {
+            "Article Title": {
+                "author": "Author",
+                "date": "mm/dd/yyyy",
+                "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
+                "content": `
+                    <p>I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time!</p>
+                `
+            }
+        };
+    </script>
 </head>
 <body>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const title = urlParams.get('title'); // ?title=something%20else
-
-        if (title != null) { alert(title); }
-    </script>
 
     <div style="margin: auto; max-width: 550px;">
 
         <h1>DogmomAI</h1>
         <nav>
-            <a href="https://dogmomai.top/?title=hom">HOME</a>
+            <a href="https://dogmomai.top">HOME</a>
             |
             <a href="https://dogmomai.top/?title=Cool%20Article">ARTICLES</a>
         </nav>
 
-        <h2>Article Title</h2>
-        <strong style="color: grey;">Author · mm/dd/yyyy · Topic</strong>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title'); // ?title=something%20else
+    
+            if (title == null) {
+                // load home page
+                document.write("home");
+            } else {
+                // try to load article, show error if does not exist
+                document.write(title);
+            }
+        </script>
+
+<!--    <h2>Article Title</h2>
+        <strong style="color: grey;">Author · mm/dd/yyyy</strong> <!-- Topic? -->
         <p>I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time!</p>
 
         <img style="width: 100%;" src="https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg">
 
-        <a href="" style="text-align: center; display: block;">Return to top</a>
+        <a href="" style="text-align: center; display: block;">Return to top</a> -->
         
     </div>
     
