@@ -74,11 +74,21 @@
                 <strong style="color: grey;">$author$ · $date$</strong>
                 $content$
             `;
+
+            const miniTemplate = `
+                <a href='https://dogmomai.top/?id=$id$'>$title$</a><br>
+                <span style="width: 400px; text-overflow: ellipsis;">$preview$</span>
+            `;
     
             if (isNaN(id)) {
                 // load home page
                 for (let i=articles.length-1; i>=0; i--) {
-                    document.write("<a href='https://dogmomai.top/?id=" + i + "'>" + articles[i]["title"] + "</a><br>");
+                    document.write(
+                        miniTemplate
+                        .replace("$id$", i)
+                        .replace("$title$", articles[i]["title"])
+                        .replace("$preview$", articles[i]["content"])
+                    );
                 }
             } else {
                 // try to load article, show error if does not exist
