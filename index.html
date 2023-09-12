@@ -61,7 +61,7 @@
 
         <script>
             const urlParams = new URLSearchParams(window.location.search);
-            const id = parseInt(urlParams.get('id')); // ?id=something%20else
+            const id = urlParams.get('id'); // ?id=1337
 
             const articleTemplate = `
                 <h2>$title$</h2>
@@ -71,19 +71,25 @@
                 <!--<a href="" style="text-align: center; display: block;">Return to top</a>-->
             `;
     
-            if (title == null) {
+            if (id == null) {
                 // load home page
                 document.write("home");
             } else {
+                id = parseInt(id);
+
                 // try to load article, show error if does not exist
-                document.write(
-                    articleTemplate
-                    .replace("$title$", articles[id]["title"])
-                    .replace("$author$", articles[id]["author"])
-                    .replace("$date$", articles[id]["date"])
-                    .replace("$image$", articles[id]["image"])
-                    .replace("$content$", articles[id]["content"])
-                );
+                if (articles[id] == null) {
+                    document.write("dne");
+                } else {
+                    document.write(
+                        articleTemplate
+                        .replace("$title$", articles[id]["title"])
+                        .replace("$author$", articles[id]["author"])
+                        .replace("$date$", articles[id]["date"])
+                        .replace("$image$", articles[id]["image"])
+                        .replace("$content$", articles[id]["content"])
+                    );
+                }
             }
         </script>
         
