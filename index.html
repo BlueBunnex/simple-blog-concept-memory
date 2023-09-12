@@ -61,7 +61,7 @@
 
         <script>
             const urlParams = new URLSearchParams(window.location.search);
-            const id = urlParams.get('id'); // ?id=1337
+            const id = parseInt(urlParams.get('id')); // ?id=1337
 
             const articleTemplate = `
                 <h2>$title$</h2>
@@ -71,12 +71,10 @@
                 <!--<a href="" style="text-align: center; display: block;">Return to top</a>-->
             `;
     
-            if (id == null) {
+            if (isNaN(id)) {
                 // load home page
                 document.write("home");
             } else {
-                id = parseInt(id);
-
                 // try to load article, show error if does not exist
                 if (articles[id] == null) {
                     document.write("dne");
