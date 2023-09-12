@@ -61,23 +61,23 @@
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const title = urlParams.get('title'); // ?title=something%20else
+
+            const articleTemplate = `
+                <h2>$title$</h2>
+                <strong style="color: grey;">$author$ · $date$</strong> <!-- Topic? -->
+                <img style="width: 100%;" src="$image$">
+                $content$
+                <a href="" style="text-align: center; display: block;">Return to top</a>
+            `;
     
             if (title == null) {
                 // load home page
                 document.write("home");
             } else {
                 // try to load article, show error if does not exist
-                document.write(title);
+                document.write(articleTemplate.replace("$title$", title));
             }
         </script>
-
-<!--    <h2>Article Title</h2>
-        <strong style="color: grey;">Author · mm/dd/yyyy</strong> <!-- Topic? -->
-        <p>I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time!</p>
-
-        <img style="width: 100%;" src="https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg">
-
-        <a href="" style="text-align: center; display: block;">Return to top</a> -->
         
     </div>
     
