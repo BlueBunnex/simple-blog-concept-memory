@@ -36,7 +36,7 @@
     </style>
     <script>
         const articles = {
-            "Article Title": {
+            "Cool%20Article": {
                 "author": "Author",
                 "date": "mm/dd/yyyy",
                 "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
@@ -79,6 +79,9 @@
                     articleTemplate
                     .replace("$title$", title)
                     .replace("$author$", articles[title]["author"])
+                    .replace("$date$", articles[title]["date"])
+                    .replace("$image$", articles[title]["image"])
+                    .replace("$content$", articles[title]["content"])
                 );
             }
         </script>
