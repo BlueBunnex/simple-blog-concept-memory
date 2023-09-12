@@ -35,8 +35,9 @@
         
     </style>
     <script>
-        const articles = {
-            "Cool%20Article": {
+        const articles = [
+            {
+                "title": "Article Title",
                 "author": "Author",
                 "date": "mm/dd/yyyy",
                 "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
@@ -44,7 +45,7 @@
                     <p>I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time!</p>
                 `
             }
-        };
+        ];
     </script>
 </head>
 <body>
@@ -55,12 +56,12 @@
         <nav>
             <a href="https://dogmomai.top">HOME</a>
             |
-            <a href="https://dogmomai.top/?title=Cool%20Article">ARTICLES</a>
+            <a href="https://dogmomai.top/?id=0">ARTICLES</a>
         </nav>
 
         <script>
             const urlParams = new URLSearchParams(window.location.search);
-            const title = urlParams.get('title'); // ?title=something%20else
+            const id = parseInt(urlParams.get('id')); // ?id=something%20else
 
             const articleTemplate = `
                 <h2>$title$</h2>
@@ -77,11 +78,11 @@
                 // try to load article, show error if does not exist
                 document.write(
                     articleTemplate
-                    .replace("$title$", title)
-                    .replace("$author$", articles[title]["author"])
-                    .replace("$date$", articles[title]["date"])
-                    .replace("$image$", articles[title]["image"])
-                    .replace("$content$", articles[title]["content"])
+                    .replace("$title$", articles[id]["title"])
+                    .replace("$author$", articles[id]["author"])
+                    .replace("$date$", articles[id]["date"])
+                    .replace("$image$", articles[id]["image"])
+                    .replace("$content$", articles[id]["content"])
                 );
             }
         </script>
