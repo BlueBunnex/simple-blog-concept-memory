@@ -33,11 +33,11 @@
         nav { background: var(--accent); color: white; margin-block-end: 1em; }
         nav a { color: white; }
 
-        p.quote {
+/*         p.quote {
             background: #FEE;
             padding: 10px;
             border-left: 4px solid var(--accent);
-        }
+        } */
         
     </style>
     <script>
@@ -47,10 +47,10 @@
                 "author": "Author",
                 "date": "mm/dd/yyyy",
                 "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
-                "content": `
-                    <p>I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time!</p>
-                    <p class="quote">Pro tip: Sleeping with cats in the room is known to increase your happiness by 21%.</p>
-                `
+                "paragraphs": [
+                    "I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time",
+                    "Pro tip: Sleeping with cats in the room is known to increase your happiness by 21%."
+                ]
             }
         ];
     </script>
@@ -76,8 +76,9 @@
             `;
 
             const miniTemplate = `
-                <a href='https://dogmomai.top/?id=$id$'>$title$</a><br>
-                <span style="width: 400px; text-overflow: ellipsis;">$preview$</span>
+                <div style="width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    <a href='https://dogmomai.top/?id=$id$'>$title$</a> - $preview$
+                </div>
             `;
     
             if (isNaN(id)) {
@@ -87,21 +88,27 @@
                         miniTemplate
                         .replace("$id$", i)
                         .replace("$title$", articles[i]["title"])
-                        .replace("$preview$", articles[i]["content"])
+                        .replace("$preview$", articles[i]["paragraphs"][0])
                     );
                 }
             } else {
                 // try to load article, show error if does not exist
                 if (articles[id] == null) {
-                    document.write("dne");
+                    document.write("Article does not exist.");
                 } else {
+                    let content = "";
+
+                    for (let i=0; i<articles[id]["paragraphs"].length; i++) {
+                        content += "<p>" + articles[id]["paragraphs"][i] + "</p>";
+                    }
+                    
                     document.write(
                         articleTemplate
                         .replace("$title$", articles[id]["title"])
                         .replace("$author$", articles[id]["author"])
                         .replace("$date$", articles[id]["date"])
                         .replace("$image$", articles[id]["image"])
-                        .replace("$content$", articles[id]["content"])
+                        .replace("$content$", content)
                     );
                 }
             }
