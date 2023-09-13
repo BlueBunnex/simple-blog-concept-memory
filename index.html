@@ -31,6 +31,7 @@
             border-radius: 6px;
             border: 1px solid lightgrey;
             cursor: pointer;
+            background: white;
         }
 
         .card:active { filter: brightness(70%); }
@@ -50,8 +51,8 @@
             const urlParams = new URLSearchParams(window.location.search);
             const img = urlParams.get('img'); // ?data=something%20else
     
-            if (image != null) {
-                alert(img);
+            if (img != null) {
+                document.write(img);
             }
         </script>
         
