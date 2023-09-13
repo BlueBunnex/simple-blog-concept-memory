@@ -26,38 +26,45 @@
         a:active { mix-blend-mode: difference; }
 
         .card {
-            aspect-ratio: calc(5/7); overflow: hidden; border-radius: 6px; box-shadow: 0 0 6px lightgrey;
+            aspect-ratio: calc(5/7);
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid lightgrey;
+            cursor: pointer;
         }
+
+        .card:active { filter: brightness(70%); }
 
         .card #thumbnail { aspect-ratio: calc(4/5); background-position: 60% bottom; background-size: 125%; }
         .card #caption { margin: 4px; }
         
     </style>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const image = urlParams.get('image'); // ?data=something%20else
-
-        if (image != null) {
-            alert(image);
-        }
-    </script>
 </head>
 <body>
 
     <div style="margin: auto; max-width: 550px;">
 
         <h1 style="background: var(--accent); color: white;">DogmomAI</h1>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const img = urlParams.get('img'); // ?data=something%20else
+    
+            if (image != null) {
+                alert(img);
+            }
+        </script>
         
         <p>Staying up late? Might as well look at some busty art yea? Visit my <a href="https://bsky.app/profile/dogmomai.top">bsky</a> too.</p>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px;">
             
-            <div class="card">
+            <div class="card" onclick="document.location.href = 'https://dogmomai.top/?img=mycatgirl';">
                 <div id="thumbnail" style="background-image: url('mycatgirl.png');"></div>
                 <div id="caption"><strong>Carla</strong> lemon cat</div> <!-- lipstick, striped knee socks -->
             </div>
 
-            <div class="card">
+            <div class="card" onclick="document.location.href = 'https://dogmomai.top/?img=dogmom_click';">
                 <div id="thumbnail" style="background-image: url('dogmom_click.png');"></div>
                 <div id="caption"><strong>Winny</strong> blue demon</div>
             </div>
