@@ -26,6 +26,13 @@
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
         a:active { mix-blend-mode: difference; }
+
+        .card {
+            aspect-ratio: calc(5/7); overflow: hidden; border-radius: 6px; box-shadow: 0 0 6px lightgrey;
+        }
+
+        .card #thumbnail { aspect-ratio: calc(4/5); background-position: 60% bottom; background-size: 125%; }
+        .card #caption { margin: 4px; }
         
     </style>
 </head>
@@ -40,10 +47,14 @@
 
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px;">
             
-            <div style="aspect-ratio: calc(5/7); overflow: hidden; border-radius: 6px; box-shadow: 0 0 6px lightgrey;">
-                <div style="aspect-ratio: calc(4/5); background-image: url('mycatgirl.png'); background-position: 60% bottom; background-size: 125%;"></div>
-                <div style="margin: 6px;"><strong>Winny</strong> lemon cat</div>
-                <!-- lipstick, striped knee socks -->
+            <div class="card">
+                <div id="thumbnail" style="background-image: url('mycatgirl.png');"></div>
+                <div id="caption"><strong>Winny</strong> lemon cat</div> <!-- lipstick, striped knee socks -->
+            </div>
+
+            <div class="card">
+                <div id="thumbnail" style="background-image: url('dogmom_click.png');"></div>
+                <div id="caption"><strong>idk</strong></div>
             </div>
             
         </div>
