@@ -33,6 +33,14 @@
         .card #caption { margin: 4px; }
         
     </style>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const image = urlParams.get('image'); // ?data=something%20else
+
+        if (image != null) {
+            alert(image);
+        }
+    </script>
 </head>
 <body>
 
