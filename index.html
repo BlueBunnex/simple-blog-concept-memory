@@ -27,110 +27,14 @@
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
         a:active { mix-blend-mode: difference; }
-
-        h1, h2 { margin: 4px 0; font-family: sans-serif; }
-
-        nav { background: var(--accent); color: white; margin-block-end: 1em; }
-        nav a { color: white; }
-
-/*         p.quote {
-            background: #FEE;
-            padding: 10px;
-            border-left: 4px solid var(--accent);
-        } */
         
     </style>
-    <script>
-        const articles = [
-            {
-                "title": "Article Title",
-                "author": "Author",
-                "date": "mm/dd/yyyy",
-                "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
-                "paragraphs": [
-                    "I really like cats! And dogs! Cuddling up with your favourite kitty and watching a nice video is a sure-fire way to have a good time",
-                    "Pro tip: Sleeping with cats in the room is known to increase your happiness by 21%."
-                ]
-            },
-            {
-                "title": "A Fox Named Fluffy",
-                "author": "Ducky, GPT Falcon",
-                "date": "9/12/2023",
-                "image": "https://cats.com/wp-content/uploads/2022/03/gray-cats-compressed.jpg",
-                "paragraphs": [
-                    `Once upon a time, in a land far, far away, there was a fox named Fluffy. Fluffy was no ordinary fox - he had the most ridiculous tail you'd ever seen. It was so long that it could wrap around his entire body and still leave him with some extra length to spare.`,
-                    `Despite his unique tail, Fluffy wasn't very good at anything. He couldn't catch a ball, he couldn't climb trees, and he certainly couldn't fly like the other foxes in the pack. But that didn't stop Fluffy from trying.`,
-                    `"I want to be able to fly!" Fluffy would say every time he saw the other foxes take off into the sky. "But I just can't do it."`,
-                    `One day, while Fluffy was sulking in a corner of the forest, he overheard some of the other foxes talking about how they were going to build a rocket ship so they could fly to the moon.`,
-                    `"I want to be on that rocket ship!" Fluffy said excitedly. "But I don't know how to fly."`,
-                    `The other foxes laughed at Fluffy and told him he was crazy for wanting to fly. But Fluffy wasn't deterred. He decided to take matters into his own paws.`,
-                    `"I may not be able to fly, but I can learn!" Fluffy said with determination. "And when I do learn how to fly, you'll see that I'm just as good as the other foxes."`,
-                    `So Fluffy set off on a journey of self-discovery. He read books about aerodynamics and experimented with different methods of flight. And after months of hard work, he finally succeeded in flying!`,
-                    `"I did it!" Fluffy said triumphantly. "I can fly just like the other foxes."`,
-                    `The other foxes were shocked when they saw Fluffy take off into the sky. They had never seen a fox with such determination and perseverance. And from that day on, Fluffy was known as the most amazing flyer in all of the forest.`
-                ]
-            }
-        ];
-    </script>
 </head>
 <body>
 
     <div style="margin: auto; max-width: 550px;">
 
-        <h1>DogmomAI</h1>
-        <nav>
-            <a href="https://dogmomai.top">HOME</a>
-        </nav>
-
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const id = parseInt(urlParams.get('id')); // ?id=1337
-
-            const articleTemplate = `
-                <img style="width: 100%;" src="$image$">
-                <h2>$title$</h2>
-                <strong style="color: grey;">$author$ · $date$</strong>
-                $content$
-            `;
-
-            const miniTemplate = `
-                <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                    <a href='https://dogmomai.top/?id=$id$'>$title$</a> - $preview$
-                </div>
-            `;
-    
-            if (isNaN(id)) {
-                // load home page
-                for (let i=articles.length-1; i>=0; i--) {
-                    document.write(
-                        miniTemplate
-                        .replace("$id$", i)
-                        .replace("$title$", articles[i]["title"])
-                        .replace("$preview$", articles[i]["paragraphs"][0])
-                    );
-                }
-            } else {
-                // try to load article, show error if does not exist
-                if (articles[id] == null) {
-                    document.write("Article does not exist.");
-                } else {
-                    let content = "";
-
-                    for (let i=0; i<articles[id]["paragraphs"].length; i++) {
-                        content += "<p>" + articles[id]["paragraphs"][i] + "</p>";
-                    }
-                    
-                    document.write(
-                        articleTemplate
-                        .replace("$title$", articles[id]["title"])
-                        .replace("$author$", articles[id]["author"])
-                        .replace("$date$", articles[id]["date"])
-                        .replace("$image$", articles[id]["image"])
-                        .replace("$content$", content)
-                    );
-                }
-            }
-        </script>
+        dog<a href="">mom</a>
         
     </div>
     
