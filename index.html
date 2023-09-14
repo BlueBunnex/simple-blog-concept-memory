@@ -19,60 +19,24 @@
             font-family: "Roboto Slab", serif;
             font-size: 0.875rem;
             color: #111;
+            margin: auto; 
+            max-width: 550px;
         }
 
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
         a:active { mix-blend-mode: difference; }
-
-        .card {
-            aspect-ratio: calc(5/7);
-            overflow: hidden;
-            border-radius: 6px;
-            border: 1px solid lightgrey;
-            cursor: pointer;
-            background: white;
-        }
-
-        .card:active { filter: brightness(70%); }
-
-        .card #thumbnail { aspect-ratio: calc(4/5); background-position: 60% bottom; background-size: 125%; }
-        .card #caption { margin: 4px; }
         
     </style>
 </head>
 <body>
 
-    <div style="margin: auto; max-width: 550px;">
-
-        <h1 style="background: var(--accent); color: white;">DogmomAI</h1>
-
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const img = urlParams.get('img'); // ?data=something%20else
+    <h1 style="background: var(--accent); color: white;">DogmomAI</h1>
     
-            if (img != null) {
-                document.write(img);
-            }
-        </script>
-        
-        <p>Staying up late? Might as well look at some busty art yea? Visit my <a href="https://bsky.app/profile/dogmomai.top">bsky</a> too.</p>
+    <p>Staying up late? Might as well look at some busty art yea? Visit my <a href="https://bsky.app/profile/dogmomai.top">bsky</a> too.</p>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px;">
-            
-            <div class="card" onclick="document.location.href = 'https://dogmomai.top/?img=mycatgirl';">
-                <div id="thumbnail" style="background-image: url('mycatgirl.png');"></div>
-                <div id="caption"><strong>Carla</strong> lemon cat</div> <!-- lipstick, striped knee socks -->
-            </div>
-
-            <div class="card" onclick="document.location.href = 'https://dogmomai.top/?img=dogmom_click';">
-                <div id="thumbnail" style="background-image: url('dogmom_click.png');"></div>
-                <div id="caption"><strong>Winny</strong> blue demon</div>
-            </div>
-            
-        </div>
-        
-    </div>
+    <img width="100%" src="mycatgirl.png">
+    <img width="100%" src="dogmom_click.png">
     
 </body>
 </html>
