@@ -25,7 +25,7 @@
         }
 
         h1 { background: var(--accent); color: white; margin: 0; }
-        h2 { margin: 0; background: #fee; border-left: 4px solid var(--accent); padding: 10px; }
+        h2 { margin: 10px 0; background: #fee; border-left: 4px solid var(--accent); padding: 4px; }
 
         img { width: 100%; }
 
@@ -39,6 +39,7 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(4, 50px);
             grid-auto-flow: row dense;
+            margin: 10px 0;
         }
 
         #info * { background: #fee; border-radius: 10px; padding: 10px; box-sizing: border-box; }
@@ -50,8 +51,8 @@
     <h1>DogmomAI</h1>
 
     <div id="info">
-        <div style="grid-column: 1 / 2; grid-rows: 1 / 5;">Staying up late? Might as well look at some busty art yea? I think AI is cool, but I also draw, so you can look at that. I think fat is cute btw — that's what I'm gonna draw, cute stuff.</div>
-        <a>home</a>
+        <div style="grid-row-start: 1; grid-row-end: 5;">Staying up late? Might as well look at some busty art yea? I think AI is cool, but I also draw, so you can look at that. I think fat is cute btw — that's what I'm gonna draw, cute stuff.</div>
+        <a style="border: 1px solid var(--accent);">home</a>
         <a>fanfiction</a>
         <a href="https://bsky.app/profile/dogmomai.top" target="_blank">bsky</a>
         <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">github</a>
