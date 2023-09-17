@@ -34,6 +34,23 @@
         .char-grid { background: white; display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 6px; }
         
     </style>
+    <script>
+        const posts = [
+            {
+                Name: "Amy",
+                Paragraph: "Amy is an edgy goth umbreon, which you can tell by how her hair is swept over one eye. She boasts big boobs and thighs and a giant ass. As an American, she likes iced coffee and frequent sex. She's 280lb pushing 300. Amy is single and ready to mingle — <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>call now</a>!",
+                Images: ["umbreonomg.png"]
+            },
+            {
+                Name: "Unclassified",
+                Paragraph: "",
+                Images: ["mycatgirl.png", "foxlady.png", "coolsuit.png", "dogmom_click.png"]
+            }
+        ];
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = parseInt(urlParams.get('id')); // ?id=1337
+    </script>
 </head>
 <body>
     
@@ -52,26 +69,25 @@
         <a>Fanfiction</a>
         <a href="https://bsky.app/profile/dogmomai.top" target="_blank">Bluesky</a>
         <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">Github</a>
-        
-        <h2>Featured (by cc)</h2>
-        <img src="https://media.discordapp.net/attachments/1123019830950375446/1152574671955435520/em24ylv.png?width=450&height=420">
 
-        <h2>Amy</h2>
-        <p>Amy is an edgy goth umbreon, which you can tell by how her hair is swept over one eye. She boasts big boobs and thighs and a giant ass. As an American, she likes iced coffee and frequent sex. She's 280lb pushing 300. Amy is single and ready to mingle — <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">call now</a>!</p>
+        <!-- display post selection -->
+        for (let i=0; i<posts.length; i++) {
+            document.write('<a href="https://dogmomai.top?id=' + i + '">' + posts[i].Name + '</a> ');
+        }
+
+        <!-- display post info -->
+        <h2>
+            <script>document.write(posts[postId].Name);</script>
+        </h2>
+        <p>
+            <script>document.write(posts[postId].Paragraph);</script>
+        </p>
         <div class="char-grid">
-            <img src="umbreonomg.png">
-        </div>
-    
-        <h2>ヨリ</h2>
-        <div class="char-grid">
-            <img src="mycatgirl.png">
-            <img src="foxlady.png">
-        </div>
-    
-        <h2>Other</h2>
-        <div class="char-grid">
-            <img src="coolsuit.png">
-            <img src="dogmom_click.png">
+            <script>
+                for (let i in posts[postId].Images) {
+                    document.write('<img src="' + posts[postId].Images[i] + '">');
+                }
+            </script>
         </div>
         
     </div>
