@@ -71,9 +71,12 @@
         <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">Github</a>
 
         <!-- display post selection -->
-        for (let i=0; i<posts.length; i++) {
-            document.write('<a href="https://dogmomai.top?id=' + i + '">' + posts[i].Name + '</a> ');
-        }
+        <h2>Posts</h2>
+        <script>
+            for (let i=0; i<posts.length; i++) {
+                document.write('<a href="https://dogmomai.top?id=' + i + '">' + posts[i].Name + '</a> ');
+            }
+        </script>
 
         <!-- display post info -->
         <h2>
