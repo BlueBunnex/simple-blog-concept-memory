@@ -33,6 +33,25 @@
         a:active, input[type="submit"]:active { mix-blend-mode: difference; }
 
         .char-grid { background: #ddd; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; }
+
+        #search {
+            aspect-ratio: 1;
+            width: 29px;
+            
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            
+            border: none;
+            border-radius: 100%;
+            
+            filter: invert();
+            background-image: url('search.svg');
+            background-color: #0af;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         
     </style>
     <script>
@@ -65,7 +84,7 @@
                     <input type="text" placeholder="search..." style="border: none; background: transparent;">
 
                     <!-- https://www.svgrepo.com/svg/19021/search -->
-                    <input type="submit" value="" style="aspect-ratio: 1; width: 29px; position: absolute; right: 4px; top: 4px; border: none; background-image: url('search.svg'); background-color: var(--accent); background-size: 60%; background-repeat: no-repeat; background-position: center; color: white; border-radius: 100%;">
+                    <input type="submit" id="search" value="">
                 </form>
             </div>
             
