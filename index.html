@@ -54,11 +54,17 @@
 </head>
 <body>
 
-    <div style="border-bottom: 2px solid var(--accent);">
-        <h1 style="float: left;">DogmomAI</h1>
-        <div style="float: right; width: 600px; padding: 10px; background: #ddd; border-radius: 100px;">
-            text-here
+    <div style="border-bottom: 2px solid var(--accent); overflow: auto;">
+
+        <div style="margin: auto; max-width: 550px;">
+            
+            <h1 style="float: left; margin: 0;">DogmomAI</h1>
+            <div style="float: right; width: 600px; padding: 10px; background: #ddd; border-radius: 100px;">
+                text-here
+            </div>
+            
         </div>
+        
     </div>
     
     <div style="margin: auto; max-width: 550px;">
@@ -69,6 +75,8 @@
             <img height="50" src="https://miro.medium.com/v2/resize:fit:1358/0*o0-6o1W1DKmI5LbX.png">
             <img height="50" src="https://m.media-amazon.com/images/I/21qmLwQcLTL.jpg">
         </div> -->
+
+        <br>
         
         <div>© 2023 The DogmomAI Corperation (not a corperation). All Rights Reserved.</div>
 
@@ -85,12 +93,9 @@
         </script>
 
         <!-- display post info -->
-        <h2>
-            <script>document.write(posts[postId].Name);</script>
-        </h2>
-        <p>
-            <script>document.write(posts[postId].Paragraph);</script>
-        </p>
+        <script>document.write("<h2>" + posts[postId].Name + "</h2>");</script>
+        <script>document.write("<p>" + posts[postId].Paragraph + "</p>");</script>
+        
         <div class="char-grid">
             <script>
                 for (let i in posts[postId].Images) {
