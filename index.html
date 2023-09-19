@@ -29,7 +29,8 @@
 
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
-        a:active { mix-blend-mode: difference; }
+        button { cursor: pointer; }
+        a:active, button:active { mix-blend-mode: difference; }
 
         .char-grid { background: white; display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 6px; }
         
@@ -60,8 +61,12 @@
             
             <h1 style="float: left; margin: 5px 0 0;">DogmomAI</h1>
             <div style="float: right; width: 300px; padding: 10px; background: #ddd; border-radius: 100px; position: relative; color: grey;">
-                search
-                <button type="button" style="aspect-ratio: 1; padding: 8px; position: absolute; right: 4px; top: 4px; border: none; background: var(--accent); color: white; border-radius: 100%;">ok</button>
+                
+                <form>
+                    <input type="text" placeholder="search..." style="border: none; background: transparent;">
+                    <input type="submit" value="OK" style="aspect-ratio: 1; padding: 8px; position: absolute; right: 4px; top: 4px; border: none; background: var(--accent); color: white; border-radius: 100%;">
+                </form>
+                
             </div>
             
         </div>
