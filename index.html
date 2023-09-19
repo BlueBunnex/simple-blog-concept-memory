@@ -34,23 +34,27 @@
 
         .char-grid { background: #ddd; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; }
 
-        #search {
+        .round-button {
             aspect-ratio: 1;
+            
+            border: none;
+            border-radius: 1000px;
+            
+            filter: invert();
+            background-color: #0af;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #search {
             width: 29px;
             
             position: absolute;
             right: 4px;
             top: 4px;
             
-            border: none;
-            border-radius: 100%;
-            
-            filter: invert();
             background-image: url('search.svg');
-            background-color: #0af;
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
         }
         
     </style>
@@ -76,17 +80,22 @@
 
     <div style="border-bottom: 2px solid var(--accent);">
 
-        <div style="margin: auto; max-width: 550px; padding: 6px 0; overflow: auto;">
+        <div style="margin: auto; max-width: 750px; padding: 6px 0; overflow: auto; position: relative;">
             
             <h1 style="float: left; margin: 3px 0 0; font-family: sans-serif;">DogmomAI</h1>
-            <div style="float: right; width: 300px; padding: 10px; background: #ddd; border-radius: 100px; position: relative;">
+
+            <!-- search bar -->
+            <div style="position: absolute; top: 4px; left: 50%; transform: translateX(-50%); width: 300px; padding: 10px; background: #ddd; border-radius: 100px;">
                 <form>
                     <input type="text" placeholder="search..." style="border: none; background: transparent;">
-
+    
                     <!-- https://www.svgrepo.com/svg/19021/search -->
-                    <input type="submit" id="search" value="">
+                    <input type="submit" class="round-button" id="search" value="">
                 </form>
             </div>
+
+            <!-- user controls -->
+            <button style="float: right;" class="round-button">POST</button>
             
         </div>
         
