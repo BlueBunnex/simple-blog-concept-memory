@@ -32,7 +32,7 @@
         input[type="submit"] { cursor: pointer; }
         a:active, input[type="submit"]:active { mix-blend-mode: difference; }
 
-        .char-grid { background: white; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 6px; }
+        .char-grid { background: #ddd; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); column-gap: 6px; }
         
     </style>
     <script>
@@ -105,6 +105,9 @@
             <script>
                 for (let i in posts[postId].Images) {
                     document.write('<img src="' + posts[postId].Images[i] + '">');
+                }
+                for (let i=0; i<6; i++) {
+                    document.write('<div></div>');
                 }
             </script>
         </div>
