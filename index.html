@@ -32,7 +32,7 @@
         input[type="submit"] { cursor: pointer; }
         a:active, input[type="submit"]:active { mix-blend-mode: difference; }
 
-        .char-grid { background: #ddd; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); column-gap: 6px; }
+        .char-grid { background: #ddd; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; }
         
     </style>
     <script>
@@ -64,7 +64,7 @@
                 
                 <form>
                     <input type="text" placeholder="search..." style="border: none; background: transparent;">
-                    <input type="submit" value="OK" style="aspect-ratio: 1; padding: 6px; position: absolute; right: 4px; top: 4px; border: none; background: var(--accent); color: white; border-radius: 100%;">
+                    <input type="submit" value="OK" style="aspect-ratio: 1; padding: 6px; position: absolute; right: 4px; top: 4px; border: none; background-image: url(search.svg), var(--accent); background-size: 80%; background-position: center; color: white; border-radius: 100%;">
                 </form>
                 
             </div>
