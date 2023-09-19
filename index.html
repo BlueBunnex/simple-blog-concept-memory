@@ -29,8 +29,8 @@
 
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
-        button { cursor: pointer; }
-        a:active, button:active { mix-blend-mode: difference; }
+        input[type="submit"] { cursor: pointer; }
+        a:active, input[type="submit"]:active { mix-blend-mode: difference; }
 
         .char-grid { background: white; display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 6px; }
         
@@ -44,7 +44,7 @@
             },
             {
                 Name: "Unclassified",
-                Paragraph: "",
+                Paragraph: "Some drawings that I like, but don't feel like turning into full-blown characters with backgrounds.",
                 Images: ["dogmom_click.png", "mycatgirl.png", "foxlady.png", "coolsuit.png", "translove.png"]
             }
         ];
@@ -57,7 +57,7 @@
 
     <div style="border-bottom: 2px solid var(--accent);">
 
-        <div style="margin: auto; max-width: 550px; padding: 10px 0; overflow: auto;">
+        <div style="margin: auto; max-width: 550px; padding: 6px 0; overflow: auto;">
             
             <h1 style="float: left; margin: 5px 0 0;">DogmomAI</h1>
             <div style="float: right; width: 300px; height: 16px; padding: 10px; background: #ddd; border-radius: 100px; position: relative;">
@@ -72,44 +72,40 @@
         </div>
         
     </div>
+
+    <br>
+
+    <div style="display: flex;">
+        <img height="50" src="https://www.nps.gov/articles/000/images/modern-Rainbow-1979-Flag.png">
+        <img height="50" src="https://www.nps.gov/articles/000/images/Transgender_Pride_flag_2.png">
+        <img height="50" src="https://miro.medium.com/v2/resize:fit:1358/0*o0-6o1W1DKmI5LbX.png">
+        <img height="50" src="https://m.media-amazon.com/images/I/21qmLwQcLTL.jpg">
+    </div>
     
-    <div style="margin: auto; max-width: 550px;">
-        
-<!--         <div style="display: flex;">
-            <img height="50" src="https://www.nps.gov/articles/000/images/modern-Rainbow-1979-Flag.png">
-            <img height="50" src="https://www.nps.gov/articles/000/images/Transgender_Pride_flag_2.png">
-            <img height="50" src="https://miro.medium.com/v2/resize:fit:1358/0*o0-6o1W1DKmI5LbX.png">
-            <img height="50" src="https://m.media-amazon.com/images/I/21qmLwQcLTL.jpg">
-        </div> -->
+    <div>© 2023 The DogmomAI Corperation (not a corperation). All Rights Reserved.</div>
 
-        <br>
-        
-        <div>© 2023 The DogmomAI Corperation (not a corperation). All Rights Reserved.</div>
+    <a>Fanfiction</a>
+    <a href="https://bsky.app/profile/dogmomai.top" target="_blank">Bluesky</a>
+    <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">Github</a>
 
-        <a>Fanfiction</a>
-        <a href="https://bsky.app/profile/dogmomai.top" target="_blank">Bluesky</a>
-        <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">Github</a>
+    <!-- display post selection -->
+    <h2>Posts</h2>
+    <script>
+        for (let i=0; i<posts.length; i++) {
+            document.write('<a href="https://dogmomai.top?id=' + i + '">' + posts[i].Name + '</a> ');
+        }
+    </script>
 
-        <!-- display post selection -->
-        <h2>Posts</h2>
+    <!-- display post info -->
+    <script>document.write("<h2>" + posts[postId].Name + "</h2>");</script>
+    <script>document.write("<p>" + posts[postId].Paragraph + "</p>");</script>
+    
+    <div class="char-grid">
         <script>
-            for (let i=0; i<posts.length; i++) {
-                document.write('<a href="https://dogmomai.top?id=' + i + '">' + posts[i].Name + '</a> ');
+            for (let i in posts[postId].Images) {
+                document.write('<img src="' + posts[postId].Images[i] + '">');
             }
         </script>
-
-        <!-- display post info -->
-        <script>document.write("<h2>" + posts[postId].Name + "</h2>");</script>
-        <script>document.write("<p>" + posts[postId].Paragraph + "</p>");</script>
-        
-        <div class="char-grid">
-            <script>
-                for (let i in posts[postId].Images) {
-                    document.write('<img src="' + posts[postId].Images[i] + '">');
-                }
-            </script>
-        </div>
-        
     </div>
     
 </body>
