@@ -64,7 +64,9 @@
                 
                 <form>
                     <input type="text" placeholder="search..." style="border: none; background: transparent;">
-                    <input type="submit" value="OK" style="aspect-ratio: 1; padding: 6px; position: absolute; right: 4px; top: 4px; border: none; background-image: url(search.svg), var(--accent); background-size: 80%; background-position: center; color: white; border-radius: 100%;">
+
+                    <!-- https://www.svgrepo.com/svg/19021/search -->
+                    <input type="submit" value="OK" style="aspect-ratio: 1; padding: 6px; position: absolute; right: 4px; top: 4px; border: none; background-image: url('search.svg'); background-color: var(--accent); background-size: 80%; background-position: center; color: white; border-radius: 100%;">
                 </form>
                 
             </div>
@@ -105,9 +107,6 @@
             <script>
                 for (let i in posts[postId].Images) {
                     document.write('<img src="' + posts[postId].Images[i] + '">');
-                }
-                for (let i=0; i<6; i++) {
-                    document.write('<div></div>');
                 }
             </script>
         </div>
