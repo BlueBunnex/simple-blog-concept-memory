@@ -13,7 +13,6 @@
     <style>
         :root {
             --accent: #f05;
-            --negative: #0fa;
         }
         
         body {
@@ -21,7 +20,8 @@
             color: #111;
             background: #eee;
 
-            margin: 0;
+            margin: 0 auto;
+            max-width: 300px;
         }
         
         p { background: #ddd; padding: 10px; border-left: 4px solid var(--accent); }
@@ -30,119 +30,26 @@
 
         a { color: var(--accent); }
         a:hover { text-decoration: none; }
-        .color-button { cursor: pointer; }
-        a:active, .color-button:active { mix-blend-mode: difference; }
+        a:active { mix-blend-mode: difference; }
 
-        .char-grid { background: #ddd; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px; }
-
-        .color-button {
-            color: black;
-            font-weight: 700;
-            
-            border: none;
-            
-            filter: invert();
-            background-color: var(--negative);
-            background-size: 60%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        #search {
-            width: 29px;
-            aspect-ratio: 1;
-            
-            position: absolute;
-            right: 4px;
-            top: 4px;
-
-            border-radius: 1000px;
-            
-            background-image: url('search.svg');
-        }
-        
     </style>
-    <script>
-        const posts = [
-            {
-                Name: "Amy",
-                Paragraph: "Amy is an edgy goth umbreon, which you can tell by how her hair is swept over one eye. She boasts big boobs and thighs and a giant ass. As an American, she likes iced coffee and frequent sex. She's 280lb pushing 300. Amy is single and ready to mingle — <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>call now</a>!",
-                Images: ["umbreonomg.png"]
-            },
-            {
-                Name: "Unclassified",
-                Paragraph: "Some drawings that I like, but don't feel like turning into full-blown characters with backgrounds.",
-                Images: ["dogmom_click.png", "mycatgirl.png", "foxlady.png", "coolsuit.png", "translove.png"]
-            }
-        ];
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const postId = parseInt(urlParams.get('id')); // ?id=1337
-    </script>
 </head>
 <body>
 
-    <div style="border-bottom: 2px solid var(--accent);">
-
-        <div style="margin: auto; max-width: 750px; padding: 6px 0; overflow: auto; position: relative;">
-            
-            <h1 style="float: left; margin: 3px 0 0; font-family: sans-serif;">DogmomAI</h1>
-
-            <!-- search bar -->
-            <div style="position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 300px; padding: 10px; background: #ddd; border-radius: 100px;">
-                <form>
-                    <input type="text" placeholder="search..." style="border: none; background: transparent;">
-    
-                    <!-- https://www.svgrepo.com/svg/19021/search -->
-                    <input type="submit" class="color-button" id="search" value="">
-                </form>
-            </div>
-
-            <!-- user controls -->
-            <img style="float: right; border-radius: 4px; height: 37px; width: 37px;" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-hu-tao-6cjtrrhyvr2g24ik.jpg">
-            <button style="float: right; padding: 12px; margin-right: 6px; border-radius: 4px;" class="color-button">New Post</button>
-            
-        </div>
-        
+    <div style="display: flex;">
+        <img height="50" src="https://www.nps.gov/articles/000/images/modern-Rainbow-1979-Flag.png">
+        <img height="50" src="https://www.nps.gov/articles/000/images/Transgender_Pride_flag_2.png">
+        <img height="50" src="https://miro.medium.com/v2/resize:fit:1358/0*o0-6o1W1DKmI5LbX.png">
+        <img height="50" src="https://m.media-amazon.com/images/I/21qmLwQcLTL.jpg">
     </div>
 
-    <div style="padding: 10px 200px;">
-    
-        <div style="display: flex;">
-            <img height="50" src="https://www.nps.gov/articles/000/images/modern-Rainbow-1979-Flag.png">
-            <img height="50" src="https://www.nps.gov/articles/000/images/Transgender_Pride_flag_2.png">
-            <img height="50" src="https://miro.medium.com/v2/resize:fit:1358/0*o0-6o1W1DKmI5LbX.png">
-            <img height="50" src="https://m.media-amazon.com/images/I/21qmLwQcLTL.jpg">
-        </div>
+    þick women<br>
+    softness and listening are virtues<br>
+    © 2023 The DogmomAI Corperation (not a corperation). All Rights Reserved.<br><br>
 
-        <br>
-        
-        <div>© 2023 The DogmomAI Corperation (not a corperation). All Rights Reserved.</div>
-    
-        <a>Fanfiction</a>
-        <a href="https://bsky.app/profile/dogmomai.top" target="_blank">Bluesky</a>
-        <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">Github</a>
-    
-        <!-- display post selection -->
-        <h2>Posts</h2>
-        <script>
-            for (let i=0; i<posts.length; i++) {
-                document.write('<a href="https://dogmomai.top?id=' + i + '">' + posts[i].Name + '</a> ');
-            }
-        </script>
-    
-        <!-- display post info -->
-        <script>document.write("<h2>" + posts[postId].Name + "</h2>");</script>
-        <script>document.write("<p>" + posts[postId].Paragraph + "</p>");</script>
-        
-        <div class="char-grid">
-            <script>
-                for (let i in posts[postId].Images) {
-                    document.write('<img src="' + posts[postId].Images[i] + '">');
-                }
-            </script>
-        </div>
-    </div>
+    <a>Fanfiction</a>
+    <a href="https://bsky.app/profile/dogmomai.top" target="_blank">Bluesky</a>
+    <a href="https://github.com/BlueBunnex/dogmomAI" target="_blank">Github</a
     
 </body>
 </html>
