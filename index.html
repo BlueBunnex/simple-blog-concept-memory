@@ -32,8 +32,8 @@
         a:hover { text-decoration: none; }
         a:active { mix-blend-mode: difference; }
 
-        #censor-board { filter: brightness(0%); }
-        #censor-board:hover { filter: brightness(100%); }
+        #censor-board { filter: brightness(0%); display: grid; gap: 0; grid-template-columns: 1fr 1fr; }
+        #censor-board:hover { transition-duration: 3s; filter: brightness(100%); }
 
     </style>
 </head>
