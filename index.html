@@ -22,9 +22,6 @@
 
             margin: 0 auto;
             max-width: 300px;
-            
-            display: flex;
-            gap: 10px;
         }
         
         p { background: #ddd; padding: 10px; border-left: 4px solid var(--accent); }
@@ -44,7 +41,7 @@
 
     <script>
         function loadNSFW() {
-            body.innerHTML = `
+            document.body.innerHTML = `
                 <div id="censor-board">
                     <img src="nakeybelly.png">
                     <img src="pinkbutt.png">
