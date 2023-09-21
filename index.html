@@ -32,6 +32,9 @@
         a:hover { text-decoration: none; }
         a:active { mix-blend-mode: difference; }
 
+        #censor-board { filter: brightness(0%); }
+        #censor-board:hover { filter: brightness(100%); }
+
     </style>
 </head>
 <body>
@@ -75,13 +78,16 @@
     </ul>
     Simple props (especially for squishing against) are free.
 
-    <img style="width: 10px;" src="pinkbutt.png">
-    <img style="width: 10px;" src="coolsuit.png">
-    <img style="width: 10px;" src="dogmom_click.png">
-    <img style="width: 10px;" src="foxlady.png">
-    <img style="width: 10px;" src="mycatgirl.png">
-    <img style="width: 10px;" src="translove.png">
-    <img style="width: 10px;" src="umbreonomg.png">
+    <div id="censor-board">
+        <img src="nakeybelly.png">
+        <img src="pinkbutt.png">
+        <img src="coolsuit.png">
+        <img src="dogmom_click.png">
+        <img src="foxlady.png">
+        <img src="mycatgirl.png">
+        <img src="translove.png">
+        <img src="umbreonomg.png">
+    </div>
 
     <p>© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.</p>
     
