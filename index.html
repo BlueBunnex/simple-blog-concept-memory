@@ -32,9 +32,7 @@
 
         img { width: 100%; min-width: 0; }
 
-        button { background: var(--accent); color: white; border: none; border-radius: 4px; padding: 4px; cursor: pointer; flex: 1; }
-        button:hover { mix-blend-mode: difference; }
-        button:active { font-weight: 700; }
+        a { color: var(--accent); }
 
         #censor-board { filter: brightness(0%); display: grid; gap: 0; grid-template-columns: 1fr 1fr 1fr; background: white; }
         #censor-board:hover { transition-duration: 3s; filter: brightness(100%); }
@@ -61,15 +59,22 @@
     </script>
 
     <div style="margin: 0 auto; max-width: 300px; padding: 10px; background: rgba(0,0,0,0.7); height: 100%;">
-        <div style="display: inline-block; width: 64px; aspect-ratio: 1; border-radius: 4px; background: url('blue_girl.JPG'); background-size: 120%; background-position: top center;"></div>
-        <div style="display: inline-block; transform: translateY(-25px); font-weight: 700;"> DogmomAI</div>
-    
-        <nav style="display: flex; gap: 4px;">
-            <button type="button" onclick="alert('will be implemented soonish? with new .html file with ?= stuff :3');">Fanfiction</button>
-            <button type="button" onclick="loadNSFW();">NSFW</button>
-            <button type="button" onclick="window.open('https://bsky.app/profile/dogmomai.top', '_blank');">Bluesky</button>
-            <button type="button" onclick="window.open('https://github.com/BlueBunnex/dogmomAI', '_blank');">Github</button>
-        </nav>
+        <div style="display: flex;">
+            <div style="display: inline-block; width: 64px; aspect-ratio: 1; border-radius: 4px; background: url('blue_girl.JPG'); background-size: 120%; background-position: top center;"></div>
+
+            <div style="flex: 1;">
+                <strong>DogmomAI</strong><br>
+                <nav>
+                    <a href="javascript:alert('will be implemented soonish? with new .html file with ?= stuff :3');">Fanfiction</a>
+                    ·
+                    <a href="javascript:loadNSFW();">NSFW</a>
+                    ·
+                    <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
+                    ·
+                    <a href="https://github.com/BlueBunnex/dogmomAI">Github</a>
+                </nav>
+            </div>
+        </div>
     
         <ul style="padding-left: 20px; margin: 14px 0;">
             <li><strong>Drawing:</strong> I like to draw fat women with large breasts.</li>
