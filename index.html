@@ -34,8 +34,6 @@
         #censor-board { filter: brightness(0%); display: grid; gap: 0; grid-template-columns: 1fr 1fr; margin: 14px 0; background: white; }
         #censor-board:hover { transition-duration: 3s; filter: brightness(100%); }
 
-        nav { margin: 14px 0; display: flex; gap: 4px; }
-
     </style>
 </head>
 <body>
@@ -62,8 +60,8 @@
         <div>p</div>
     </div>
 
-    <nav>
-        <button type="button" onclick="alert("dne rn");">Fanfiction</button>
+    <nav style="margin: 2px 0; display: flex; gap: 4px;">
+        <button type="button" onclick="alert('dne rn');">Fanfiction</button>
         <button type="button" onclick="window.open('https://bsky.app/profile/dogmomai.top', '_blank');">Bluesky</button>
         <button type="button" onclick="window.open('https://github.com/BlueBunnex/dogmomAI', '_blank');">Github</button>
     </nav>
