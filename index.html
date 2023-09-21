@@ -29,7 +29,8 @@
         img { width: 100%; min-width: 0; }
 
         button { background: var(--accent); color: #eee; border: none; border-radius: 4px; padding: 4px; cursor: pointer; flex: 1; }
-        button:active { mix-blend-mode: difference; }
+        button:hover { mix-blend-mode: difference; }
+        button:active { font-weight: 700; }
 
         #censor-board { filter: brightness(0%); display: grid; gap: 0; grid-template-columns: 1fr 1fr; margin: 14px 0; background: white; }
         #censor-board:hover { transition-duration: 3s; filter: brightness(100%); }
