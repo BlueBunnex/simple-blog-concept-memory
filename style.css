@@ -20,6 +20,8 @@ body:after {
     display: block;
 }
 
+h1, h2 { margin-bottom: 0; }
+
 a { color: var(--accent); }
 a:hover { filter: brightness(75%); }
 a:active { filter: invert(100%); }
@@ -27,7 +29,6 @@ a:active { filter: invert(100%); }
 hr {
     border-top: 1px solid lightgrey;
     border-bottom: none;
-    width: 90%;
 }
 
 .box { border: 1px solid lightgrey; border-radius: 6px; padding: 12px; }
