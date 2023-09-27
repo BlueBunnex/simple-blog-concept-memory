@@ -20,7 +20,7 @@ body:after {
     display: block;
 }
 
-h1, h2 { margin-bottom: 0; }
+h1, h2 { margin-bottom: 6px; }
 
 a { color: var(--accent); }
 a:hover { filter: brightness(75%); }
