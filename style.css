@@ -20,7 +20,7 @@ body:after {
     display: block;
 }
 
-h1, h2 { margin-bottom: 6px; }
+h1, h2 { margin-bottom: 0; }
 
 a { color: var(--accent); }
 a:hover { filter: brightness(75%); }
@@ -31,5 +31,5 @@ hr {
     border-bottom: none;
 }
 
-.box { border: 1px solid lightgrey; border-radius: 6px; padding: 12px; }
+.box { border: 1px solid lightgrey; border-radius: 6px; padding: 12px; margin: 14px 0; }
 .box img { border: 1px solid lightgrey; width: 100%; }
