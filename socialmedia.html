@@ -15,8 +15,8 @@
             gap: 0;
         }
 
-        a { font-decoration: none; }
-        a:hover { font-decoration: underline; }
+        a { text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -29,10 +29,12 @@
 
         <hr>
 
-        <a href="" style="color: black;">Following</a><br>
-        <a href="" style="color: grey;">Popular</a><br>
-        <a href="" style="color: grey;">News</a><br>
-        <a href="" style="color: #c17;">Other</a>
+        <ul style="list-style-type: none; padding: 0; font-size: 1.2em;">
+            <li><a href="" style="color: black;">Following</a></li>
+            <li><a href="" style="color: grey;">Popular</a></li>
+            <li><a href="" style="color: grey;">News</a></li>
+            <li><a href="" style="color: #c17; font-size: calc(1em / 1.2em);">Other</a></li>
+        </ul>
     </div>
     
     <div style="grid-column: 2 / 3;"></div>
