@@ -19,21 +19,35 @@
         body {
             font-family: 'Roboto Slab', serif;
             font-size: 14px;
-            color: #222;
+            background: #222;
+            color: white;
         }
         
         a { color: var(--accent); }
         a:hover { filter: invert(100%); }
         a:active { filter: invert(100%) brightness(70%); }
+
+        button {
+            padding: 12px;
+            cursor: pointer;
+            background: var(--accent);
+            
+            border: none;
+            border-radius: 6px;
+            
+            font-size: 1em;
+            font-weight: 800;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
-    <button type="button" style="background: var(--accent); border: none; border-radius: 6px; padding: 12px; color: white; font-weight: 800;">Cart</button>
+    <button type="button">Cart</button>
 
     <nav>
         <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> ·
-        <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a> ·
+        <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
     </nav>
     
     <img height="200" src="demongirl.png">
