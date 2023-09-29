@@ -45,8 +45,10 @@
             font-weight: 800;
             color: black;
         }
-        button:active { background: var(--accent-dark); color: white; }
         button img { height: 24px; position: absolute; left: 22px; top: 9px; }
+        
+        button:active { background: var(--accent-dark); color: white; }
+        button:active img { filter: invert(1); }
     </style>
 </head>
 <body>
