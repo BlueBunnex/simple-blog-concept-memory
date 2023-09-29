@@ -31,6 +31,9 @@
 
         button {
             padding: 12px;
+            padding-left: 36px;
+
+            position: relative;
             cursor: pointer;
             background: var(--accent);
             
@@ -41,12 +44,14 @@
             font-weight: 800;
             color: white;
         }
+
+        button img { filter: invert(1); height: 24px; position: absolute; left: 10px; top: 9px; }
     </style>
 </head>
 <body>
 
     <!-- https://www.svgrepo.com/svg/470757/cart -->
-    <button type="button"><img style="filter: invert(1); height: 1em;" src="cart.svg"> Cart</button>
+    <button type="button"><img src="cart.svg"> Cart</button>
 
     <nav>
         <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> ·
