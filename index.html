@@ -26,12 +26,11 @@
         }
         
         a { color: var(--accent); }
-        a:hover { filter: invert(100%); }
-        a:active { filter: invert(100%) brightness(70%); }
+        a:hover { text-decoration: none; }
+        a:active { brightness(0); }
 
         button {
             padding: 12px;
-            padding-left: 36px;
 
             position: relative;
             cursor: pointer;
@@ -44,6 +43,7 @@
             font-weight: 800;
             color: white;
         }
+        button:has(img) { padding-left: 36px; }
 
         button img { filter: invert(1); height: 24px; position: absolute; left: 10px; top: 9px; }
     </style>
