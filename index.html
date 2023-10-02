@@ -38,7 +38,16 @@
     </style>
     <script>
         const articles = [
-            
+            {
+                title: "Are Children The Key To Demystifying Language?",
+                meta: "Erik Lajko · 10/01/2023 · Satire",
+                body: `
+                    <p>A team at University of Maryland prepares to uncover the mysteries of the exotic language Pirahã through a new technique that makes use of America's smartest workers — children.</p>
+                    <p>Their methodology is simple in premise — by taking advantage of children's heightened ability to pick up languages, UMD will be able to decipher this largely undocumented language without any effort on the researcher's part. To do this researchers plan to have a native English and Pirahã speaker get married, have a child, and get divorced. The resulting bounce between households the child will experience will hopefully be frequent enough for them to pick up both languages. In parallel, the linguistic divide between their parents will ideally motivate them to study linguistics, at which point their knowledge of technical terminology will be strong enough where they can start writing a dictionary for us.</p>
+                    <p>"What happens if the kid doesn't decide to become a linguist?" one critic asked UMD researchers.</p>
+                    <p>"That's what we in the biz like to call 'dropping out of a longitudinal study.'" answered Paul Minigan, head of the research study on Pirahã. "If that happens, we'll rerun the experiment with new participants until we get the results we want."</p>
+                `
+            }
         ];
     </script>
 </head>
@@ -58,18 +67,16 @@
         if (id == 0) {
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
-                    <h1 style="margin: 0;">Are Children The Key To Demystifying Language?</h1>
-                    <div style="color: var(--text-dark);">Erik Lajko · 10/01/2023 · Satire</div>
+                    <h1 style="margin: 0;">%TITLE%</h1>
+                    <div style="color: var(--text-dark);">%META%</div>
                 </div>
-                
-                A team at University of Maryland prepares to uncover the mysteries of the exotic language Pirahã through a new technique that makes use of America's smartest workers—children.
-                Their methodology is simple in premise—by taking advantage of children's heightened ability to pick up languages, UMD will be able to decipher this largely undocumented language without any effort on the researcher's part. To do this researchers plan to have a native English and Pirahã speaker get married, have a child, and get divorced. The resulting bounce between households the child will experience will hopefully be frequent enough for them to pick up both languages. In parallel, the linguistic divide between their parents will ideally motivate them to study linguistics, at which point their knowledge of technical terminology will be strong enough where they can start writing a dictionary for us.
-                "What happens if the kid doesn't decide to become a linguist?" one critic asked UMD researchers.
-                "That's what we in the biz like to call 'dropping out of a longitudinal study.'" answered Paul Minigan, head of the research study on Pirahã. "If that happens, we'll rerun the experiment with new participants until we get the results we want."
-            
+                %BODY%
                 <div style="color: var(--text-dark);">Source(s):</div>
                 <div>dude trust me</div>
             `;
+            toInsert = toInsert.replace("%TITLE%", articles[id].title);
+            toInsert = toInsert.replace("%META%", articles[id].meta);
+            toInsert = toInsert.replace("%BODY%", articles[id].body);
         }
 
         document.write(toInsert);
