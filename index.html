@@ -56,10 +56,12 @@
 <body>
 
     <nav>
-        <a href='index.html'>DogmomAI Home</a> ·
-        <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> ·
-        <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
+        <a href='index.html'>DogmomAI Home</a>
+        <span style="float: right;">
+            <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> · <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
+        </span>
     </nav>
+    <hr>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -85,7 +87,7 @@
             // load article
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
-                    <h1 style="margin-bottom: 0;">%TITLE%</h1>
+                    <h1 style="margin: 0;">%TITLE%</h1>
                     <div style="color: var(--text-dark);">%META%</div>
                 </div>
                 %BODY%
