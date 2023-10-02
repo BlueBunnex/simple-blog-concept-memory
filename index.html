@@ -34,6 +34,8 @@
 
         img { border-radius: 10px; filter: brightness(50%); transition-duration: 0.2s; }
         img:hover { filter: brightness(100%); }
+
+        hr { border: none; border-top: 1px solid var(--accent); }
         
     </style>
     <script>
@@ -57,14 +59,16 @@
         const urlParams = new URLSearchParams(window.location.search);
         const id = parseInt(urlParams.get('id'));
 
-        let toInsert = `
-            <img height="200" src="demongirl.png">
-            <img height="200" src="blue_girl.JPG">
-            <br>
-            <a href='?id=0'>article 0</a>
-        `;
+        let toInsert;
 
-        if (!isNaN(id)) {
+        if (isNaN(id)) {
+            toInsert = `
+                <img height="200" src="demongirl.png">
+                <img height="200" src="blue_girl.JPG">
+                <br>
+            `;
+            toInsert += "<a href='?id=0'>" + articles[0].title + "</a>";
+        } else {
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
                     <h1 style="margin: 0;">%TITLE%</h1>
