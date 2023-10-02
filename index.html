@@ -65,13 +65,13 @@
             toInsert = `
                 <img height="200" src="demongirl.png">
                 <img height="200" src="blue_girl.JPG">
-                <br>
+                <br><br>
             `;
             for (let i=articles.length-1; i+1; i--) {
                 toInsert += "<a href='?id=" + i + "'>" + articles[i].title + "</a><br>";
             }
         } else if (id < 0 || id >= articles.length) {
-            toInsert = "article does not exist :(";
+            toInsert = "<h1 style='text-align: center;'>Problem!</h1><p>article does not exist :(</p>";
         } else {
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
