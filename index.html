@@ -67,9 +67,11 @@
                 <img height="200" src="blue_girl.JPG">
                 <br>
             `;
-            for (let i=articles.length-1; i; i--) {
+            for (let i=articles.length-1; i+1; i--) {
                 toInsert += "<a href='?id=" + i + "'>" + articles[i].title + "</a><br>";
             }
+        } if (id < 0 || id >= articles.length) {
+            toInsert = "article does not exist :(";
         } else {
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
