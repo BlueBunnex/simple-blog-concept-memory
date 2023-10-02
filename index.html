@@ -67,7 +67,9 @@
                 <img height="200" src="blue_girl.JPG">
                 <br>
             `;
-            toInsert += "<a href='?id=0'>" + articles[0].title + "</a>";
+            for (let i=0; i<articles.length; i++) {
+                toInsert += "<a href='?id=" + i + "'>" + articles[i].title + "</a><br>";
+            }
         } else {
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
