@@ -49,6 +49,14 @@
                     <p>"What happens if the kid doesn't decide to become a linguist?" one critic asked UMD researchers.</p>
                     <p>"That's what we in the biz like to call 'dropping out of a longitudinal study.'" answered Paul Minigan, head of the research study on Pirahã. "If that happens, we'll rerun the experiment with new participants until we get the results we want."</p>
                 `
+            },
+            {
+                title: "Drawing as Therapy — Fact or Cap?",
+                meta: "John Sock · 10/01/2023 · Satire",
+                body: `
+                    <img height="200" src="demongirl.png">
+                    <img height="200" src="blue_girl.JPG">
+                `
             }
         ];
     </script>
@@ -71,12 +79,7 @@
 
         if (isNaN(id)) {
             // load home screen
-            toInsert = `
-                <br>
-                <img height="200" src="demongirl.png">
-                <img height="200" src="blue_girl.JPG">
-                <br><br>
-            `;
+            toInsert = "<br>";
             for (let i=articles.length-1; i+1; i--) {
                 toInsert += "<a href='?id=" + i + "'>" + articles[i].title + "</a><br>" + articles[i].meta + "<br>";
             }
