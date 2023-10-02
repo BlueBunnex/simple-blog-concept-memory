@@ -41,7 +41,11 @@
         const urlParams = new URLSearchParams(window.location.search);
         const id = parseInt(urlParams.get('id')); // ?id=1227
 
-        let toInsert = `<img height="200" src="demongirl.png"><img height="200" src="blue_girl.JPG">`;
+        let toInsert = `
+            <img height="200" src="demongirl.png">
+            <img height="200" src="blue_girl.JPG">
+            <a href='https://dogmomai.top/?id=0'>article</a>
+        `;
 
         if (id == 0) {
             toInsert = `<div style="border-left: 4px solid var(--accent); padding-left: 8px;">
