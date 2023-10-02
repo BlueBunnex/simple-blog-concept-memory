@@ -41,13 +41,13 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const id = parseInt(urlParams.get('id')); // ?id=1227
+        const id = parseInt(urlParams.get('id'));
 
         let toInsert = `
             <img height="200" src="demongirl.png">
             <img height="200" src="blue_girl.JPG">
             <br>
-            <a href='?id=0'>article</a>
+            <a href='?id=0'>article 0</a>
         `;
 
         if (id == 0) {
@@ -69,6 +69,7 @@
 
     <br><hr>
     <nav>
+        <a href='index.html'>Home</a> ·
         <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> ·
         <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
     </nav>
