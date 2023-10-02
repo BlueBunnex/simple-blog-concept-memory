@@ -22,7 +22,7 @@
             font-family: 'Roboto Slab', serif;
             font-size: 14px;
             color: var(--text);
-            background: #222;
+            background: #111;
 
             max-width: 550px;
             margin: 10px auto;
@@ -42,7 +42,7 @@
         const articles = [
             {
                 title: "Are Children The Key To Demystifying Language?",
-                meta: "Erik Lajko · 10/01/2023 · Satire",
+                meta: "John Sock · 10/01/2023 · Satire",
                 body: `
                     <p>A team at University of Maryland prepares to uncover the mysteries of the exotic language Pirahã through a new technique that makes use of America's smartest workers — children.</p>
                     <p>Their methodology is simple in premise — by taking advantage of children's heightened ability to pick up languages, UMD will be able to decipher this largely undocumented language without any effort on the researcher's part. To do this researchers plan to have a native English and Pirahã speaker get married, have a child, and subsequently get divorced (the method through which this is carried out is at this point undisclosed). The resulting bounce between households the child will experience will hopefully be frequent enough for them to pick up both languages. In parallel, the linguistic divide between their parents will ideally motivate them to study linguistics, at which point their knowledge of technical terminology will be strong enough where they can start writing a dictionary for us.</p>
@@ -69,6 +69,7 @@
         let toInsert;
 
         if (isNaN(id)) {
+            // load home screen
             toInsert = `
                 <br>
                 <img height="200" src="demongirl.png">
@@ -76,11 +77,13 @@
                 <br><br>
             `;
             for (let i=articles.length-1; i+1; i--) {
-                toInsert += "<a href='?id=" + i + "'>" + articles[i].title + "</a><br>";
+                toInsert += "<a href='?id=" + i + "'>" + articles[i].title + "</a><br>" + articles[i].meta + "<br>";
             }
         } else if (id < 0 || id >= articles.length) {
+            // load error
             toInsert = "<h1 style='text-align: center;'>Uh oh!</h1><div>article does not exist :(</div>";
         } else {
+            // load article
             toInsert = `
                 <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
                     <h1 style="margin: 0;">%TITLE%</h1>
