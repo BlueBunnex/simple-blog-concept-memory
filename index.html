@@ -23,10 +23,8 @@
             max-width: 550px;
             margin: 14px auto;
         }
-        
-        a { color: var(--accent); }
-        a:hover { text-decoration: none; }
-        a:active { color: black; }
+
+        button { border: none; border-radius: 0; background: var(--accent); color: white; }
 
         img { width: 180px; }
 
@@ -37,8 +35,8 @@
 <body>
 
     <nav>
-        <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a> ·
-        <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
+        <button type="button" onclick="document.location.href = 'https://github.com/BlueBunnex/dogmomAI';">Github repo</button>
+        <button type="button" onclick="document.location.href = 'https://bsky.app/profile/dogmomai.top';">Bluesky</button>
     </nav>
     <hr>
 
