@@ -25,9 +25,10 @@
             margin: auto;
         }
 
-        button { border: none; border-radius: 0; background: var(--accent); color: black; font-weight: 700; padding: 10px; cursor: pointer; flex: 1; }
+        button { border: none; border-radius: 0; background: var(--accent); color: black; font-weight: 700; padding: 10px; cursor: pointer; }
         button:active { background: transparent; color: white; }
-        nav { display: flex; gap: 4px; margin: 4px 0; }
+        
+        nav { display: flex; gap: 12px; margin: 4px 0; padding: 1em 0; position: relative; }
         
         img { width: 180px; filter: brightness(50%); border-radius: 4px; }
         img:hover { filter: brightness(100%); }
@@ -39,12 +40,11 @@
 </head>
 <body>
 
-    <nav style="padding: 1em 0;">
+    <nav>
         <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a>
-        <span> </span><span> </span><span> </span><span> </span><span> </span>
         <a href="https://github.com/BlueBunnex/dogmomAI">Bluesky</a>
 
-        <button type="button" style="float: right; height: 100%;">Donate <3</button>
+        <button type="button" style="float: right; height: 100%; position: absolute; top: 0; right: 0;">Donate <3</button>
     </nav>
 
     <div style="background-image: url('https://wallpapers.com/images/hd/pastel-pink-background-9o8t0lmswd8km9ae.jpg'); background-position: center; background-size: cover; aspect-ratio: 1.618;"></div>
