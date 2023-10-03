@@ -30,8 +30,8 @@
         
         nav { display: flex; gap: 12px; margin: 4px 0; padding: 1em 0; position: relative; }
         
-        img { width: 180px; filter: brightness(50%); border-radius: 4px; }
-        img:hover { filter: brightness(100%); }
+        img { width: 180px; filter: brightness(0); border-radius: 4px; }
+        img:hover { filter: brightness(1); }
 
         a { color: white; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -44,7 +44,10 @@
         <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a>
         <a href="https://github.com/BlueBunnex/dogmomAI">Bluesky</a>
 
-        <button type="button" style="float: right; height: 100%; position: absolute; top: 0; right: 0;">Donate <3</button>
+        <div style="position: absolute; top: 0; right: 0;">
+            <button type="button" style="height: 100%; background: transparent; color: white; border: 1px solid white; box-sizing: border-box;">Wow</button>
+            <button type="button" style="height: 100%;">Donate <3</button>
+        </div>
     </nav>
 
     <div style="background-image: url('https://wallpapers.com/images/hd/pastel-pink-background-9o8t0lmswd8km9ae.jpg'); background-position: center; background-size: cover; aspect-ratio: 1.618;"></div>
