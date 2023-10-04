@@ -35,7 +35,8 @@
         img { width: 180px; filter: brightness(0.5); border-radius: 4px; }
         img:hover { filter: brightness(1); }
 
-        img-tile { width: 30%; aspect-ratio: 1; background-position: top center; background-size: cover; }
+        
+        .image-tile { aspect-ratio: 1; background-position: top center; background-size: cover; }
         
     </style>
 </head>
@@ -53,9 +54,11 @@
 
     <div style="background-image: url('https://wallpapers.com/images/hd/pastel-pink-background-9o8t0lmswd8km9ae.jpg'); background-position: center; background-size: cover; aspect-ratio: 1.618;"></div>
 
-    <div class="image-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
-    <div class="image-tile" style="background-image: url('demongirl.png');"></div>
-    <div class="image-tile" style="background-image: url('blue_girl.JPG');"></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
+        <div class="image-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
+        <div class="image-tile" style="background-image: url('demongirl.png');"></div>
+        <div class="image-tile" style="background-image: url('blue_girl.JPG');"></div>
+    </div>
     
     <br>
     <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
