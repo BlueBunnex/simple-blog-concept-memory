@@ -86,9 +86,10 @@
         function httpGetAsync(apikey, limit, query) {
             // create url
             var search_url =
-                  "https://tenor.googleapis.com/v2/search?q=" + query
+                  "https://tenor.googleapis.com/v2/search?media_filter=minimal&q=" + query
                 + "&key=" + apikey
-                + "&limit=" + limit;
+                + "&limit=" + limit
+                + "&pos=" + Math.floor(Math.random() * 100);
             
             // create the request object
             var xmlHttp = new XMLHttpRequest();
@@ -118,7 +119,7 @@
             return;
         }
     
-        httpGetAsync("AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg", 12, "cats");
+        httpGetAsync("AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg", 12, "fat women cute");
     </script>
     
 </body>
