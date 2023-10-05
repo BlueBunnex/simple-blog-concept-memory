@@ -90,18 +90,14 @@
             return;
         }
     
-        // set the apikey and limit
         var apikey = "AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg";
-        var lmt = 9;
+        var limit = 3;
+        var query = "excited";
     
-        // test search term
-        var search_term = "excited";
-    
-        // using default locale of en_US
         var search_url =
-              "https://g.tenor.com/v1/search?q=" + search_term
+              "https://tenor.googleapis.com/v2/search?q=" + query
             + "&key=" + apikey
-            + "&limit=" + lmt;
+            + "&limit=" + limit;
     
         httpGetAsync(search_url, tenorCallback_search);
     </script>
