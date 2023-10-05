@@ -49,20 +49,35 @@
     </style>
 </head>
 <body>
-
-    <img id="preview_gif" src="" alt="" style="width:220px; height:164px;">
     
     <script>
 
-        // url Async requesting function
-        function httpGetAsync(theUrl, callback) {
+        const insert = document.getElementById("gif-insert");
+
+        // url async requesting function
+        function httpGetAsync(apikey, limit, query) {
+            // create url
+            var search_url =
+                  "https://tenor.googleapis.com/v2/search?q=" + query
+                + "&key=" + apikey
+                + "&limit=" + limit;
+            
             // create the request object
             var xmlHttp = new XMLHttpRequest();
         
             // set the state change callback to capture when the response comes in
             xmlHttp.onreadystatechange = function() {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                    callback(xmlHttp.responseText);
+                    
+                    // parse the json response
+                    var response_objects = JSON.parse(xmlHttp.responseText);
+                    console.log(response_objects);
+
+                    for (let i=0; i<limit; i++) {
+                        var url = response_objects.results[i].media_formats.tinygif.url;
+                        insert.innerHTML += `<div class="image-tile" style="background-image: url('` + url + `');"></div>`;
+                    }
+                    
                 }
             }
         
@@ -74,31 +89,8 @@
         
             return;
         }
-        
-        // callback for the top 8 GIFs of search
-        function tenorCallback_search(responsetext) {
-            // parse the json response
-            var response_objects = JSON.parse(responsetext);
-
-            console.log(response_objects);
-
-            var url = response_objects.results[0].media_formats.tinygif.url;
-            
-            document.getElementById("preview_gif").src = url;
-        
-            return;
-        }
     
-        var apikey = "AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg";
-        var limit = 3;
-        var query = "excited";
-    
-        var search_url =
-              "https://tenor.googleapis.com/v2/search?q=" + query
-            + "&key=" + apikey
-            + "&limit=" + limit;
-    
-        httpGetAsync(search_url, tenorCallback_search);
+        httpGetAsync("AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg", 12, "cats");
     </script>
 
     <nav>
@@ -117,13 +109,11 @@
         </div>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
+    <div id="gif-insert" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
         <div class="image-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
         <div class="image-tile" style="background-image: url('demongirl.png');"></div>
         <div class="image-tile" style="background-image: url('blue_girl.JPG');"></div>
         <div class="image-tile" style="background-image: url('https://media.tenor.com/Fz00mKEWaksAAAAd/fat-cute.gif');"></div>
-        <div class="image-tile" style="background-image: url('https://media.tenor.com/cSqAcA5QUwoAAAAd/cheers-cheers-meme.gif');"></div>
-        <div class="image-tile" style="background-image: url('https://media.tenor.com/-K4Zg3COa9oAAAAd/m1garand-thigh-highs.gif');"></div>
     </div>
 
     <p style="color: #666; font-family: monospace; font-size: 12px;">© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.</p>
