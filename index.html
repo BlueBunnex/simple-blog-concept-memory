@@ -35,6 +35,7 @@
 
         .image-tile {
             aspect-ratio: 1;
+            padding: 4px;
             
             background-position: top left;
             background-size: cover;
@@ -42,7 +43,7 @@
             transition-duration: 2s;
             transition-property: background-position;
         }
-        .image-tile img { display: none; width: 20px; background: white; filter: invert(1); }
+        .image-tile img { display: none; width: 20px; background: white; filter: invert(1); cursor: pointer; }
         
         .image-tile:hover { background-position: bottom right; }
         .image-tile:hover img { display: inline-block; }
