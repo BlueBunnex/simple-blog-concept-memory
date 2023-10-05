@@ -80,12 +80,11 @@
         function tenorCallback_search(responsetext) {
             // parse the json response
             var response_objects = JSON.parse(responsetext);
-        
-            top_10_gifs = response_objects["results"];
+            var results_gifs = response_objects["results"];
         
             // load the GIFs -- for our example we will load the first GIFs preview size (nanogif) and share size (tinygif)
-            document.getElementById("preview_gif").src = top_10_gifs[0]["media"][0]["nanogif"]["url"];
-            document.getElementById("share_gif").src = top_10_gifs[0]["media"][0]["tinygif"]["url"];
+            document.getElementById("preview_gif").src = results_gifs[0]["media"][0]["nanogif"]["url"];
+            document.getElementById("share_gif").src = results_gifs[0]["media"][0]["tinygif"]["url"];
         
             return;
         }
