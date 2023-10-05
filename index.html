@@ -84,7 +84,7 @@
         // url async requesting function
         function httpGetAsync(query, limit=5) {
             // create url
-            var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost%3Apopular+in%3Adigitalart%2Fdrawings+frogs";
+            var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost%3Apopular+in%3Adigitalart%2Fdrawings+" + query;
 
             fetch(search_url)
                 .then(response => response.text())
@@ -100,7 +100,7 @@
             return;
         }
     
-        httpGetAsync("asian boobs fat woman");
+        httpGetAsync("fat%20boobs%20woman%20bbw");
     </script>
     
 </body>
