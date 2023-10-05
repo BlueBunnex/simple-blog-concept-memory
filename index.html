@@ -25,15 +25,15 @@
             margin: auto;
         }
 
-        button { height: 100%; border: none; border-radius: 0; background: var(--accent); color: black; font-size: 0.8em; font-weight: 700; padding: 12px; cursor: pointer; }
+        button { height: 100%; border: none; border-radius: 0; background: var(--accent); color: black; font-size: 0.85em; font-weight: 700; padding: 12px; cursor: pointer; }
         button.dark { background: transparent; color: white; border: 1px solid white; box-sizing: border-box; }
         button:active, button.dark:active { background: white; color: black; }
         
-        nav { display: flex; gap: 12px; margin: 4px 0; padding: 1em 0; position: relative; }
+        nav { display: flex; gap: 16px; margin: 4px 0; padding: 1em 0; padding-left: 60px; position: relative; }
         nav a { color: white; text-decoration: none; }
         nav a:hover { text-decoration: underline; }
 
-        .image-tile {
+        .img-tile {
             aspect-ratio: 1;
             padding: 4px;
             
@@ -44,10 +44,10 @@
             transition-property: background-position;
             transition-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
         }
-        .image-tile img { display: none; width: 20px; background: white; filter: invert(1); cursor: pointer; border-radius: 2px; }
+        .img-tile img { display: none; width: 20px; background: white; filter: invert(1); cursor: pointer; border-radius: 2px; }
         
-        .image-tile:hover { background-position: bottom right; }
-        .image-tile:hover img { display: inline-block; }
+        .img-tile:hover { background-position: bottom right; }
+        .img-tile:hover img { display: inline-block; }
 
         #img-insert { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin: 4px 0; }
         
@@ -55,7 +55,7 @@
 </head>
 <body>
 
-    <nav style="padding-left: 55px;">
+    <nav>
         <!-- https://www.svgrepo.com/svg/510244/strawberry -->
         <div style="background-color: var(--accent); background-image: url('https://www.svgrepo.com/show/510244/strawberry.svg'); background-size: 80%; background-position: center; background-repeat: no-repeat; height: 100%; aspect-ratio: 1; position: absolute; top: 0; left: 0;"></div>
         
@@ -75,15 +75,15 @@
     </div>
 
     <div id="img-insert">
-        <div class="image-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
-        <div class="image-tile" style="background-image: url('demongirl.png');"></div>
-        <div class="image-tile" style="background-image: url('blue_girl.JPG');"></div>
+        <div class="img-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
+        <div class="img-tile" style="background-image: url('demongirl.png');"></div>
+        <div class="img-tile" style="background-image: url('blue_girl.JPG');"></div>
     </div>
 
     <p style="font-family: monospace; font-size: 12px;">© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.<br>Powered By DeviantArt.</p>
 
     <!--
-        DeviantArt RSS stuffff
+        DeviantArt RSS requests
     -->
     <script>
 
@@ -109,7 +109,7 @@
                         let img_link = el.querySelector("link").innerHTML;
                         
                         insert.innerHTML += `
-                            <div class="image-tile" style="background-image: url('${img_url}');">
+                            <div class="img-tile" style="background-image: url('${img_url}');">
                                 <img onclick="window.open('${img_link}', '_blank');" src="https://www.svgrepo.com/show/486763/open-external.svg">
                             </div>
                         `;
@@ -121,7 +121,7 @@
             return;
         }
     
-        httpGetAsync("ai+art+fat+boobs"); // fat+boobs+cleavage+anime
+        httpGetAsync("fat+cleavage+woman"); // fat+boobs+cleavage+anime
     </script>
     
 </body>
