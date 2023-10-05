@@ -84,23 +84,26 @@
         // url async requesting function
         function httpGetAsync(query, limit=5) {
             // create url
-            var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:7d+" + query;
-
+            var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
+            
             fetch(search_url)
                 .then(response => response.text())
                 .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
                 .then(data => {
                     const items = data.querySelectorAll("item");
                     items.forEach(el => {
-                        let img_url = el.querySelector("[medium='image']").getAttribute("url");
-                        insert.innerHTML += `<div class="image-tile" style="background-image: url('${img_url}');"></div>`;
+                        let img_url = el.querySelector("[medium='image']");
+                        if (img_url != null) {
+                            img_url = img_url.getAttribute("url");
+                            insert.innerHTML += `<div class="image-tile" style="background-image: url('${img_url}');"></div>`;
+                        }
                     });
             });
         
             return;
         }
     
-        httpGetAsync("fat%20boobs%20woman%20bbw");
+        httpGetAsync("bbw");
     </script>
     
 </body>
