@@ -91,10 +91,15 @@
                 .then(data => {
                     const items = data.querySelectorAll("item");
                     items.forEach(el => {
-                        let img_url = el.querySelector("[medium='image']");
-                        if (img_url != null) {
-                            img_url = img_url.getAttribute("url");
-                            insert.innerHTML += `<div class="image-tile" style="background-image: url('${img_url}');"></div>`;
+                        let img = el.querySelector("[medium='image']");
+                        if (img != null) {
+                            let img_url = img.getAttribute("url");
+                            let img_link = el.querySelector("link").innerHTML;
+                            insert.innerHTML += `
+                                <div class="image-tile" style="background-image: url('${img_url}');">
+                                    <a href="${img_link}">Original Page</a>
+                                </div>
+                            `;
                         }
                     });
             });
