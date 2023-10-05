@@ -72,17 +72,17 @@
         <div class="image-tile" style="background-image: url('https://media.tenor.com/Fz00mKEWaksAAAAd/fat-cute.gif');"></div>
     </div>
 
-    <p style="font-family: monospace; font-size: 12px;">© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.<br>Powered By Tenor.</p>
+    <p style="font-family: monospace; font-size: 12px;">© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.<br>Powered By DeviantArt.</p>
 
     <!--
-        Tenor stuffff
+        DeviantArt RSS stuffff
     -->
     <script>
 
         const insert = document.getElementById("gif-insert");
 
         // url async requesting function
-        function httpGetAsync(apikey, limit, query) {
+        function httpGetAsync(query, limit=5) {
             // create url
             var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost%3Apopular+in%3Adigitalart%2Fdrawings+frogs";
 
@@ -93,15 +93,15 @@
                     const items = data.querySelectorAll("item");
                     items.forEach(el => {
                         console.log(el);
-                        // let gif_url = el.querySelector("link").innerHTML;
-                        // insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", gif_url);
+                        let gif_url = el.querySelector("media:thumbnail").innerHTML;
+                        insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", gif_url);
                     });
             });
         
             return;
         }
     
-        httpGetAsync("AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg", 14, "asian boobs fat woman");
+        httpGetAsync("asian boobs fat woman");
     </script>
     
 </body>
