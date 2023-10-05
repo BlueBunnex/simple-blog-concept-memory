@@ -93,7 +93,7 @@
         function httpGetAsync(query, limit=20) {
             
             // create url
-            var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
+            const search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
             
             fetch(search_url)
                 .then(response => response.text())
@@ -101,14 +101,19 @@
                 .then(data => {
                     
                     const items = data.querySelectorAll("item");
-                    const num = Math.min(limit, items.length);
+                    const iMax = Math.min(limit, items.length);
+
+                    var num = iMax;
 
                     // load items into the DOM
-                    for (let i=0; i<num; i++) {
+                    for (let i=0; i<iMax; i++) {
 
                         let img = items[i].querySelector("[medium='image']");
-
-                        if (img == null) { continue; }
+                        
+                        if (img == null) {
+                            num--;
+                            continue;
+                        }
                         
                         let img_url = img.getAttribute("url");
                         let img_link = items[i].querySelector("link").innerHTML;
@@ -120,13 +125,13 @@
                         `;
                     }
                     
-                    count.innerHTML = items.length;
+                    count.innerHTML = num;
             });
         
             return;
         }
     
-        httpGetAsync("anime+weight+gain+progression+woman+boobs"); // fat+boobs+cleavage+anime
+        httpGetAsync("fat+boobs+cleavage+anime+smut");
     </script>
     
 </body>
