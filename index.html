@@ -53,7 +53,7 @@
 <body>
 
     <nav style="padding-left: 55px;">
-        /* https://www.svgrepo.com/svg/510244/strawberry */
+        <!-- https://www.svgrepo.com/svg/510244/strawberry -->
         <div style="background-color: var(--accent); background-image: url('https://www.svgrepo.com/show/510244/strawberry.svg'); background-size: 80%; background-position: center; background-repeat: no-repeat; height: 100%; aspect-ratio: 1; position: absolute; top: 0; left: 0;"></div>
         
         <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a>
@@ -87,8 +87,8 @@
         const insert = document.getElementById("img-insert");
         const count = document.getElementById("img-count");
 
-        // url async requesting function
         function httpGetAsync(query, limit=5) {
+            
             // create url
             var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
             
@@ -96,19 +96,22 @@
                 .then(response => response.text())
                 .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
                 .then(data => {
+                    
                     const items = data.querySelectorAll("item");
+
+                    // load every item into the DOM
                     items.forEach(el => {
-                        let img = el.querySelector("[medium='image']");
-                        if (img != null) {
-                            let img_url = img.getAttribute("url");
-                            let img_link = el.querySelector("link").innerHTML;
-                            insert.innerHTML += `
-                                <div class="image-tile" style="background-image: url('${img_url}');">
-                                    <img onclick="window.open('${img_link}', '_blank');" src="https://www.svgrepo.com/show/486763/open-external.svg">
-                                </div>
-                            `;
-                        }
+                        
+                        let img_url = el.querySelector("[medium='image']").getAttribute("url");
+                        let img_link = el.querySelector("link").innerHTML;
+                        
+                        insert.innerHTML += `
+                            <div class="image-tile" style="background-image: url('${img_url}');">
+                                <img onclick="window.open('${img_link}', '_blank');" src="https://www.svgrepo.com/show/486763/open-external.svg">
+                            </div>
+                        `;
                     });
+                    
                     count.innerHTML = items.length;
             });
         
