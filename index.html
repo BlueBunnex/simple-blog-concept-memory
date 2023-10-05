@@ -21,7 +21,7 @@
             color: white;
             background: black;
 
-            max-width: 550px;
+            max-width: 750px;
             margin: auto;
         }
 
@@ -40,13 +40,15 @@
             background-position: top left;
             background-size: cover;
             
-            transition-duration: 2s;
+            transition-duration: 4s;
             transition-property: background-position;
         }
         .image-tile img { display: none; width: 20px; background: white; filter: invert(1); cursor: pointer; border-radius: 2px; }
         
         .image-tile:hover { background-position: bottom right; }
         .image-tile:hover img { display: inline-block; }
+
+        #img-insert { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin: 4px 0; }
         
     </style>
 </head>
@@ -71,7 +73,7 @@
         </div>
     </div>
 
-    <div id="img-insert" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 4px 0;">
+    <div id="img-insert">
         <div class="image-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
         <div class="image-tile" style="background-image: url('demongirl.png');"></div>
         <div class="image-tile" style="background-image: url('blue_girl.JPG');"></div>
