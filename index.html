@@ -90,7 +90,7 @@
         const insert = document.getElementById("img-insert");
         const count = document.getElementById("img-count");
 
-        function httpGetAsync(query) {
+        function httpGetAsync(query, limit=20) {
             
             // create url
             var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
@@ -101,23 +101,24 @@
                 .then(data => {
                     
                     const items = data.querySelectorAll("item");
+                    const num = Math.min(limit, items.length);
 
-                    // load every item into the DOM
-                    items.forEach(el => {
+                    // load items into the DOM
+                    for (let i=0; i<num; i++) {
 
-                        let img = el.querySelector("[medium='image']");
+                        let img = items[i].querySelector("[medium='image']");
 
                         if (img == null) { continue; }
                         
                         let img_url = img.getAttribute("url");
-                        let img_link = el.querySelector("link").innerHTML;
+                        let img_link = items[i].querySelector("link").innerHTML;
                         
                         insert.innerHTML += `
                             <div class="img-tile" style="background-image: url('${img_url}');">
                                 <img onclick="window.open('${img_link}', '_blank');" src="https://www.svgrepo.com/show/486763/open-external.svg">
                             </div>
                         `;
-                    });
+                    }
                     
                     count.innerHTML = items.length;
             });
