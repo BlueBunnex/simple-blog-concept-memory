@@ -32,8 +32,8 @@
         nav a { color: white; text-decoration: none; }
         nav a:hover { text-decoration: underline; }
 
-        .image-tile { filter: brightness(0.5); aspect-ratio: 1; background-position: top center; background-size: cover; transition-duration: 2s; }
-        .image-tile:hover { filter: brightness(1); background-position: bottom center; }
+        .image-tile { filter: brightness(0.5); aspect-ratio: 1; background-position: top center; background-size: cover; }
+        .image-tile:hover { filter: brightness(1); background-position: bottom center; transition-duration: 2s; transition-property: background-position; }
         
     </style>
 </head>
@@ -62,7 +62,7 @@
     
     <br>
     <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
-        <strong>DogmomAI</strong><br>
+        <strong><a style="color: var(--accent);">Blog</a> | DogmomAI</strong>
         <strong>5</strong> followers · <strong><script>document.write(Math.floor(Math.random()*300)+50);</script></strong> violations of protocol
     </div>
 
