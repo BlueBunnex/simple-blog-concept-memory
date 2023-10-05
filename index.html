@@ -74,15 +74,15 @@
                     console.log(response_objects);
 
                     for (let i=0; i<limit; i++) {
-                        var url = response_objects.results[i].media_formats.tinygif.url;
-                        insert.innerHTML += `<div class="image-tile" style="background-image: url('` + url + `');"></div>`;
+                        var gif_url = response_objects.results[i].media_formats.tinygif.url;
+                        insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", gif_url);
                     }
                     
                 }
             }
         
             // open as a GET call, pass in the url and set async = True
-            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.open("GET", search_url, true);
         
             // call send with no params as they were passed in on the url string
             xmlHttp.send(null);
