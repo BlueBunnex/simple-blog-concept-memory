@@ -64,11 +64,11 @@
 
     <div style="background-image: url('https://wallpapers.com/images/hd/pastel-pink-background-9o8t0lmswd8km9ae.jpg'); background-position: center; background-size: cover; padding: 40px 4px;">
         <div style="background: rgba(0,0,0,0.5); padding: 14px;">
-            I currently have <strong><script>document.write(Math.floor(Math.random()*300)+50);</script></strong> violations of protocol.
+            Generated <strong id="img-count"></strong> violations of protocol.
         </div>
     </div>
 
-    <div id="gif-insert" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
+    <div id="img-insert" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
         <div class="image-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
         <div class="image-tile" style="background-image: url('demongirl.png');"></div>
         <div class="image-tile" style="background-image: url('blue_girl.JPG');"></div>
@@ -81,7 +81,8 @@
     -->
     <script>
 
-        const insert = document.getElementById("gif-insert");
+        const insert = document.getElementById("img-insert");
+        const count = document.getElementById("img-count");
 
         // url async requesting function
         function httpGetAsync(query, limit=5) {
@@ -105,12 +106,13 @@
                             `;
                         }
                     });
+                    count.innerHTML = items.length;
             });
         
             return;
         }
     
-        httpGetAsync("fat+boobs+cleavage+anime+progression");
+        httpGetAsync("fat+boobs+cleavage+anime");
     </script>
     
 </body>
