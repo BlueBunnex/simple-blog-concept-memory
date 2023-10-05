@@ -93,7 +93,7 @@
                     const items = data.querySelectorAll("item");
                     items.forEach(el => {
                         console.log(el);
-                        let gif_url = el.querySelector("media:content").url;
+                        let gif_url = el.querySelector("[medium='image']").url;
                         insert.innerHTML += `<div class="image-tile" style="background-image: url('${gif_url}');"></div>`;
                     });
             });
