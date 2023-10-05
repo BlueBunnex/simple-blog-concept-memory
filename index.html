@@ -26,7 +26,8 @@
         }
 
         button { height: 100%; border: none; border-radius: 0; background: var(--accent); color: black; font-weight: 700; padding: 12px; cursor: pointer; }
-        button:active { background: white; color: black; }
+        button.dark { background: transparent; color: white; border: 1px solid white; box-sizing: border-box; }
+        button:active, button.dark:active { background: white; color: black; }
         
         nav { display: flex; gap: 12px; margin: 4px 0; padding: 1em 0; position: relative; }
         nav a { color: white; text-decoration: none; }
@@ -54,7 +55,7 @@
         <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
 
         <div style="position: absolute; top: 0; right: 0; height: 100%;">
-            <button type="button" style="background: transparent; color: white; border: 1px solid white; box-sizing: border-box;">Sub</button>
+            <button type="button" class="dark">Sub</button>
             <button type="button">Donate</button>
         </div>
     </nav>
