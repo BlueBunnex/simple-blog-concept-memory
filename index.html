@@ -32,8 +32,18 @@
         nav a { color: white; text-decoration: none; }
         nav a:hover { text-decoration: underline; }
 
-        .image-tile { filter: brightness(0.5); aspect-ratio: 1; background-position: top center; background-size: cover; }
-        .image-tile:hover { filter: brightness(1); background-position: bottom center; transition-duration: 2s; transition-property: background-position; }
+        .image-tile {
+            filter: brightness(0.5);
+            aspect-ratio: 1;
+            
+            background-position: top center;
+            background-size: cover;
+            
+            transition-duration: 2s;
+            transition-property: background-position;
+            animation-iteration-count: infinite;
+        }
+        .image-tile:hover { filter: brightness(1); background-position: bottom center; }
         
     </style>
 </head>
@@ -61,12 +71,9 @@
     </div>
     
     <br>
-    <div style="border-left: 4px solid var(--accent); padding-left: 8px;">
-        <strong><a style="color: var(--accent);">Blog</a> | DogmomAI</strong>
-        <strong>5</strong> followers · <strong><script>document.write(Math.floor(Math.random()*300)+50);</script></strong> violations of protocol
-    </div>
+    <a style="color: var(--accent);">Blog</a> | DogmomAI
 
-    <p>I think I'm gonna make an OC with twintails, a pear shaped body (hint hint), and those weird thigh bands. I should probably do some digging for some inspiration/references.</p>
+    <p>I think I'm gonna make an OC with twintails, a pear shaped body (hint hint), and those weird thigh bands. I should probably do some digging for some inspiration/references. I currently have <strong><script>document.write(Math.floor(Math.random()*300)+50);</script></strong> violations of protocol.</p>
 
     <p>© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.</p>
     
