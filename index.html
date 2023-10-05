@@ -92,7 +92,7 @@
                 .then(data => {
                     const items = data.querySelectorAll("item");
                     items.forEach(el => {
-                        console.log(el);
+                        insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", el.querySelector("link"));
                     });
             });
         
