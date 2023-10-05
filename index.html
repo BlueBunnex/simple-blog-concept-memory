@@ -92,8 +92,9 @@
                 .then(data => {
                     const items = data.querySelectorAll("item");
                     items.forEach(el => {
-                        let gif_url = el.querySelector("link").innerHTML;
-                        insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", gif_url);
+                        console.log(el);
+                        // let gif_url = el.querySelector("link").innerHTML;
+                        // insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", gif_url);
                     });
             });
         
