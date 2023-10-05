@@ -56,16 +56,13 @@
     <script>
 
         // url Async requesting function
-        function httpGetAsync(theUrl, callback)
-        {
+        function httpGetAsync(theUrl, callback) {
             // create the request object
             var xmlHttp = new XMLHttpRequest();
         
             // set the state change callback to capture when the response comes in
-            xmlHttp.onreadystatechange = function()
-            {
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                {
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                     callback(xmlHttp.responseText);
                 }
             }
@@ -80,25 +77,21 @@
         }
         
         // callback for the top 8 GIFs of search
-        function tenorCallback_search(responsetext)
-        {
+        function tenorCallback_search(responsetext) {
             // parse the json response
             var response_objects = JSON.parse(responsetext);
         
             top_10_gifs = response_objects["results"];
         
             // load the GIFs -- for our example we will load the first GIFs preview size (nanogif) and share size (tinygif)
-        
             document.getElementById("preview_gif").src = top_10_gifs[0]["media"][0]["nanogif"]["url"];
-        
             document.getElementById("share_gif").src = top_10_gifs[0]["media"][0]["tinygif"]["url"];
         
             return;
-        
         }
     
         // set the apikey and limit
-        var apikey = "AIzaSyAdbImEIKaMb95S9TCc7wKb0J99WfewI8E";
+        var apikey = "AIzaSyA0poAqDr2r8Sx2TjFDp-bKBTosJFCxwTg";
         var lmt = 9;
     
         // test search term
