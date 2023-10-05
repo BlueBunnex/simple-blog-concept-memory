@@ -83,38 +83,15 @@
 
         // url async requesting function
         function httpGetAsync(apikey, limit, query) {
-            query += " " + Math.floor(Math.random() * 100);
-            
             // create url
-            var search_url =
-                  "https://tenor.googleapis.com/v2/search?media_filter=minimal&q=" + query
-                + "&key=" + apikey
-                + "&limit=" + limit;
-            
-            // create the request object
-            var xmlHttp = new XMLHttpRequest();
-        
-            // set the state change callback to capture when the response comes in
-            xmlHttp.onreadystatechange = function() {
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                    
-                    // parse the json response
-                    var response_objects = JSON.parse(xmlHttp.responseText);
-                    console.log(response_objects);
+            var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost%3Apopular+in%3Adigitalart%2Fdrawings+frogs";
 
-                    for (let i=0; i<limit; i++) {
-                        var gif_url = response_objects.results[i].media_formats.tinygif.url;
-                        insert.innerHTML += `<div class="image-tile" style="background-image: url('%URL%');"></div>`.replace("%URL%", gif_url);
-                    }
-                    
-                }
-            }
-        
-            // open as a GET call, pass in the url and set async = True
-            xmlHttp.open("GET", search_url, true);
-        
-            // call send with no params as they were passed in on the url string
-            xmlHttp.send(null);
+            fetch(search_url)
+                .then(response => response.text())
+                .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                .then(data => {
+                    console.log(data);
+            });
         
             return;
         }
