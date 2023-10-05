@@ -51,7 +51,6 @@
 <body>
 
     <img id="preview_gif" src="" alt="" style="width:220px; height:164px;">
-    <img id="share_gif" src="" alt="" style="width:498px; height:372px;">
     
     <script>
 
@@ -81,10 +80,11 @@
             // parse the json response
             var response_objects = JSON.parse(responsetext);
 
-            console.log(response_objects.results[0]);
+            console.log(response_objects);
+
+            var url = response_objects.results[0].media_formats.tinygif.url;
             
-            // document.getElementById("preview_gif").src = results_gifs[0]["media"][0]["nanogif"]["url"];
-            // document.getElementById("share_gif").src = results_gifs[0]["media"][0]["tinygif"]["url"];
+            document.getElementById("preview_gif").src = url;
         
             return;
         }
