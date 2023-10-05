@@ -25,7 +25,7 @@
             margin: auto;
         }
 
-        button { height: 100%; border: none; border-radius: 0; background: var(--accent); color: black; font-weight: 700; padding: 12px; cursor: pointer; }
+        button { height: 100%; border: none; border-radius: 0; background: var(--accent); color: black; font-size: 1em; font-weight: 700; padding: 12px; cursor: pointer; }
         button.dark { background: transparent; color: white; border: 1px solid white; box-sizing: border-box; }
         button:active, button.dark:active { background: white; color: black; }
         
@@ -42,7 +42,7 @@
             
             transition-duration: 4s;
             transition-property: background-position;
-            transition-timing-function: linear;
+            transition-timing-function: cubic-bezier(.2,0,.8,1);
         }
         .image-tile img { display: none; width: 20px; background: white; filter: invert(1); cursor: pointer; border-radius: 2px; }
         
