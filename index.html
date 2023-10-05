@@ -42,10 +42,10 @@
             transition-duration: 2s;
             transition-property: background-position;
         }
-        .image-tile a { display: none; background: black; color: var(--accent); }
+        .image-tile img { display: none; }
         
         .image-tile:hover { background-position: bottom right; }
-        .image-tile:hover a { display: inline; }
+        .image-tile:hover img { display: inline-block; width: 20px; }
         
     </style>
 </head>
@@ -99,7 +99,7 @@
                             let img_link = el.querySelector("link").innerHTML;
                             insert.innerHTML += `
                                 <div class="image-tile" style="background-image: url('${img_url}');">
-                                    <a href="${img_link}">Original Page</a>
+                                    <img onclick="window.open('${img_link}', '_blank');" src="https://www.svgrepo.com/show/486763/open-external.svg">
                                 </div>
                             `;
                         }
