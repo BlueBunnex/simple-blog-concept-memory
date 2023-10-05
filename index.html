@@ -90,7 +90,7 @@
         const insert = document.getElementById("img-insert");
         const count = document.getElementById("img-count");
 
-        function httpGetAsync(query, limit=5) {
+        function httpGetAsync(query) {
             
             // create url
             var search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
@@ -121,7 +121,7 @@
             return;
         }
     
-        httpGetAsync("fat+boobs+cleavage+anime+bbw+progression+sexy");
+        httpGetAsync("weight+gain+progression+woman+boobs"); // fat+boobs+cleavage+anime
     </script>
     
 </body>
