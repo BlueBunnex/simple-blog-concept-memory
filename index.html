@@ -16,123 +16,25 @@
         }
         
         body {
-            font-family: sans-serif;
+            font-family: serif;
             font-size: 14px;
-            color: white;
-            background: black;
 
-            max-width: 750px;
+            max-width: 300px;
             margin: auto;
         }
 
-        button { height: 100%; border: none; border-radius: 0; background: var(--accent); color: black; font-size: 0.85em; font-weight: 700; padding: 12px; cursor: pointer; }
-        button.dark { background: transparent; color: white; border: 1px solid white; box-sizing: border-box; }
-        button:active, button.dark:active { background: white; color: black; }
-        
-        nav { display: flex; gap: 16px; margin: 4px 0; padding: 1em 0; padding-left: 60px; position: relative; }
-        nav a { color: white; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-
-        .img-tile {
-            aspect-ratio: 1;
-            padding: 4px;
-            
-            background-position: top left;
-            background-size: cover;
-            
-            transition-duration: 2.5s;
-            transition-property: background-position;
-            transition-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
-        }
-        .img-tile img { display: none; width: 20px; background: white; filter: invert(1); cursor: pointer; border-radius: 2px; }
-        
-        .img-tile:hover { background-position: bottom right; }
-        .img-tile:hover img { display: inline-block; }
-
-        #img-insert { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin: 4px 0; }
+        img { width: 80px; }
         
     </style>
 </head>
 <body>
 
-    <nav>
-        <!-- https://www.svgrepo.com/svg/482096/peach-2 -->
-        <div style="background-image: url('https://www.svgrepo.com/show/482096/peach-2.svg'); background-color: var(--accent); background-size: 80%; background-position: center; background-repeat: no-repeat; height: 100%; aspect-ratio: 1; position: absolute; top: 0; left: 0;"></div>
-        
-        <a href="https://github.com/BlueBunnex/dogmomAI">Github repo</a>
-        <a href="https://bsky.app/profile/dogmomai.top">Bluesky</a>
+    <h1>THE DOGMOMAI BOARD</h1>
 
-        <div style="position: absolute; top: 0; right: 0; height: 100%;">
-            <button type="button" class="dark">Sub</button>
-            <button type="button">Donate ♥</button>
-        </div>
-    </nav>
-
-    <div style="background-image: url('https://wallpapers.com/images/hd/pastel-pink-background-9o8t0lmswd8km9ae.jpg'); background-position: center; background-size: cover; padding: 40px 4px;">
-        <div style="background: rgba(0,0,0,0.5); padding: 14px;">
-            Generated <strong id="img-count">...</strong> violations of protocol.
-        </div>
-    </div>
-
-    <div id="img-insert">
-        <div class="img-tile" style="background-image: url('https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg');"></div>
-        <div class="img-tile" style="background-image: url('demongirl.png');"></div>
-        <div class="img-tile" style="background-image: url('blue_girl.JPG');"></div>
-    </div>
-
-    <p style="font-family: monospace; font-size: 12px;">© 2023 The DogmomAI Corporation (not a corporation). All Rights Reserved.<br>Powered By DeviantArt.</p>
-
-    <!--
-        DeviantArt RSS requests
-    -->
-    <script>
-
-        const insert = document.getElementById("img-insert");
-        const count = document.getElementById("img-count");
-
-        function httpGetAsync(query, limit=15) {
-            
-            // create url
-            const search_url = "https://backend.deviantart.com/rss.xml?type=deviation&q=boost:popular+in:digitalart+max_age:24+" + query;
-            
-            fetch(search_url)
-                .then(response => response.text())
-                .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-                .then(data => {
-                    
-                    const items = data.querySelectorAll("item");
-                    const iMax = Math.min(limit, items.length);
-
-                    var num = iMax;
-
-                    // load items into the DOM
-                    for (let i=0; i<iMax; i++) {
-
-                        let img = items[i].querySelector("[medium='image']");
-                        
-                        if (img == null) {
-                            num--;
-                            continue;
-                        }
-                        
-                        let img_url = img.getAttribute("url");
-                        let img_link = items[i].querySelector("link").innerHTML;
-                        
-                        insert.innerHTML += `
-                            <div class="img-tile" style="background-image: url('${img_url}');">
-                                <img onclick="window.open('${img_link}', '_blank');" src="https://www.svgrepo.com/show/486763/open-external.svg">
-                            </div>
-                        `;
-                    }
-                    
-                    count.innerHTML = num;
-            });
-        
-            return;
-        }
-    
-        httpGetAsync("bbw+cute+dress", 60); // fat+boobs+cleavage+anime
-    </script>
+    <img src="https://t3.ftcdn.net/jpg/02/74/25/68/360_F_274256881_WSeCn3Iw8yFIU8T6z71aDjXHfAdtc5iy.jpg">
+    <img src="demongirl.png">
+    <img src="blue_girl.JPG">
+    <img src="https://images-ext-2.discordapp.net/external/dWGjz_uQ3ZmNobrZoK4Xb5qQMrpTkj54VNZOT1jpO7A/https/media.tenor.com/Fz00mKEWaksAAAPo/fat-cute.mp4">
     
 </body>
 </html>
