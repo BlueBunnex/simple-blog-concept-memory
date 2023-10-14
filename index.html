@@ -7,7 +7,8 @@
 
     <style>
         :root { --accent: #a5a; }
-        body { font-size: 14px; max-width: 500px; margin: auto; }
+        body { font-size: 14px; }
+        .center { max-width: 500px; margin: auto; }
         a { transition-duration: 0.5s; color: var(--accent); display: inline-block; padding: 10px; border-radius: 3px; margin-right: 3px; }
         a:hover { transition-duration: 0s; background: #eee; }
         img { width: 35%; }
@@ -18,21 +19,28 @@
 </head>
 <body>
 
-    <nav>
-        <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
-        <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a>
-        <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
-    </nav>
-    
-    <p>
-        <img src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=956886-847&recipeName=680">
-        when I asked to see a big rack this is not what I had in mind
-    </p>
+    <div style="background: var(--accent);">
+        <div class="center">
+            <h1>Yeah we ball.</h1>
+            <nav style="background: white; border: 2px solid black; padding: 10px; border-radius: 6px;">
+                <a href="https://github.com/BlueBunnex/dogmomAI">repo</a><br>
+                <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a><br>
+                <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
+            </nav>
+        </div>
+    </div>
 
-    <p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Twemoji_1f351.svg/1200px-Twemoji_1f351.svg.png">
-        insert image of woman with gyaat here
-    </p>
+    <div class="center">
+        <p>
+            <img src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=956886-847&recipeName=680">
+            when I asked to see a big rack this is not what I had in mind
+        </p>
+    
+        <p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Twemoji_1f351.svg/1200px-Twemoji_1f351.svg.png">
+            insert image of woman with gyaat here
+        </p>
+    </div>
     
 </body>
 </html>
