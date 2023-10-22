@@ -12,8 +12,10 @@
         a { color: var(--accent); }
         h1 { border-top: 4px solid var(--accent); padding-top: 6px; }
         img { width: 40%; clear: both; }
-        img:nth-of-type(odd) { float: left; }
-        img:nth-of-type(even) { float: right; }
+        img:nth-of-type(odd) { float: left; margin-right: 10px; }
+        img:nth-of-type(even) { float: right; margin-left: 10px; }
+        p:nth-of-type(odd) { clear: left; }
+        p:nth-of-type(even) { clear: right; }
     </style>
 </head>
 <body>
