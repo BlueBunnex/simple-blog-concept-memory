@@ -3,19 +3,25 @@
 <head>
     <style>
         :root { --accent: #70f; }
-        body { text-align: justify; }
-        a { color: var(--accent); }
+        body { text-align: justify; font-family: sans-serif; }
+        a { color: var(--accent); text-decoration: none; font-weight: 700; }
         img { width: 100%; }
         nav a:after { content:"\a"; white-space: pre; }
-        hr { border: none; border-top: 1px solid lightgrey; }
+        hr { border: none; border-top: 1px solid lightgrey; margin: 2em 0; }
+
+        h1 { font-size: 1.2em; }
+        h2 { font-size: 1.2em; }
     </style>
 </head>
 <body>
 
     <!-- rounded image that is underneath vvv -->
+    <img
+        style="max-width: 400px; margin: auto; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"
+        src="https://media.istockphoto.com/id/147205632/photo/modern-home-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=sxRQ398SxAjC4FrRombjl46oDGJVdy23T7i3RXO-mww=">
     
-    <div style="max-width: 400px; margin: auto; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
-        <strong style="font-size: 2em;">Dogmomai</strong>
+    <div style="max-width: 400px; margin: auto; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2); padding: 30px; box-sizing: border-box;">
+        <h1>Dogmomai</h1>
         <nav>
             <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
             <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a>
@@ -26,8 +32,8 @@
         <a href="">Read more</a>
 
         <hr>
-        
-        <strong>AI art</strong>
+
+        <h2>AI art</h2>
         <img src="ai/cutebutt.png">
         <img src="ai/wife.png">
         <img src="ai/sweetsnowlady.png">
