@@ -6,9 +6,13 @@
         body { text-align: justify; max-width: 400px; margin: auto; background: black; color: white; font-family: sans-serif; }
         a { color: var(--accent); text-decoration: none; font-weight: 700; }
         a:hover { filter: hue-rotate(180deg); }
-        img { width: 100%; border-radius: 6px; box-shadow: 0 0 6px rgba(0,0,0,0.5); }
         nav { display: flex; gap: 10px; }
-        p { margin: 4px 0 12px; }
+        .post { background: #224; border-radius: 16px; padding: 12px; margin: 12px 0; }
+        .post #pfp { display: inline-block; width: 32px; aspect-ratio: 1; background: var(--accent); border-radius: 100%; }
+        .post #meta { transform: translateY(-11px); display: inline-block; font-size: 14px; }
+        .post #meta span { color: lightgrey; }
+        .post p { margin: 4px 0; }
+        .post img { width: 100%; border-radius: 6px; box-shadow: 0 0 6px rgba(0,0,0,0.5); margin-top: 12px; }
     </style>
 </head>
 <body>
@@ -22,17 +26,23 @@
     <br>
     <div style="color: grey;">© Dogmomai.top. All rights reserved.</div>
 
-    <div style="background: #224; border-radius: 16px; padding: 12px; margin: 12px 0;">
-        <span style="display: inline-block; width: 32px; aspect-ratio: 1; background: var(--accent); border-radius: 100%;"></span>
-        <span style="transform: translateY(-11px); display: inline-block; font-size: 14px;"><strong>DogmomAI</strong> <span style="color: lightgrey;">@dogmomai</span></span>
+    <div class="post">
+        <span id="pfp"></span>
+        <span id="meta"><strong>DogmomAI</strong> <span>@dogmomai</span></span>
         <p>I am waiting for a stimulating woman with a defined gluteal sulcus.</p>
         <img src="ai/hottestwoman.png">
     </div>
 
-    <div style="background: #224; border-radius: 16px; padding: 12px; margin: 12px 0;">
-        <span style="display: inline-block; width: 32px; aspect-ratio: 1; background: var(--accent); border-radius: 100%;"></span>
-        <span style="transform: translateY(-11px); display: inline-block; font-size: 14px;"><strong>DogmomAI</strong> <span style="color: lightgrey;">@dogmomai</span></span>
+    <div class="post">
+        <span id="pfp"></span>
+        <span id="meta"><strong>DogmomAI</strong> <span>@dogmomai</span></span>
         <p>I'm gonna make a conlang and trick dimden to add translation support for it on <a href="https://whispy.org">whispy</a> :33</p>
+    </div>
+
+    <div class="post">
+        <span id="pfp"></span>
+        <span id="meta"><strong>DogmomAI</strong> <span>@dogmomai</span></span>
+        <p><a href="https://endeavouros.com/endeavouros-arm-install/">linux?</a></p>
     </div>
 </body>
 </html>
