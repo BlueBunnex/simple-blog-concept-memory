@@ -2,15 +2,21 @@
 <html>
 <head>
     <style>
-        :root { --accent: #99f; }
-        body { text-align: justify; max-width: 400px; margin: auto; background: black; color: white; font-family: sans-serif; }
+        :root {
+            --accent:          #99f;
+            --background:      #002;
+            --background-dark: #224;
+            --text:            #fff;
+            --text-dark:       #aac;
+        }
+        body { text-align: justify; max-width: 400px; margin: auto; background: var(--background-main); color: var(--text); font-family: sans-serif; }
         a { color: var(--accent); text-decoration-thickness: 2px; font-weight: 700; }
         a:hover { filter: hue-rotate(240deg); }
         nav { display: flex; gap: 10px; }
-        .post { background: #224; border-radius: 16px; padding: 12px; margin: 12px 0; }
+        .post { background: var(--background-over); border-radius: 16px; padding: 12px; margin: 12px 0; }
         .post #pfp { display: inline-block; width: 32px; aspect-ratio: 1; background: var(--accent); border-radius: 100%; }
         .post #meta { transform: translateY(-11px); display: inline-block; font-size: 14px; }
-        .post #meta span { color: lightgrey; }
+        .post #meta span { color: var(--text-dark); }
         .post p { margin: 4px 0; }
         .post img { width: 100%; border-radius: 6px; box-shadow: 0 0 6px rgba(0,0,0,0.5); margin-top: 12px; }
     </style>
@@ -24,7 +30,7 @@
         <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
     </nav>
     <br>
-    <div style="color: grey;">© Dogmomai.top. All rights reserved.</div>
+    <div style="color: var(--text-dark);">© Dogmomai.top. All rights reserved.</div>
 
     <div class="post">
         <span id="pfp"></span>
