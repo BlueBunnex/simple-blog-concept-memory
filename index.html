@@ -3,7 +3,7 @@
 <head>
     <style>
         :root {
-            --accent:         #acf;
+            --accent:         #f67;
             --background:     #eee;
             --background-alt: #ddd;
             --text:           #111;
@@ -12,9 +12,12 @@
         body { max-width: 600px; margin: auto; background: var(--background); color: var(--text); font-family: sans-serif; }
         a { font-weight: 700; color: var(--text); }
         a:hover { text-decoration: none; }
-        img { width: 100%; }
 
         .post { background: var(--background-alt); border-radius: 6px; padding: 14px; margin: 12px 0; }
+        .post #pfp { border-radius: 6px; display: inline-block; width: 32px; aspect-ratio: 1; }
+        .post #meta { transform: translateY(-11px); display: inline-block; font-size: 14px; }
+        .post #meta span { color: var(--text-alt); }
+        .post p { margin: 4px 0 2px; }
     </style>
 </head>
 <body>
@@ -38,11 +41,10 @@
         <div style="flex: 1;">
     
             <div class="post">
-                <img style="border-radius: 6px; display: inline-block; width: 32px; aspect-ratio: 1;" src="https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/master/w_1000,h_684,c_limit/the-ultimate-hamburger.jpg">
-                <span style="transform: translateY(-11px); display: inline-block; font-size: 14px;"><strong>bb</strong> <span style="color: var(--text-alt);">@bbisacat</span></span>
-                <p style="margin: 4px 0 2px;">
+                <img id="pfp" src="https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/master/w_1000,h_684,c_limit/the-ultimate-hamburger.jpg">
+                <span id="meta"><strong>bb</strong> <span>@bbisacat</span></span>
+                <p>
                     I wanna get back into drawing bbw art, but I don't want to feel like I'm being pressured to do it. I wanna do it for fun!
-                    <img src="https://i.seadn.io/gae/vH3RcK8sDnmKjJvIxUpSZg6WgEzbJftKP_4ZbzJ8fb9cjSER-B67lu0corKnqAyxwu_ih9Urg-KJuiCUJ0uZkcNIUTNIMVa8lkybWQ?auto=format&dpr=1&w=3840">
                 </p>
             </div>
 
