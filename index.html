@@ -16,7 +16,8 @@
         .post { background: var(--background-alt); border-radius: 6px; padding: 14px; margin: 12px 0; }
         .post #pfp { border-radius: 6px; display: inline-block; width: 32px; aspect-ratio: 1; }
         .post #meta { transform: translateY(-11px); display: inline-block; font-size: 14px; }
-        .post #meta span { color: var(--text-alt); }
+        .post #meta a { color: var(--text-alt); text-decoration: none; }
+        .post #meta a:hover { text-decoration: underline; }
         .post p { margin: 4px 0 2px; }
     </style>
 </head>
@@ -32,7 +33,7 @@
             <img style="width: 100%; aspect-ratio: 1; border: 1px solid black; box-sizing: border-box;" src="pixelcat.png">
             <br>
             <div style="padding: 0.5em;">
-                <strong>bb</strong> <span style="color: var(--text-alt);">@bbisacat</span>
+                <strong>bb</strong><br><span style="color: var(--text-alt);">@bbisacat</span>
                 <p>look a pordù -> 🐈</p>
             </div>
         </div>
@@ -40,7 +41,7 @@
         <div style="flex: 1;">
             <div class="post">
                 <img id="pfp" src="pixelcat.png">
-                <span id="meta"><strong>bb</strong> <span>@bbisacat</span></span>
+                <span id="meta"><strong>bb</strong> <a>@bbisacat</a></span>
                 <p>I don't know if I wanna get back into drawing bbw art. sometimes I don't know what I want to do at all</p>
             </div>
 
