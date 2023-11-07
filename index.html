@@ -3,8 +3,8 @@ or<!DOCTYPE html>
 <head>
     <style>
         :root {
-            --bg:     #170908;
-            --bg-alt: black;
+            --bg:     #322;
+            --bg-alt: #000;
             --accent: #f00;
             --text:   #eee;
         }
@@ -13,20 +13,18 @@ or<!DOCTYPE html>
         a { color: var(--text); transition-duration: 0.15s; border-radius: 4px; display: block; padding: 0.5em; text-align: center; }
         a:hover { text-decoration: none; background: var(--accent); }
         img { width: 100%; }
-        nav { flex: 1; display: flex; gap: 2em; }
+        nav { background: var(--bg-alt); display: flex; gap: 2em; }
     </style>
 </head>
 <body>
-    <div style="display: flex; background: var(--bg-alt);">
-        <div style="flex: 0; height: 100px; aspect-ratio: 1; background: var(--accent);">
+    <nav>
+        <div style="flex: 0; height: 30px; aspect-ratio: 1; background: var(--accent); font-weight: 700;">
             D
         </div>
-        <nav>
-            <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
-            <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a>
-            <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
-        </nav>
-    </div>
+        <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
+        <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a>
+        <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
+    </nav>
 
     <br>
 
