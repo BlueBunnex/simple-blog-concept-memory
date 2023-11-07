@@ -1,29 +1,36 @@
-<!DOCTYPE html>
+or<!DOCTYPE html>
 <html>
 <head>
     <style>
         :root {
-            --bg:     #112;
-            --bg-alt: #336;
-            --accent: #7af;
+            --bg:     #170908;
+            --bg-alt: black;
+            --accent: #f00;
             --text:   #eee;
         }
         body { max-width: 600px; margin: auto; background: var(--bg); color: var(--text); font-family: sans-serif; }
         h1 { font-size: 1.2em; margin: 0; }
-        a { color: var(--accent); flex: 1; transition-duration: 0.15s; background: var(--bg-alt); border-radius: 4px; display: block; padding: 0.5em; text-align: center; }
-        a:hover { text-decoration: none; flex: 1.1; color: var(--text); background: var(--accent); }
+        a { color: var(--text); transition-duration: 0.15s; border-radius: 4px; display: block; padding: 0.5em; text-align: center; }
+        a:hover { text-decoration: none; background: var(--accent); }
         img { width: 100%; }
-        nav { display: flex; gap: 4px; margin: 4px 0; }
+        nav { flex: 1; display: flex; gap: 2em; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
-        <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a>
-        <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
-    </nav>
+    <div style="display: flex; background: var(--bg-alt);">
+        <div style="flex: 0; height: 100px; aspect-ratio: 1; background: var(--accent);">
+            D
+        </div>
+        <nav>
+            <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
+            <a href="https://bsky.app/profile/dogmomai.top">bsky [dogmomai]</a>
+            <a href="https://soundcloud.com/hazel-is-fat">soundcloud [hazel is fat]</a>
+        </nav>
+    </div>
 
-    <div style="background: var(--bg-alt); padding: 1em; border-radius: 4px;">
+    <br>
+
+    <div style="background: var(--bg-alt); padding: 1em;">
         <h1>Molly, my catbee momma sona</h1>
         <p>cuddles every night, romantic and sweet like honey, engorged round belly and tail, bumbles into windows when flying, produces 5 gal/day, low maintenance but loves you 🐝</p>
         <p>Sometimes, she gets too hungry and dips her fingers in the bee sauce — it usually ends up becoming whole handfuls instead of just finger samples though.</p>
