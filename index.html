@@ -4,14 +4,14 @@
     <title>dogmomai</title>
     <style>
         @keyframes blink { 75% { opacity: 0; } }
-        @keyframes rainbow { 0% { color: red; } 25% { color: yellow; } 50% { color: cyan; } 75% { color: purple; } }
+        @keyframes rainbow { 0% { color: red; } 25% { color: yellow; } 50% { color: cyan; } 75% { color: purple; } 100% { color: red; } }
         
         body { width: 800px; margin: auto; }
         blink { animation: blink 1s step-end infinite; }
         img { height: 220px; }
         header { font-family: sans-serif; font-size: 1em; background: black; padding: 1em; display: flex; gap: 1em; }
         header, header a { color: white; }
-        header a:hover { animation: rainbow 2s step-end infinite; }
+        header a:hover { animation: rainbow 2s linear infinite; }
     </style>
 </head>
 <body>
