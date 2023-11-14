@@ -8,7 +8,7 @@
         header, header a { color: white; }
         header a:hover { text-decoration: none; }
         h1 { background: #cde; border-top: 2px solid #349; padding: 4px 0.5em 0; }
-        h1, h2 { color: #349; font-size: 1em; }
+        h1, h2 { color: #349; font-size: 1em; margin: 0; }
         th { font-weight: 400; color: grey; width: 10em; }
     </style>
 </head>
@@ -21,7 +21,7 @@
         <a href="https://spacehey.com/bbw">spacehey</a>
     </header>
 
-    <main style="display: flex; gap: 1em;">
+    <main style="display: flex; gap: 1em; margin-top: 1em;">
         <div style="flex: 0 0 200px;">
             <img style="width: 100%; height: auto; aspect-ratio: 1;" src="https://preview.redd.it/xl4vo7dypk661.jpg?width=640&crop=smart&auto=webp&s=9b0f175b26fe10a4dc6df03987c79f059f012cb3">
             <h1>Mimi</h1>
@@ -29,32 +29,34 @@
             <small>© Dogmomai.top. All rights reserved.</small>
         </div>
         
-        <div style="flex: 1; text-align: justify;">
+        <div style="flex: 1; text-align: justify; border: 1px solid grey;">
             <h1>Information</h1>
-            
-            <h2>Looks</h2>
-            <table>
-                <tr>
-                    <th>Cuteness</th>
-                    <td>Very</td>
-                </tr>
-                <tr>
-                    <th>Weight</th>
-                    <td>220lbs</td>
-                </tr>
-                <tr>
-                    <th>Clothes Size</th>
-                    <td>XXL</td>
-                </tr>
-            </table>
-            
-            <h2>Hobbies</h2>
-            <table>
-                <tr>
-                    <th>Favourite Weather</th>
-                    <td>Rainy</td>
-                </tr>
-            </table>
+
+            <div style="padding: 1em;">
+                <h2>Looks</h2>
+                <table>
+                    <tr>
+                        <th>Cuteness</th>
+                        <td>Very</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>220lbs</td>
+                    </tr>
+                    <tr>
+                        <th>Clothes Size</th>
+                        <td>XXL</td>
+                    </tr>
+                </table>
+                
+                <h2>Hobbies</h2>
+                <table>
+                    <tr>
+                        <th>Favourite Weather</th>
+                        <td>Rainy</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </main>
 
