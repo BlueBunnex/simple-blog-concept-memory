@@ -8,12 +8,13 @@
             --dark:  #349;
         }
         body { width: 600px; margin: auto; font-family: sans-serif; }
-        header { font-family: sans-serif; background: var(--dark); padding: 1em; display: flex; gap: 1em; }
-        header, header a { color: white; }
-        header a:hover { text-decoration: none; }
+        header { font-family: sans-serif; background: var(--dark); padding: 0.5em 1em; display: flex; gap: 1em; }
+        header, header a { color: white; text-decoration: none; }
+        header a:hover { text-decoration: underline; }
         h1, h2 { color: var(--dark); font-size: 1em; margin: 0; }
         h1 { background: var(--light); border-top: 2px solid var(--dark); padding: 4px 0.5em 0; }
         h2 { margin-top: 0.5em; }
+        table { border-collapse: collapse; }
         th { font-weight: 400; color: grey; width: 10em; }
     </style>
 </head>
@@ -38,6 +39,14 @@
             <h1>Information</h1>
 
             <div style="padding: 1em;">
+                <h2>Hobbies</h2>
+                <table>
+                    <tr>
+                        <th>Favourite Weather</th>
+                        <td>Rainy</td>
+                    </tr>
+                </table>
+                
                 <h2>Looks</h2>
                 <table>
                     <tr>
