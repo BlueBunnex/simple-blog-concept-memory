@@ -3,12 +3,17 @@
 <head>
     <title>dogmomai</title>
     <style>
+        :root {
+            --light: #cde;
+            --dark:  #349;
+        }
         body { width: 600px; margin: auto; font-family: sans-serif; }
-        header { font-family: sans-serif; background: black; padding: 1em; display: flex; gap: 1em; }
+        header { font-family: sans-serif; background: var(--dark); padding: 1em; display: flex; gap: 1em; }
         header, header a { color: white; }
         header a:hover { text-decoration: none; }
-        h1 { background: #cde; border-top: 2px solid #349; padding: 4px 0.5em 0; }
-        h1, h2 { color: #349; font-size: 1em; margin: 0; }
+        h1, h2 { color: var(--dark); font-size: 1em; margin: 0; }
+        h1 { background: var(--light); border-top: 2px solid var(--dark); padding: 4px 0.5em 0; }
+        h2 { margin-top: 0.5em; }
         th { font-weight: 400; color: grey; width: 10em; }
     </style>
 </head>
@@ -29,7 +34,7 @@
             <small>© Dogmomai.top. All rights reserved.</small>
         </div>
         
-        <div style="flex: 1; text-align: justify; border: 1px solid grey;">
+        <div style="flex: 1; text-align: justify; border: 1px solid lightgrey;">
             <h1>Information</h1>
 
             <div style="padding: 1em;">
