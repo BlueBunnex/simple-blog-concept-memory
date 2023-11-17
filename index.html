@@ -5,14 +5,13 @@
     <style>
         :root { --accent: rgb(40, 88, 223); }
         body { width: 40em; margin: auto; font-family: sans-serif; font-size: 14px; }
-        footer { background: #eee; padding: 0.5em; text-align: center; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
+        a:active { color: red; }
         th { color: grey; width: 10em; text-align: left; font-weight: 400; vertical-align: top; }
     </style>
 </head>
 <body>
-
     <main style="display: flex; gap: 0.5em; margin: 1em 0;">
         <div style="flex: 1;">
             <img width="100%" src="https://i.pinimg.com/564x/1a/c0/23/1ac0231aa6d74d092328d445aa98183e.jpg">
@@ -40,6 +39,14 @@
                 </tr>
                 <tr><td><strong>Extended Info</strong></td></tr>
                 <tr>
+                    <th>Weight:</th>
+                    <td>266lbs</td>
+                </tr>
+                <tr>
+                    <th>Height:</th>
+                    <td>5'2"</td>
+                </tr>
+                <tr>
                     <th>Clothing Size:</th>
                     <td>XXL</td>
                 </tr>
@@ -50,8 +57,7 @@
             </table>
         </div>
     </main>
-
-    <footer>
+    <footer style="background: #eee; padding: 0.5em; text-align: center;">
         <a href="https://github.com/BlueBunnex/dogmomAI">repo</a> ·
         <a href="https://bsky.app/profile/dogmomai.top">bsky</a> ·
         <a href="https://soundcloud.com/hazel-is-fat">soundcloud</a> ·
@@ -59,6 +65,5 @@
         <br>
         <small>© Dogmomai.top. All rights reserved.</small>
     </footer>
-    
 </body>
 </html>
