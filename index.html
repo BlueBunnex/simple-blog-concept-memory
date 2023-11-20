@@ -4,7 +4,7 @@
     <title>dogmomai.top</title>
     <style>
         body { text-align: center; width: 800px; margin: auto; font-family: sans-serif; font-size: 18px; color: #003; background: #5bf; }
-        a { color: #24f; font-weight: 700; }
+        a { color: blue; font-weight: 700; }
         a:hover { text-decoration: none; }
         
         @keyframes heartbeat {
@@ -16,10 +16,11 @@
         }
         #heart { 
             animation: heartbeat 1s infinite linear;
+            display: inline-block;
             position: relative;
             width: 100px;
-            height: 90px;
-            margin: 6em auto;
+            height: 75px;
+            margin-left: 12px;
         }
         #heart:before, #heart:after {
             position: absolute;
@@ -41,8 +42,9 @@
     </style>
 </head>
 <body>
-    <h1 style="font-size: 6em;">Sally-Robo's Heart Is Blue</h1>
-    <div id="heart"></div>
+    <h1 style="font-size: 6em;">
+        Sally-Robo's Heart Is <span style="color: blue;">Blue</span><span id="heart"></span>
+    </h1>
     <p>2-panel-wide comic with reoccurring characters</p>
     <p>ur just a D-type robot! im an A-type robot! ^_^</p>
     <p>this cave is really dark...</p>
