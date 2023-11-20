@@ -6,6 +6,7 @@
         body { text-align: center; width: 800px; margin: auto; font-family: sans-serif; font-size: 18px; color: #003; background: #5bf; }
         a { color: #24f; font-weight: 700; }
         a:hover { text-decoration: none; }
+        
         @keyframes heartbeat {
             0% { transform: scale(1); }
             6% { transform: scale(1.01); }
@@ -13,11 +14,34 @@
             26% { transform: scale(1.01); }
             100% { transform: scale(1); }
         }
-        .heartbeat { animation: heartbeat 1s infinite linear; }
+        #heart { 
+            animation: heartbeat 1s infinite linear;
+            position: relative;
+            width: 100px;
+            height: 90px;
+        }
+        #heart:before, #heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: blue;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        #heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
     </style>
 </head>
 <body>
-    <h1 style="font-size: 6em;" class="heartbeat">Sally-Robo's Heart Is Blue</h1>
+    <h1 style="font-size: 6em;">Sally-Robo's Heart Is Blue</h1>
+    <div id="heart"></div>
     <p>2-panel-wide comic with reoccurring characters</p>
     <p>ur just a D-type robot! im an A-type robot! ^_^</p>
     <p>this cave is really dark...</p>
