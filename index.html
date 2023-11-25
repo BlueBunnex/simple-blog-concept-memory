@@ -23,10 +23,18 @@
     
     <p>I've already fallen for you. I'm coming to your house. My delicate figure + W Ohio gyatt is yours. I make the perfect weighted blanket. I am quiet when you need me to be and incessently annoying whenever else. Aaaaaaa.</p>
 
-    <div style="display: flex;">
-        <button type="button">Posts</button>
-        <button type="button" selected>Images</button>
+    <div id="selector" style="display: flex;">
+        <button type="button" onclick="select(0)">Posts</button>
+        <button type="button" onclick="select(1)" selected>Images</button>
     </div>
+
+    <script>
+        const selector = body.getElementById("selector");
+
+        for (const button of selector.children) {
+            button.removeAttribute("selected");
+        }
+    </script>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
         <img width="100%" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
