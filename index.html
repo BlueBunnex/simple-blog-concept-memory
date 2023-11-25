@@ -29,10 +29,14 @@
     </div>
 
     <script>
-        const selector = body.getElementById("selector");
+        function select(index) {
+            const buttons = document.getElementById("selector").children;
+    
+            for (let i = 0; i < selector.length; i++) {
+                buttons[i].removeAttribute("selected");
+            }
 
-        for (const button of selector.children) {
-            button.removeAttribute("selected");
+            buttons[index] = addAttribute("selected");
         }
     </script>
 
