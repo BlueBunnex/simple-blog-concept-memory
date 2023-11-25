@@ -32,11 +32,11 @@
         function select(index) {
             const buttons = document.getElementById("selector").children;
     
-            for (let i = 0; i < selector.length; i++) {
+            for (let i = 0; i < buttons.length; i++) {
                 buttons[i].removeAttribute("selected");
             }
 
-            buttons[index].addAttribute("selected");
+            buttons[index].setAttribute("selected");
         }
     </script>
 
