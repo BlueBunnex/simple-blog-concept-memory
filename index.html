@@ -3,69 +3,22 @@
 <head>
     <title>dogmomai.top</title>
     <style>
-        body { width: 450px; margin: 1em auto; font-family: sans-serif; }
+        body { width: 80%; margin: 1em auto; }
         a { color: #c7c; }
         a:hover { text-decoration: none; }
-        button { cursor: pointer; background: white; transition-duration: 0.2s; color: grey; font-size: 1em; font-weight: 700; font-family: inherit; border: none; padding: 1em; }
-        #selector button { flex: 1; box-sizing: border-box; height: 3em; }
-        #selector button:hover { background: #eee; }
-        #selector button[selected] { border-bottom: 4px solid #c7c; color: black; }
+        button { cursor: pointer; background: white; transition-duration: 0.2s; color: grey; font-size: 1em; font-weight: 700; font-family: sans-serif; border: none; padding: 1em; }
+        button:hover { background: #eee; }
     </style>
-    <script>
-        var buttons;
-        var content;
-        
-        function select(index) {
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].removeAttribute("selected");
-                content[i].style.display = "none";
-            }
-
-            buttons[index].setAttribute("selected", "");
-            content[index].style.display = "grid";
-        }
-
-        function init() {
-            buttons = document.getElementById("selector").children;
-            content = document.getElementById("content").children;
-            select(0);
-        }
-    </script>
 </head>
 <body onload="init()">
-    <div style="display: flex; gap: 1em;">
-        <img style="width: 120px; border-radius: 100%; aspect-ratio: 1;" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
-        <div>
-            <div style="font-size: larger; margin-top: 18px;">Wendy Lu <span style="color: grey;">@wendeeznuts</span></div>
-            <br>
-            22yo · Works in Architecture<br>
-            5'4" · 130lbs<br>
-        </div>
-    </div>
-    
-    <p>I've already fallen for you. I'm coming to your house. My delicate figure + W Ohio gyatt is yours. I make the perfect weighted blanket. I am quiet when you need me to be and incessently annoying whenever else. Aaaaaaa.</p>
+    <div style="height: 100px; width: 100px; background: linear-gradient(15deg, #f00, #c7c);"></div>
 
-    <div id="selector" style="display: flex;">
-        <button type="button" onclick="select(0)">Posts</button>
-        <button type="button" onclick="select(1)">Images</button>
-    </div>
-
-    <div id="content">
-        <div style="display: grid; grid-template-columns: 100%;">
-
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
-            <img width="100%" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
-            <img width="100%" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
-            <img width="100%" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
-            <img width="100%" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
-            <img width="100%" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
-            <div style="background: #eee;"></div>
-        </div>
-    </div>
+    <!-- news, big grid with long cells :3 -->
+    <main></main>
     
     <footer style="text-align: center; margin-top: 1em; color: grey;">
-        <small onclick="window.open('https://github.com/BlueBunnex/dogmomAI')">©2023 Dogmomai.top. All rights reserved.</small>
+        [<a href="https://github.com/BlueBunnex/dogmomAI">repo</a>]<br>
+        <small>©2023 Dogmomai.top. All rights reserved.</small>
     </footer>
 </body>
 </html>
