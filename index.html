@@ -22,7 +22,7 @@
             }
 
             buttons[index].setAttribute("selected", "");
-            content[index].style.display = "block";
+            content[index].style.display = "grid";
         }
 
         function init() {
@@ -51,7 +51,7 @@
     </div>
 
     <div id="content">
-        <div>
+        <div style="display: grid; grid-template-columns: 100%;">
 
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin: 4px 0;">
