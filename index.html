@@ -12,8 +12,8 @@
         #selector button[selected] { border-bottom: 4px solid #c7c; color: black; }
     </style>
     <script>
-        const buttons = document.getElementById("selector").children;
-        const content = document.getElementById("content").children;
+        var buttons;
+        var content;
         
         function select(index) {
             for (let i = 0; i < buttons.length; i++) {
@@ -26,6 +26,8 @@
         }
 
         function init() {
+            buttons = document.getElementById("selector").children;
+            content = document.getElementById("content").children;
             select(0);
         }
     </script>
