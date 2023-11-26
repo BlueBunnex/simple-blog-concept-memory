@@ -11,8 +11,26 @@
         #selector button:hover { background: #eee; }
         #selector button[selected] { border-bottom: 4px solid #c7c; color: black; }
     </style>
+    <script>
+        const buttons = document.getElementById("selector").children;
+        const content = document.getElementById("content").children;
+        
+        function select(index) {
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].removeAttribute("selected");
+                content[i].style.display = "none";
+            }
+
+            buttons[index].setAttribute("selected", "");
+            content[index].style.display = "block";
+        }
+
+        function init() {
+            select(0);
+        }
+    </script>
 </head>
-<body>
+<body onload="init()">
     <div style="display: flex; gap: 1em;">
         <img style="width: 120px; border-radius: 100%; aspect-ratio: 1;" src="https://wallpapers.com/images/hd/cool-anime-girl-pfp-aoi-hinami-f7u50zvrx77vpmsr.jpg">
         <div>
@@ -29,23 +47,6 @@
         <button type="button" onclick="select(0)">Posts</button>
         <button type="button" onclick="select(1)">Images</button>
     </div>
-
-    <script>
-        const buttons = document.getElementById("selector").children;
-        const content = document.getElementById("content").children;
-        
-        function select(index) {
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].removeAttribute("selected");
-                content[i].style.display = "none";
-            }
-
-            buttons[index].setAttribute("selected", "");
-            content[index].style.display = "block";
-        }
-
-        select(0);
-    </script>
 
     <div id="content">
         <div>
