@@ -6,39 +6,47 @@
         body { width: 70%; margin: auto; }
         button { cursor: pointer; background: white; transition-duration: 0.2s; color: grey; font-size: 1em; font-weight: 700; font-family: sans-serif; border: none; padding: 1em; }
         button:hover { background: #eee; }
-        h2 { margin: 0; font-family: sans-serif; font-size: 1em; border-top: 1px solid lightgrey; padding-top: 1em; }
         p { margin: 0.5em 0; }
     </style>
 </head>
 <body>
     <strong>DOGMOMAI</strong> lean → curvy → chonky
 
-    <!-- news, big grid with long cells :3 -->
-    <main style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); grid-auto-rows: 200px; gap: 16px; grid-auto-flow: dense;">
-
-        <script>
-            for (let i=0; i<40; i++) {
-                let w = Math.floor(Math.random() * 2) + 1;
-                let h = Math.floor(Math.random() * 2) + 1;
-
-                let content = `
-                    <h2>Are Cats Cool?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum. Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac. Cras volutpat dui vitae ex mattis posuere ultrices id dolor. Aliquam molestie mi sem, a congue lorem molestie quis. Suspendisse non erat ultrices, hendrerit eros in, interdum libero. In at tempus tellus.</p>
-                    <p>Suspendisse et sem pulvinar, molestie dui non, dignissim quam. Donec pretium sollicitudin ornare. In posuere mauris urna, et volutpat enim elementum a.</p>
-                `;
-
-                if (i % 2 == 1) {
-                    w = 1;
-                    h = 1;
+    <main style="display: flex; gap: 16px;">
+        <div style="flex: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); grid-auto-rows: 200px; gap: inherit; grid-auto-flow: dense;">
+            <script>
+                for (let i=0; i<40; i++) {
+                    let a;
+    
+                    if (i % 2 == 1) {
+                        a = 1;
+                    } else {
+                        a = Math.floor(Math.random() * 2) + 1;
+                    }
+    
+                    let content = `
+                        <h2 style="margin: 0; font-family: sans-serif; font-size: 1em; border-top: 1px solid lightgrey; padding-top: 1em;">Are Cats Cool?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum. Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac. Cras volutpat dui vitae ex mattis posuere ultrices id dolor. Aliquam molestie mi sem, a congue lorem molestie quis. Suspendisse non erat ultrices, hendrerit eros in, interdum libero. In at tempus tellus.</p>
+                        <p>Suspendisse et sem pulvinar, molestie dui non, dignissim quam. Donec pretium sollicitudin ornare. In posuere mauris urna, et volutpat enim elementum a.</p>
+                    `;
+    
+                    if (w == 2) {
+                        content = "<img src='https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg' height='100%' style='float: right; padding-left: 1em;'>" + content;
+                    }
+                    
+                    document.write("<div style='grid-column-end: span " + w + "; grid-row-end: span " + h + "; overflow: hidden;'>" + content + "</div>");
                 }
+            </script>
+        </div>
 
-                if (w == 2) {
-                    content = "<img src='https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg' height='100%' style='float: right; padding-left: 1em;'>" + content;
-                }
-                
-                document.write("<div style='grid-column-end: span " + w + "; grid-row-end: span " + h + "; overflow: hidden;'>" + content + "</div>");
-            }
-        </script>
+        <div style="width: 300px;">
+            <h1 style="margin: 0; font-family: sans-serif; font-size: larger; border-top: 1px solid black; padding-top: 4px;">News</h1>
+            <h2>Rats Are Being Used In Space</h2>
+            <hr>
+            <h2>Scary Things Happen At Night In Johntown</h2>
+            <hr>
+            <h2>"I Am So Scared Of The Internet" Admits College Student</h2>
+        </div>
     </main>
     
     <footer style="text-align: center; margin-top: 1em; color: grey;">
