@@ -9,12 +9,27 @@
     </style>
 </head>
 <body>
-    <div style="width: 52px; height: 52px; display: inline-block; background: linear-gradient(15deg, #f00, #c7c); padding: 4px; box-sizing: border-box; transform: translateY(6px);">
-        <div style="background: white; height: 100%;"></div>
-    </div>
+
+    lean → curvy → chonky
 
     <!-- news, big grid with long cells :3 -->
-    <main></main>
+    <main style="display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 100px; gap: 10px; grid-auto-flow: dense;">
+
+        <script>
+            for (let i=0; i<40; i++) {
+                let w = Math.floor(Math.random() * 2) + 1;
+                let h = Math.floor(Math.random() * 2) + 1;
+
+                if (i % 2 == 1) {
+                    w = 1;
+                    h = 1;
+                }
+                document.write(
+                    "<div style='grid-column-end: span " + w + "; grid-row-end: span " + h + "; border-radius: 10px; background: lightgrey;'></div>"
+                );
+            }
+        </script>
+    </main>
     
     <footer style="text-align: center; margin-top: 1em; color: grey;">
         [<a href="https://github.com/BlueBunnex/dogmomAI">repo</a>]<br>
