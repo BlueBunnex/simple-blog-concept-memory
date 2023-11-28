@@ -11,6 +11,8 @@
 
         h1 { font-size: larger; margin: 0; }
         h2 { margin: 0; font-family: sans-serif; font-size: 1em; }
+        h1 a, h2 a { text-decoration: none; color: inherit; }
+        h1:hover a, h2:hover a { color: #222; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -23,10 +25,14 @@
                 let a = `
                 <div style="display: flex; gap: 1em; padding: 1em 0; border-top: 1px solid black;">
                     <div style="flex: 1;">
-                        <h2>Are Cats Cool?</h2>
+                        <h2>
+                            <a>Are Cats Cool?</a>
+                        </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum.</p>
                         <hr>
-                        <h2>When Is The Word "Derp" Coming Back?</h2>
+                        <h2>
+                            <a>When Is The Word "Derp" Coming Back?</a>
+                        </h2>
                         <p>Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac.</p>
                     </div>
                     <div style="flex: 2; aspect-ratio: 1.5; background-image: url('https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg'); background-size: cover;"></div>
@@ -38,13 +44,13 @@
                     <button type="button">
                         <div style="color: grey; font-size: smaller;">MIKE LEMONIE</div>
                         <h2>
-                            Something Really Relevant
+                            <a>Something Really Relevant</a>
                         </h2>
                     </button>
                     <button type="button">
                         <div style="color: grey; font-size: smaller;">JOHN SOCK</div>
                         <h2>
-                            Is Burger King Ever Going To Stop Selling Trash?
+                            <a>Is Burger King Ever Going To Stop Selling Trash?</a>
                         </h2>
                     </button>
                 </div>
@@ -59,13 +65,13 @@
             </script>
         </div>
 
-        <div style="width: 350px;">
+        <div style="width: 300px;">
             <div style="margin-bottom: 1em; font-weight: 700; font-family: sans-serif; border-top: 1px solid black; padding-top: 4px; color: #b00;">News</div>
-            <h1>Rats Are Being Used In Space</h1>
+            <h1><a>Rats Are Being Used In Space</a></h1>
             <hr>
-            <h1>Scary Things Happen At Night In Johntown</h1>
+            <h1><a>Scary Things Happen At Night In Johntown</a></h1>
             <hr>
-            <h1>"I Am So Scared Of The Internet" Admits College Student</h1>
+            <h1><a>"I Am So Scared Of The Internet" Admits College Student</a></h1>
         </div>
     </main>
     
