@@ -7,9 +7,9 @@
         button { cursor: pointer; flex: 1; background: white; transition-duration: 0.2s; font-size: 1em; font-weight: 700; font-family: sans-serif; text-align: left; border: none; padding: 1em; }
         button:hover { background: #eee; }
         p { margin: 0.5em 0; }
-        hr { border: 0; border-top: 1px solid lightgrey; }
+        hr { border: 0; border-top: 1px solid lightgrey; margin: 0.83em 0; }
 
-        h1 { font-size: larger; margin: 0.83em 0; }
+        h1 { font-size: larger; margin: 0; }
         h2 { margin: 0; font-family: sans-serif; font-size: 1em; }
     </style>
 </head>
@@ -18,38 +18,43 @@
 
     <main style="display: flex; gap: 1em">
         <div style="flex: 1;">
-
-            <div style="display: flex; gap: 1em; padding: 1em 0; border-top: 1px solid black;">
-                <div style="flex: 1;">
-                    <h2>Are Cats Cool?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum.</p>
-                    <hr>
-                    <h2>When Is The Word "Derp" Coming Back?</h2>
-                    <p>Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac.</p>
-                </div>
-                <div style="flex: 2; aspect-ratio: 1.5; background-image: url('https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg'); background-size: cover;"></div>
-            </div>
-
-            <div style="display: flex;">
-                <button type="button">
-                    <div style="color: grey; font-size: smaller;">JOHN SOCK</div>
-                    <h2>
-                        Something Really Relevant
-                    </h2>
-                </button>
-                <button type="button">
-                    <div style="color: grey; font-size: smaller;">JOHN SOCK</div>
-                    <h2>
-                        Is Burger King Ever Going To Stop Selling Trash?
-                    </h2>
-                </button>
-            </div>
                 
             <script>
+                let a = `
+                <div style="display: flex; gap: 1em; padding: 1em 0; border-top: 1px solid black;">
+                    <div style="flex: 1;">
+                        <h2>Are Cats Cool?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum.</p>
+                        <hr>
+                        <h2>When Is The Word "Derp" Coming Back?</h2>
+                        <p>Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac.</p>
+                    </div>
+                    <div style="flex: 2; aspect-ratio: 1.5; background-image: url('https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg'); background-size: cover;"></div>
+                </div>
+                `;
+
+                let b = `
+                <div style="display: flex;">
+                    <button type="button">
+                        <div style="color: grey; font-size: smaller;">MIKE LEMONIE</div>
+                        <h2>
+                            Something Really Relevant
+                        </h2>
+                    </button>
+                    <button type="button">
+                        <div style="color: grey; font-size: smaller;">JOHN SOCK</div>
+                        <h2>
+                            Is Burger King Ever Going To Stop Selling Trash?
+                        </h2>
+                    </button>
+                </div>
+                `;
+
+                document.write(a);
+                document.write(b);
+                
                 for (let i=0; i<40; i++) {
-                    let a = Math.floor(Math.random() * 2) + 1;
-                    
-                    //document.write(a);
+                    document.write(a);
                 }
             </script>
         </div>
