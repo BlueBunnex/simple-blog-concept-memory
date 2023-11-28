@@ -21,25 +21,25 @@
                 let w = Math.floor(Math.random() * 2) + 1;
                 let h = Math.floor(Math.random() * 2) + 1;
 
+                let content = `
+                    <h2>Are Cats Cool?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum. Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac. Cras volutpat dui vitae ex mattis posuere ultrices id dolor. Aliquam molestie mi sem, a congue lorem molestie quis. Suspendisse non erat ultrices, hendrerit eros in, interdum libero. In at tempus tellus.</p>
+                    <p>Suspendisse et sem pulvinar, molestie dui non, dignissim quam. Donec pretium sollicitudin ornare. In posuere mauris urna, et volutpat enim elementum a.</p>
+                `;
+
                 if (i % 2 == 1) {
                     w = 1;
                     h = 1;
                 }
+
+                if (w == 2) {
+                    content += "<img src='https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg' height='100%' style='float: right; padding-left: 1em;'>";
+                }
                 
-                document.write(`
-                    <div style='grid-column-end: span ` + w + `; grid-row-end: span ` + h + `; border-radius: 10px; overflow: hidden;'>
-                        <h2>Are Cats Cool?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dictum dui. Pellentesque et nunc odio. Curabitur mattis aliquet ligula ut vestibulum. Quisque dolor nunc, gravida vitae felis sed, interdum aliquam turpis. Aliquam faucibus nulla libero, a molestie sem varius ac. Cras volutpat dui vitae ex mattis posuere ultrices id dolor. Aliquam molestie mi sem, a congue lorem molestie quis. Suspendisse non erat ultrices, hendrerit eros in, interdum libero. In at tempus tellus.</p>
-                        <p>Suspendisse et sem pulvinar, molestie dui non, dignissim quam. Donec pretium sollicitudin ornare. In posuere mauris urna, et volutpat enim elementum a.</p>
-                    </div>
-                `);
+                document.write("<div style='grid-column-end: span " + w + "; grid-row-end: span " + h + "; border-radius: 10px; overflow: hidden;'>" + content + "</div>");
             }
         </script>
     </main>
-
-    <!--
-    <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" height="100%" style="float: right; padding-left: 1em;">
-    -->
     
     <footer style="text-align: center; margin-top: 1em; color: grey;">
         [<a href="https://github.com/BlueBunnex/dogmomAI">repo</a>]<br>
