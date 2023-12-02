@@ -11,36 +11,39 @@
         nav { display: flex; justify-content: space-evenly; background: #902; }
         nav a { color: white; }
         nav a[current] { text-decoration: none; font-weight: 700; }
+        header > img { display: block; width: 100%; }
+        footer { text-align: center; margin-top: 1em; color: grey; }
     </style>
 </head>
 <body>
-    <img src="dogmomai_banner.png" style="display: block; width: 100%;">
-    <nav>
-        <a current>Home</a>
-        <a href="">page 1</a>
-        <a href="">page 2</a>
-        <a href="">page 3</a>
-    </nav>
+    <header>
+        <img src="dogmomai_banner.png">
+        <nav>
+            <a current>Home</a>
+            <a href="">page 1</a>
+            <a href="">page 2</a>
+            <a href="">page 3</a>
+        </nav>
+    </header>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor dolor, volutpat et est at, sollicitudin condimentum est. Donec elementum ornare egestas. Aliquam sit amet efficitur nibh. Mauris consequat elit a feugiat posuere. Mauris in odio eu dui faucibus sollicitudin. Cras congue, mauris ac pulvinar pretium, nisl eros facilisis dolor, a fringilla massa magna ac tortor. Sed porttitor, odio nec aliquam volutpat, sapien tellus vulputate diam, quis fringilla mi risus a risus. Vivamus molestie, neque nec auctor accumsan, libero velit facilisis felis, vitae molestie est sem ut est. Etiam a turpis feugiat nibh blandit posuere eget ut massa. Cras hendrerit ultrices dapibus. Aenean ut dui ut mauris lobortis congue in sed risus. Aliquam erat volutpat. Vestibulum auctor dolor eleifend, viverra odio sed, gravida neque. Proin lectus neque, fringilla non libero at, finibus ultricies arcu.</p>
-    <p>Sed sagittis, ligula eu elementum pellentesque, lacus purus mollis lorem, eget congue tellus elit id sapien. Maecenas ac enim a turpis ornare pellentesque eu ut nulla. Aenean id viverra quam. Quisque bibendum sagittis bibendum. Vivamus lorem erat, tempus vel erat ac, tincidunt vulputate quam. Vivamus suscipit libero est, sed lacinia justo congue at. Curabitur volutpat velit arcu, nec aliquam ex posuere et.</p>
-    <div style="color: #902; background: #fee; padding: 0.5em; border: 1px solid #902; border-radius: 2px;">
-        <h2>fun fact:</h2>
-        women with big boobs are hot
-    </div>
-    <p>Since I find it entertaining to think about what living in a foreign country with a hot gf on a small piece of land would be like, and also just because I like looking at land, below is the land I've been looking at.</p>
-
-    <div style="position: relative; margin: 1em 0; padding: 0.5em; border: 1px solid #bbb;">
-        <h1>Onjuku Seibu Greentown (Land)</h1>
-        <h2>8,800.00 USD</h2>
-        <button
-            onclick="window.open('https://realestate.co.jp/en/forsale/view/1072633')"
-            style="position: absolute; top: 0.5em; right: 0.5em; cursor: pointer; height: calc(100% - 1em); padding: 0 1em; border: 0; background: #902; border-radius: 4px; color: white; font-size: 0.8em; font-weight: 700; font-family: sans-serif;">
-            View Listing
-        </button>
-    </div>
+    <main>
+        <div style="color: #902; background: #fee; padding: 0.5em; border: 1px solid #902; border-radius: 2px;">
+            <h2>fun fact:</h2>
+            women with big boobs are hot
+        </div>
     
-    <footer style="text-align: center; margin-top: 1em; color: grey;">
+        <div style="position: relative; margin: 1em 0; padding: 0.5em; border: 1px solid #bbb;">
+            <h1>Onjuku Seibu Greentown (Land)</h1>
+            <h2>8,800.00 USD</h2>
+            <button
+                onclick="window.open('https://realestate.co.jp/en/forsale/view/1072633')"
+                style="position: absolute; top: 0.5em; right: 0.5em; cursor: pointer; height: calc(100% - 1em); padding: 0 1em; border: 0; background: #902; border-radius: 4px; color: white; font-size: 0.8em; font-weight: 700; font-family: sans-serif;">
+                View Listing
+            </button>
+        </div>
+    </main>
+    
+    <footer>
         [<a href="https://github.com/BlueBunnex/dogmomAI">repo</a>]<br>
         <small>© 2023 Dogmomai.top. All rights reserved.</small>
     </footer>
