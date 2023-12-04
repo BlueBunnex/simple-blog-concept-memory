@@ -5,17 +5,16 @@
     <style>
         body { width: 600px; margin: auto; text-align: justify; }
         a:hover { text-decoration: none; }
-        article { padding: 1em 0; }
-        article + article:before { content: ""; height: 1px; width: 95%; margin: auto; background: lightgrey; display: block; transform: translateY(-1em); }
+        article { padding: 0.5em; margin: 0.5em 0; background: #eef; }
     </style>
     <script>
         const template = `<article>
-                <div style="display: flex; gap: 1em;">
+                <div style="display: flex; gap: 1em; margin-bottom: 0.5em;">
                     <img width="32px" src="https://i.pinimg.com/736x/da/5f/35/da5f35cbc495b53e4ab2bdc499ee2d18.jpg">
                     <span style="color: grey; padding-top: 8px;">dogmomai</span>
                     <a style="padding-top: 8px;" href="">follow</a>
                 </div>
-                <p>%CONTENT%</p>
+                %CONTENT%
             </article>`;
         
         function post(content) {
