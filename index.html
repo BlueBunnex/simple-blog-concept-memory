@@ -6,18 +6,29 @@
         body { width: 600px; margin: auto; text-align: justify; }
         a:hover { text-decoration: none; }
     </style>
+    <script>
+        const template = `<article style="margin: 1em 0;">
+                <div style="display: flex; gap: 1em;">
+                    <img width="32px" src="https://i.pinimg.com/736x/da/5f/35/da5f35cbc495b53e4ab2bdc499ee2d18.jpg">
+                    <span style="color: grey; padding-top: 8px;">dogmomai</span>
+                    <a style="padding-top: 8px;" href="">follow</a>
+                </div>
+                <p>%CONTENT%</p>
+            </article>`;
+        
+        function post(content) {
+            document.write(template.replace("%CONTENT%", content));
+        }
+    </script>
 </head>
 <body>
     <img src="dogmomai_banner.png" style="display: block; width: 100%;">
 
-    <article style="margin: 1em 0;">
-        <div style="display: flex; gap: 1em;">
-            <img width="32px" src="https://i.pinimg.com/736x/da/5f/35/da5f35cbc495b53e4ab2bdc499ee2d18.jpg">
-            <span style="color: grey; padding-top: 8px;">dogmomai</span>
-            <a style="padding-top: 8px;" href="">follow</a>
-        </div>
-        <p>nah u playin' u ain't a chick with big breasts u a carrot</p>
-    </article>
+    <script>
+        post("nah u playin' u ain't a chick with big breasts u a carrot");
+        post("im literally sobbing ;-;");
+        post("I should draw a woman... with cat ears... and thighs... big ones.");
+    </script>
     
     <div style="text-align: center; color: grey;">
         [<a href="https://github.com/BlueBunnex/dogmomAI">repo</a>]<br>
