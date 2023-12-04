@@ -5,8 +5,8 @@
     <style>
         body { width: 600px; margin: auto; text-align: justify; }
         a:hover { text-decoration: none; }
-        article { margin: 1em 0; }
-        article + article { border-top: 1px solid grey; }
+        article { padding: 1em 0; }
+        article + article:before { content: ""; height: 1px; width: 95%; margin: auto; background: lightgrey; display: block; transform: translateY(-1em); }
     </style>
     <script>
         const template = `<article>
