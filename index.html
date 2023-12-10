@@ -3,11 +3,15 @@
 <head>
     <title>dogmomai.top</title>
     <style>
+        :root {
+            --a: #f7a;
+        }
         body { width: 600px; margin: auto; font-family: sans-serif; }
-        a { color: #f7a; }
-        table { border-collapse: collapse; border: 2px solid #f7a; }
+        a { color: var(--a); }
+        table { border-collapse: collapse; border: 2px solid var(--a); }
         th, td { padding: 0.5em; }
-        th { text-align: left; padding-right: 1em; background: #f7a; color: white; }
+        th { text-align: left; padding-right: 1em; background: var(--a); color: white; }
+        footer { text-align: center; padding: 1em; background: var(--a); }
     </style>
 </head>
 <body>
@@ -33,6 +37,6 @@
         </tr>
     </table>
     
-    <div style="text-align: center; margin: 1em;"><a href="https://github.com/BlueBunnex/dogmomAI">repo</a> | © 2023 Dogmomai.top. All rights reserved.</div>
+    <footer><a href="https://github.com/BlueBunnex/dogmomAI">repo</a> | © 2023 Dogmomai.top. All rights reserved.</footer>
 </body>
 </html>
