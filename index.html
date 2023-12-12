@@ -52,11 +52,14 @@
             </div>
         </div>
         <div style="flex: 1; padding: 0.5em;">
-            <form action="/action_page.php" class="region">
-                <textarea rows="4" cols="50"></textarea>
-                <br><br>
+            <!-- post input area -->
+            <form action="/action_page.php" class="region" style="overflow: hidden;">
+                <textarea rows="6" style="width: calc(100% - 6px); font-size: 1em;"></textarea>
+                <br>
                 <input type="submit" value="Publish">
             </form>
+            
+            <!-- posts here -->
         </div>
         <div style="width: 220px;"></div>
     </main>
