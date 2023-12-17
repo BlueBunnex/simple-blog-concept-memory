@@ -5,7 +5,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&amp;display=swap');
         body { margin: auto; width: 420px; font-size: 14px; font-family: 'Lora', serif; text-align: justify; }
-        a { color: #63f; }
+        header, footer { padding: 1em 0; }
         a:hover { text-decoration: none; }
         img { width: 100%; }
         .comment { display: flex; background: #ccc; padding: 0.5em; gap: 0.5em; }
@@ -13,13 +13,13 @@
     </style>
 </head>
 <body>
-    <header style="display: flex; padding: 1em 0;">
+    <header style="display: flex;">
         <form action="/action_page.php">
             <input type="text" id="fname" name="fname" placeholder="Enter keyword/username">
             <input type="submit" value="Search">
         </form>
         <div style="flex: 1;"></div>
-        <div><strong>@KunaTheWorthlessArtist</strong> | <a style="color: red;" href="">logout</a></div>
+        <div><strong>@kuna</strong> | <a style="color: red;" href="">logout</a></div>
     </header>
 
     <div class="comment">
@@ -27,7 +27,7 @@
             <img src="https://i.pinimg.com/564x/9e/6a/e8/9e6ae8b5b31eb294dc39e06f60d64894.jpg">
         </div>
         <div style="flex: 1; background: white; padding: 0.5em;">
-            <strong>Here is my OC, who is currently unnamed.</strong> As I draw her more I will eventually create a ref sheet, but for now the broad strokes of her design are below.
+            Hey guys, it's me, kuna the worthless artist. <strong>Here is my OC, who is currently unnamed.</strong> As I draw her more I will eventually create a ref sheet, but for now the broad strokes of her design are below.
             <div style="display: grid; grid-template-columns: 1fr 1fr;">
                 <img src="https://pbs.twimg.com/media/GBUr5OqXoAAw4ie?format=jpg&name=4096x4096">
                 <img src="https://pbs.twimg.com/media/GBWW1U7XQAA-CFi?format=jpg&name=large">
@@ -44,9 +44,9 @@
         </div>
     </div>
     
-    <p style="text-align: center;">
+    <footer style="text-align: center;">
         <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
         <br>© 2023 Dogmomai.top. All rights reserved.
-    </p>
+    </footer>
 </body>
 </html>
