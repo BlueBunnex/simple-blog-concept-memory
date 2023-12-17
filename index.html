@@ -4,40 +4,31 @@
     <title>dogmomai.top</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&amp;display=swap');
-        body { display: flex; gap: 1em; justify-content: center; font-size: 14px; font-family: 'Lora', serif; text-align: justify; }
+        body { margin: 1em auto; width: 420px; font-size: 14px; font-family: 'Lora', serif; text-align: justify; }
         a { color: #63f; }
         a:hover { text-decoration: none; }
         img { width: 100%; }
     </style>
 </head>
 <body>
-    <div style="width: 420px;">
-        <h1 style="font-size: 2em; border-bottom: 1px solid grey;">Kuna The Worthless Artist</h1>
+    <form action="/action_page.php">
+        <input type="text" id="fname" name="fname" placeholder="I'm looking for..." style="width: 10.5em;">
+        <input type="submit" value="Search">
+    </form>
+    
+    <h1 style="font-size: 2em; border-bottom: 1px solid grey;">Kuna The Worthless Artist</h1>
 
-        <p><strong>Here is my OC, who is currently unnamed.</strong> As I draw her more I will eventually create a ref sheet, but for now the broad strokes of her design are below.</p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr;">
-            <img src="https://pbs.twimg.com/media/GBUr5OqXoAAw4ie?format=jpg&name=4096x4096">
-            <img src="https://pbs.twimg.com/media/GBWW1U7XQAA-CFi?format=jpg&name=large">
-            <img src="https://pbs.twimg.com/media/GBWW1sEWMAAIpK_?format=jpg&name=4096x4096">
-        </div>
-
-        <!--
-        <p style="background: #ffd; padding: 1em; border: 1px solid #cc7;">box</p>
-        <img src="https://pbs.twimg.com/media/GBbM5U_WwAAfXIU?format=jpg&name=large">
-        -->
-        
-        <p style="text-align: center;">
-            <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
-            <br>© 2023 Dogmomai.top. All rights reserved.
-        </p>
+    <p><strong>Here is my OC, who is currently unnamed.</strong> As I draw her more I will eventually create a ref sheet, but for now the broad strokes of her design are below.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <img src="https://pbs.twimg.com/media/GBUr5OqXoAAw4ie?format=jpg&name=4096x4096">
+        <img src="https://pbs.twimg.com/media/GBWW1U7XQAA-CFi?format=jpg&name=large">
+        <img src="https://pbs.twimg.com/media/GBWW1sEWMAAIpK_?format=jpg&name=4096x4096">
     </div>
-    <div style="width: 180px; background: #eee;">
-        <form action="/action_page.php">
-            <input type="text" id="fname" name="fname" placeholder="I'm looking for..." style="width: 10.5em;">
-            <input type="submit" value="Search">
-        </form>
-        text
-    </div>
+    
+    <p style="text-align: center;">
+        <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>
+        <br>© 2023 Dogmomai.top. All rights reserved.
+    </p>
 </body>
 </html>
