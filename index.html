@@ -8,6 +8,8 @@
         a { color: #63f; }
         a:hover { text-decoration: none; }
         img { width: 100%; }
+        .comment { display: flex; background: #ccc; padding: 0.5em; gap: 0.5em; }
+        .comment + .comment { padding-top: 0; }
     </style>
 </head>
 <body>
@@ -30,11 +32,21 @@
         <img src="https://pbs.twimg.com/media/GBWW1sEWMAAIpK_?format=jpg&name=4096x4096">
     </div>
 
-    <div style="display: flex; background: #eee; padding: 0.5em; gap: 0.5em;">
-        <div style="width: 100px;">
+    <div class="comment">
+        <div style="width: 50px;">
             <img src="https://i.pinimg.com/564x/9e/6a/e8/9e6ae8b5b31eb294dc39e06f60d64894.jpg">
         </div>
-        <div style="flex: 1; background: white; padding: 0.5em;">hey gamers, it's me, ya boi</div>
+        <div style="flex: 1; background: white; padding: 0.5em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non rutrum magna. Curabitur sapien ipsum, condimentum id lectus lacinia, posuere consectetur tellus. Vivamus malesuada ut leo eu blandit. Aliquam erat volutpat. Pellentesque id leo ipsum. Quisque feugiat ac ipsum sed tristique. Aenean condimentum dui neque. Maecenas blandit, enim a commodo iaculis, diam nulla laoreet erat, quis dignissim enim nisl ac justo. Ut porttitor egestas nisl, ac consectetur ex.
+        </div>
+    </div>
+    <div class="comment">
+        <div style="width: 50px;">
+            <img src="https://i.pinimg.com/564x/9e/6a/e8/9e6ae8b5b31eb294dc39e06f60d64894.jpg">
+        </div>
+        <div style="flex: 1; background: white; padding: 0.5em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non rutrum magna. Curabitur sapien ipsum, condimentum id lectus lacinia, posuere consectetur tellus. Vivamus malesuada ut leo eu blandit. Aliquam erat volutpat. Pellentesque id leo ipsum. Quisque feugiat ac ipsum sed tristique. Aenean condimentum dui neque. Maecenas blandit, enim a commodo iaculis, diam nulla laoreet erat, quis dignissim enim nisl ac justo. Ut porttitor egestas nisl, ac consectetur ex.
+        </div>
     </div>
     
     <p style="text-align: center;">
