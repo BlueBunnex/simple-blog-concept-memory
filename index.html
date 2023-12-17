@@ -11,10 +11,14 @@
     </style>
 </head>
 <body>
-    <form action="/action_page.php">
-        <input type="text" id="fname" name="fname" placeholder="I'm looking for..." style="width: 10.5em;">
-        <input type="submit" value="Search">
-    </form>
+    <div style="display: flex;">
+        <form action="/action_page.php">
+            <input type="text" id="fname" name="fname" placeholder="Enter keyword/username">
+            <input type="submit" value="Search">
+        </form>
+        <div style="flex: 1;"></div>
+        <div>@kuna | <a href="">logout</a></div>
+    </div>
     
     <h1 style="font-size: 2em; border-bottom: 1px solid grey;">Kuna The Worthless Artist</h1>
 
