@@ -5,8 +5,13 @@
     <style>
         body { margin: auto; width: 80%; }
         img { width: 100%; }
-        #gallery { display: grid; grid-template-columns: 1fr 1fr; }
+        #gallery { display: grid; grid-template-columns: 1fr 1fr 1fr; }
         footer { text-align: center; }
+
+        @media screen and (orientation:portrait) {
+            body { width: 100%; font-size: 2em; /* idk */ }
+            #gallery { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
