@@ -6,9 +6,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
         body { margin: auto; width: 600px; font-family: sans-serif; }
         a { color: #f27; }
-        h1, h2 { font-family: 'Oxygen', sans-serif; font-weight: 300; color: #445; }
-        h1 { font-size: 1.5em; }
-        h2 { font-size: 1em; }
+        h1 { font-size: 1.5em; font-family: 'Oxygen', sans-serif; font-weight: 300; color: #544; }
+        button { flex: 1; padding: 1em; font-weight: 700; text-align: center; border-radius: 1000px; font-size: 0.8em; border: 0; }
         .tile { background-color: #eee; border: 1px solid lightgrey; border-radius: 4px; aspect-ratio: 1; background-size: cover; background-position: center; }
     </style>
 </head>
@@ -29,9 +28,9 @@
         <div class="tile"></div>
     </div>
 
-    <div style="display: flex;">
-        <button style="flex: 1; background: #210; color: white; padding: 1em; font-weight: 700; text-align: center; border-radius: 1000px; font-size: 0.8em; border: 0;">ADD TO CART</button>
-        <button style="flex: 1; background: lightgrey; padding: 1em; font-weight: 700; text-align: center; border-radius: 1000px; font-size: 0.8em; border: 0;">ADD TO CART</button>
+    <div style="display: flex; gap: 4px;">
+        <button type="button" style="background: #210; color: white;">ADD TO CART</button>
+        <button type="button" style="background: lightgrey;">PROCEED TO CHECKOUT</button>
     </div>
 </body>
 </html>
