@@ -7,7 +7,7 @@
         body { margin: auto; width: 600px; font-family: sans-serif; }
         a { color: #f27; }
         h1 { font-size: 1.5em; font-family: 'Oxygen', sans-serif; font-weight: 300; color: #544; }
-        button { flex: 1; padding: 1em; font-weight: 700; text-align: center; border-radius: 1000px; font-size: 0.8em; border: 0; }
+        button { cursor: pointer; flex: 1; padding: 1em; font-weight: 700; text-align: center; border-radius: 1000px; font-size: 0.8em; border: 0; }
         .tile { background-color: #eee; border: 1px solid lightgrey; border-radius: 4px; aspect-ratio: 1; background-size: cover; background-position: center; }
     </style>
 </head>
@@ -19,6 +19,11 @@
     <hr>
     <p>I'm an overfed wolfgirl with really long hair and a soft hoodie (I'll update my profile pic soon). I have a resolution to draw more dynamic, emotionally expressive, and volatile art. Here's my <a href="https://github.com/BlueBunnex/dogmomAI">repo</a>.</p>
 
+    <div style="display: flex; gap: 4px;">
+        <button type="button" style="background: #210; color: white;">BUTTON 1</button>
+        <button type="button" style="background: lightgrey;">BUTTON 2</button>
+    </div>
+    
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5em; margin: 1em 0;">
         <div class="tile" style="background-image: url('https://pbs.twimg.com/media/GC45nMEW4AA5s57?format=jpg&amp;name=4096x4096');"></div>
         <div class="tile" style="background-image: url('https://pbs.twimg.com/media/GC8QiysWEAACdic?format=jpg&name=4096x4096');"></div>
@@ -26,11 +31,6 @@
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
-    </div>
-
-    <div style="display: flex; gap: 4px;">
-        <button type="button" style="background: #210; color: white;">ADD TO CART</button>
-        <button type="button" style="background: lightgrey;">PROCEED TO CHECKOUT</button>
     </div>
 </body>
 </html>
