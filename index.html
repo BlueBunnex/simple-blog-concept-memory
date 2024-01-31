@@ -12,6 +12,8 @@
         }
         body { background: white; min-height: 100vh; margin: 0 auto; width: 600px; font-family: 'Josefin Sans', sans-serif; }
         p { color: #666; font-family: serif; }
+        button { background: var(--tan); border-radius: 0; border: 0; padding: 6px 10px 4px; font-family: inherit; color: black; font-size: 1em; }
+        button:hover { cursor: pointer; background: white; }
     </style>
 </head>
 <body>
@@ -24,14 +26,15 @@
         <img style="position: absolute; filter: blur(4px) brightness(0.5); width: 110%; top: -5%; left: -5%;" src="https://www.artisancoffeeco.com/cdn/shop/collections/artisan-coffee-co_pod_machine-01_1200x1200.jpg?v=1646736650">
         <div style="position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); z-index: 9; color: white; text-align: center;">
             <h1 style="margin-top: 0;">Latest coffee experience!</h1>
-            <button style="background: var(--tan); border-radius: 0; border: 0; padding: 6px 10px 4px; font-family: inherit; color: black; font-size: 1em;">Get started</button>
+            <button type="button">Get started</button>
         </div>
     </div>
 
     <main style="padding: 1em;">
-        <div style="border: 1px solid #666; border-radius: 4px; padding: 1em; margin: 1em 0;">
+        <div style="border: 1px solid #666; border-radius: 4px; padding: 1em; margin: 1em 0; position: relative; overflow: hidden;">
             <h3>MOCHA</h3>
             <p>The complex, chocolate flavour of mochas are unmatched.</p>
+            <img style="height: 100%; position: absolute; right: 0; top: 0;" src="https://www.spoonfulofflavor.com/wp-content/uploads/2021/11/mocha-latte-recipe.jpg">
         </div>
         <div style="border: 1px solid #666; border-radius: 4px; padding: 1em; margin: 1em 0;">
             <h3>LATTE</h3>
