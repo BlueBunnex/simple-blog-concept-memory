@@ -32,6 +32,7 @@
         div.box { margin: 1em 0; display: flex; gap: 1em; }
         div.box > div { flex: 1; padding: 1em; border: 1px solid #aaa; border-radius: 4px; }
         div.box > img { height: 140px; aspect-ratio: 1; border-radius: 4px; }
+        div.box #price { color: var(--brown); font-weight: 400; font-size: 0.8em; }
 
         #hero { position: relative; overflow: hidden; height: 20em; }
         #hero > img { position: absolute; filter: blur(4px) brightness(0.5); width: 110%; top: -5%; left: -5%; }
@@ -55,22 +56,22 @@
     <main>
         <div class="box">
             <div>
-                <h3>MOCHA</h3>
+                <h3>MOCHA <span id="price">$3.99</span></h3>
                 <p>The complex, chocolate flavour of mochas are unmatched.</p>
             </div>
             <img src="https://images.immediate.co.uk/production/volatile/sites/2/2021/11/Mocha-1fc71f7.png?quality=90&resize=556,505">
         </div>
         <div class="box">
             <div>
-                <h3>LATTE</h3>
-                <p>Description.</p>
+                <h3>LATTE <span id="price">$3.99</span></h3>
+                <p>Feel warm and energized with our creamy, frothy lattes.</p>
             </div>
             <img src="https://www.allrecipes.com/thmb/Wh0Qnynwdxok4oN0NZ1Lz-wl0A8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9428203-9d140a4ed1424824a7ddd358e6161473.jpg">
         </div>
         <div class="box">
             <div>
-                <h3>AMERICANO</h3>
-                <p>Description.</p>
+                <h3>AMERICANO <span id="price">$3.99</span></h3>
+                <p>Bring yourself back to your roots with a sip of American culture.</p>
             </div>
             <img src="https://images.squarespace-cdn.com/content/v1/5a7cbe247131a5f17b3cc8fc/1519447742018-MOHBW2G0VOQ7QSCPJE14/Americano-Coffee-Lounge-Ingredients.jpg">
         </div>
