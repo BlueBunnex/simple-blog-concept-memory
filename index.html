@@ -3,9 +3,11 @@
 <head>
     <title>dogmomai</title>
     <style>
-        main {
+        body {
             width: 800px;
             margin: auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
         }
         
         .section {
@@ -17,7 +19,11 @@
 </head>
 <body style="background: #def; font-family: sans-serif; font-size: 14px;">
 
-    <div style="width: 300px; display: flex; gap: 0.5em; flex-direction: column;">
+    <div class="section" style="grid-column: 1 / span 2;">
+        header
+    </div>
+
+    <div class="section" style="display: flex; gap: 0.5em; flex-direction: column;">
         
         <div style="display: flex;">
             <img width="60" style="aspect-ratio: 1;" src="https://avatarfiles.alphacoders.com/368/368986.jpg">
