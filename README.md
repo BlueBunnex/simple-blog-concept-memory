@@ -1,4 +1,6 @@
-# [dogmomai.top](http://dogmomai.top)
-me when I dev: ☝️🤓
+# Simple Blog Concept Memory
+Teaching bluebunnex how to organize.
 
-women when I dev: 🤤💕💕
+(new repo -> import from existing -> enable pages)
+
+Big ideas are just multiple smaller ones!
